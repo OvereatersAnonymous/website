@@ -1,68 +1,122 @@
-# [Bedrock](https://roots.io/bedrock/)
-[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
-[![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
+# Overeaters Anonymous Website
 
-Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+Base repo to support the Overeaters Anonymous website, built in WordPress.
+
+The following notes are more guidelines than enforced policies. Please reach out to the OA team for any problems, issues, suggestions.
+
+## Repo Notes
+
+- WordPress managed by [Bedrock](https://roots.io/bedrock/)
+- Noticably absent from this repo:
+- WordPress Core: this is by design, no need to replicate, please do not commit. Lastest WordPress will be installed on servers as part of deployment. Each dev is responsible for setting up their own local dev environment via composer.
+- `web/app/uploads/`: also by design, please do not commit
+- `.gitignore` has been setup to help enforce these concepts, please update as needed or reasonable if it is causing problems.
+
+## Environment setup
+
+Environment is being managed via [Bedrock](https://roots.io/bedrock/),  a modern WordPress stack that helps you get started with the best development tools and project structure.
 
 Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
 
-## Features
-
-* Better folder structure
-* Dependency management with [Composer](https://getcomposer.org)
-* Easy WordPress configuration with environment specific files
-* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-* Autoloader for mu-plugins (use regular plugins as mu-plugins)
-* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
-
-## Requirements
-
+### Requirements
+* [WordPress](https://wordpress.org/) >= 5.2
 * PHP >= 7.1
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+* [Node.js](http://nodejs.org/) >= 8.0x
+* [Yarn](https://yarnpkg.com/en/docs/install)
 
-## Installation
+### Installation
 
-1. Create a new project:
-    ```sh
-    $ composer create-project roots/bedrock
-    ```
-2. Update environment variables in the `.env` file:
-  * Database variables
-    * `DB_NAME` - Database name
-    * `DB_USER` - Database user
-    * `DB_PASSWORD` - Database password
-    * `DB_HOST` - Database host
-    * Optionally, you can define `DATABASE_URL` for using a DSN instead of using the variables above (e.g. `mysql://user:password@127.0.0.1:3306/db_name`)
-  * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-  * `WP_HOME` - Full URL to WordPress home (https://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (https://example.com/wp)
-  * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
-    * Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
-    * Generate with [our WordPress salts generator](https://roots.io/salts.html)
-3. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site
-4. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/`
-5. Access WordPress admin at `https://example.com/wp/wp-admin/`
+1. Pull in git project repository:
+`git pull origin master`
 
-## Documentation
+2. OA team can provide `.env` file and you can customize environment variables in `.env`  file
+* `DB_NAME` - Database name
+* `DB_USER` - Database user
+* `DB_PASSWORD` - Database password
+* `DB_HOST` - Database host
+* `WP_ENV` - Set to environment (`development`, `staging`, `production`)
+* `WP_HOME` - Full URL to WordPress home (http://example.com)
+* `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+* `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
+* `ACF_PRO_KEY` - If using acf pro, provide key with this configuration
 
-Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
+If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command][wp-cli-dotenv] or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-salt].
 
-## Contributing
+3. Theme is brought down via git repository in `web/app/themes`
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
+4. We are using `http://oa.local` as our local development url
 
-## Bedrock sponsors
+5. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
 
-Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
+6. In project root, run `composer install` to bring down wordpress core, dependencies and contributed plugins
 
-<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="itineris" width="200" height="150"></a>
+7. Import your database provided by OA team or it will ask to install barebones copy
 
-## Community
+8. Access WP admin at `http://oa.local/wp/wp-admin`
 
-Keep track of development and community news.
 
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+## Development / Deployment Workflow
+
+* Deployments to staging and production will be triggered manually by the OA team
+
+#### Branch Descriptions
+* `/master`
+* core base code used to merge dev code and keep clean
+* `/dev`
+* use the dev branch for local development, commit work frequently
+* `/staging`
+* changes commited to staging will be deployed to staging environment
+* `/production`
+* contains only production ready code
+
+### Theme Management
+
+* To get the initial theme build, navigate to the theme dir `cd web/app/themes/oa/`
+* Run `yarn` to update dependencies
+* Run `yarn build` to compile the build, a `dist` dir will be created, do not commit it, prod and staging branches will be compiled for production by the OA team
+
+Please review documention in theme directory for further notes. Files can be comitted directly to the root of this git project repository https://github.com/OvereatersAnonymous/website/tree/master/web/app/themes/oa
+
+For full deployment notes on the server and additional gotchas, please review this document which requires our permission to access  https://docs.google.com/document/d/16-2whcdwdwuVEd-3lZlSR877Knjc6fBeN-hMtkXuWIo
+
+### Plugin Management
+
+**Contrib Plugins**
+
+- Contrib plugins can be brought in via composer to `/web/app/plugins/yourpluginname` using `composer require <package_name>:<version`> 
+- Source for wordpress composer packages  https://wpackagist.org
+
+**Custom Plugins**
+
+- Custom plugins should be set up so that they can be brought in via composer to `/web/app/plugins/yourpluginname`
+
+**Custom Must Use Plugins**
+
+- Custom must use plugins should be set up so that they can be brought in via composer to `/web/app/mu-plugins/yourpluginname`
+
+**Composer setup for custom plugins or must-use plugins**
+
+- This works via git's tagging system. 
+-  After you commit files that your ready to deploy, within the plugin reposistory, `git pull origin --tags` to get all the remote tag references and  `git tag -l` to list all tags 
+- Create a tag increasing the version number. So if it's 1.0.0, increase to 1.0.1 for minor changes or 1.1.0 for more significant changes or 2.0.0 for complete overhaul or changes of code, this depends on self judgment.  `git tag <version_number>` and then run `git push origin --tags`
+- Go back to root directory. 
+- For creating a new setup via composer, open `composer.json` and add under `repositories` the following
+```,{
+"type": "package",
+"package": {
+"name": "oa/<plugin-name>",
+"version": "dev-master",
+"type": "wordpress-<muplugin or plugin>"
+"source": {
+"type": "git",
+"url": "https://github.com/OvereatersAnonymous/<plugin-name>.git",
+"reference": "<git-tag-number>"
+}
+}
+}
+```
+- For updating the plugin, you will need to update the `reference` to the latest tag number everytime. 
+- Once you save, you can then run `composer update oa/<plugin-name>` , this will checkout the plugin directory to the tag, add reference in composer.json and composer.lock file.  
+- Commit both composer files and push. Run through deployment as usual
+- On server, you always only run `composer install`
