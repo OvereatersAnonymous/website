@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'NeutrifStudio-Regular';
+    src: url('../fonts/neutrif-studio/3A74E5_2_0.eot');
+    src: url('../fonts/neutrif-studio/3A74E5_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/neutrif-studio/3A74E5_2_0.woff2') format('woff2'), url('../fonts/neutrif-studio/3A74E5_2_0.woff') format('woff'), url('../fonts/neutrif-studio/3A74E5_2_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeutrifStudio-RegularItalic';
+    src: url('../fonts/neutrif-studio/3A74E5_3_0.eot');
+    src: url('../fonts/neutrif-studio/3A74E5_3_0.eot?#iefix') format('embedded-opentype'), url('../fonts/neutrif-studio/3A74E5_3_0.woff2') format('woff2'), url('../fonts/neutrif-studio/3A74E5_3_0.woff') format('woff'), url('../fonts/neutrif-studio/3A74E5_3_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeutrifStudio-Bold';
+    src: url('../fonts/neutrif-studio/3A74E5_0_0.eot');
+    src: url('../fonts/neutrif-studio/3A74E5_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/neutrif-studio/3A74E5_0_0.woff2') format('woff2'), url('../fonts/neutrif-studio/3A74E5_0_0.woff') format('woff'), url('../fonts/neutrif-studio/3A74E5_0_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeutrifStudio-BoldItalic';
+    src: url('../fonts/neutrif-studio/3A74E5_1_0.eot');
+    src: url('../fonts/neutrif-studio/3A74E5_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/neutrif-studio/3A74E5_1_0.woff2') format('woff2'), url('../fonts/neutrif-studio/3A74E5_1_0.woff') format('woff'), url('../fonts/neutrif-studio/3A74E5_1_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

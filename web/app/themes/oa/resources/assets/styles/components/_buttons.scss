@@ -1,0 +1,42 @@
+.btn {
+	padding: 0.6rem 1rem 0.4rem;
+	letter-spacing:0.2px;
+	@extend strong;
+	&.big {
+		padding: 1.6rem 2rem 1.4rem;
+		@include font-size(24);
+	}
+	&.primary {
+		background-color: map-get($button-colors, 'blueberry');
+		box-shadow: 0 3px map-get($button-colors, 'blueberry-highlight');
+	}
+
+	&.coralred {
+		background-color: map-get($button-colors, 'coralred');
+		box-shadow: 0 3px map-get($button-colors, 'coralred-highlight');
+	}
+
+	&.aqua {
+		background-color: map-get($button-colors, 'aqua');
+		box-shadow: 0 3px map-get($button-colors, 'aqua-highlight');
+	}
+
+	&.smoky {
+		background-color: map-get($button-colors, 'smoky');
+		box-shadow: 0 3px map-get($button-colors, 'smoky-highlight');
+	}
+
+	&.navyblack {
+		background-color: map-get($button-colors, 'navyblack');
+		box-shadow: 0 3px map-get($button-colors, 'navyblack-highlight');
+	}
+
+	&:link, &:visited, &:hover, &:focus, &:active {
+		color:white;
+		text-decoration: none;
+	}
+	&:hover {
+		background-color: map-get($button-colors, 'navyblack');
+		box-shadow: 0 3px map-get($button-colors, 'navyblack-highlight');
+	}
+}
