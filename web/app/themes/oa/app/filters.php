@@ -89,3 +89,58 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+
+// Cloudred.com
+//  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+// / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+//`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+function oa_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl','App\\oa_login_logo_url' );
+
+function oa_login_logo_url_text() {
+    return get_option('blogname');
+}
+add_filter( 'login_headertext','App\\oa_login_logo_url_text' );
+
+/*Security measures*/
+if(function_exists('remove_action')) {
+    remove_action('wp_head', 'wp_generator');
+}
+// Redefine password from name and email, globally
+add_filter( 'wp_mail_from', 'App\\wpse_new_mail_from' );
+
+
+function wpse_new_mail_from( $old ) {
+    return get_option('admin_email');
+}
+add_filter('wp_mail_from_name', 'App\\wpse_new_mail_from_name');
+
+function wpse_new_mail_from_name( $old ) {
+    return get_option('blogname');
+}
+//end
+
+//Unset the tag body class as it conflicts with bootstrap css
+function bs4_remove_tag_body_class( $classes ) {
+    if ( false !== ( $class = array_search( 'tag', $classes ) ) ) {
+        unset( $classes[$class] );
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'App\\bs4_remove_tag_body_class' );
+
+//Make OA specific image sizes selectable from your WordPress admin
+//See the setup.php for the actual setting of these sizes
+function oa_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'square@2x' => __( 'Large square' ),
+        'square@1x' => __( 'Medium square' )
+    ) );
+}
+add_filter( 'image_size_names_choose', 'App\\oa_custom_sizes' );
+//_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
+// END
