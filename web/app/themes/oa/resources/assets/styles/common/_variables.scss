@@ -2,7 +2,35 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #5F51E4, //used by bootstrap?
+  blueberry: #5F51E4,
+  peach: #FA8561,
+  grape: #9D3C7B,
+  gold: #D19123,
+  ocean: #378BAC,
+  base: #1A1A1A
+);
+$supporting-colors: (
+  nude: #EFECE1,
+  pear: #D0EFEB,
+  dragonfruit: #CC75A9,
+  teal: #8FDECC,
+  nightsky: #1A1A1A,
+  smoke: #8492A6,
+  steal: #C0CCDA,
+  lightg: #E5E9F2
+);
+$button-colors: (
+  purple: #5F51E4,
+  purple-highlight: #4234C4,
+  coralred: #FF3C38,
+  coralred-highlight: #CE312E,
+  aqua: #6DE0C1,
+  aqua-highlight: #18C596,
+  smoky: #8492A6,
+  smoky-highlight: #697585,
+  navyblack: #3C4A68,
+  navyblack-highlight:#273042
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
