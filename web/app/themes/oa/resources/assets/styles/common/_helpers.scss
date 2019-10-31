@@ -18,3 +18,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@mixin icon() {
+	font-family: FontAwesome;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-indent: 0;
+	position: absolute;
+}

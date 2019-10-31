@@ -1,21 +1,30 @@
+<div class="container-fluid search-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="search">
+        @include('partials.widget-search')
+      </div>
+    </div>
+  </div>
+</div>
 <header class="banner">
   <div class="container-fluid hat">
     <div class="row">
       <div class="col-md-12">
-        <div class="container">
+        <div class="container" style="position: relative;">
         	<!-- hat nav-->
         	<div class="row">
         		<div class="col-md-4">
         			@include('partials.widget-country-select')
         		</div>
-        		<div class="col-md-3 col-lg-4">
+        		<div class="col-md-3">
         			@include('partials.widget-language-select')
         		</div>
-        		<div class="col-md-5 col-lg-4">
+        		<div class="col-md-5">
         			@if (has_nav_menu('header_navigation'))
-              		{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
-              	@endif
-              </div>
+              	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
+              @endif
+            </div>
           </div>
         	<!-- //END hat -->
         </div>
@@ -49,10 +58,6 @@
     </div>
     <div class="row">
       <div class="wrapper">
-       
-        <!--<div class="site-search">
-          {!! get_search_form(false) !!}
-        </div>-->
         <nav class="nav-primary">
           @if (has_nav_menu('primary_navigation'))
             {!! wp_nav_menu(['theme_location' => 'primary_navigation']) !!}

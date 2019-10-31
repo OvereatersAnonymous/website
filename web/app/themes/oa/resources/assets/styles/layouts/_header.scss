@@ -1,3 +1,55 @@
+.search-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 988;
+    &.open {
+        background-color: map-get($supporting-colors, 'lightg');
+
+    }
+    .search {          
+        position: absolute;
+        top: 0;
+        right: 0;
+        &.open {
+            width: 100%;
+        }
+        .search-toggle {
+            &--btn {
+                position: absolute;
+                right: 15px;
+                &:before {
+                    @include icon();
+                    content: "\f002";
+                    @include font-size(16);
+                }
+
+                &.open:before {
+                    content: "\f057";
+                }
+            }
+        }
+        .search-form {
+            display: none;
+            &.open {
+                display: block;
+            }
+
+            .search-field {
+                width: 100%;
+                border:none;
+                outline: none;
+                background:none;
+                &:focus {
+                    outline:none;
+                }
+            }
+            .search-submit {
+                display: none;
+            }
+        }
+    }
+}
 .banner {
 
     .hat {
@@ -7,6 +59,7 @@
         /*header nav*/
         .menu-header-navigation-container {
             text-align: right;
+            padding-right: 45px;
             .menu {
                 @extend .inline-list;
                 margin-bottom: 1rem;
@@ -19,6 +72,11 @@
         @include media-breakpoint-up(md) {
             display: block;
         }
+
+        .tools {
+            position: relative;
+        }
+        
     }
 
     .btn {
@@ -178,14 +236,8 @@
         }
     }
     .site-search:before {
-        font-family: FontAwesome;
-        line-height: 1;
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-indent: 0;
+        @include icon();
         content: "\f002";
-        position: absolute;
         @include font-size(20);
         left: 0;
         top: 50%;
@@ -234,26 +286,26 @@
                 a:before {
                     transition: all 0.3s;
                     font-family: FontAwesome;
-                    font-size: 36px;
+                    font-size: 20px;
                     line-height: 1;
                     color: map-get($theme-colors, 'base');;
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
                     text-indent: 0;
-                    content: "\f105";
+                    content: "\f078";
                     position: absolute;
                     right: 0;
                     top: 50%;
-                    margin-top: -22px;
+                    margin-top: -13px;
                 }
             }
             .menu-item-has-children.open {
                 a:before {
-                    -ms-transform: rotate(90deg);
+                    -ms-transform: rotate(180deg);
                     /* IE 9 */
-                    -webkit-transform: rotate(90deg);
+                    -webkit-transform: rotate(180deg);
                     /* Chrome, Safari, Opera */
-                    transform: rotate(90deg);
+                    transform: rotate(180deg);
                 }
             }
             .sub-menu {

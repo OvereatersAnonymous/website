@@ -23,9 +23,22 @@ export default {
                 jQuery('.overlay-nav').css({ 'height': jQuery(document).height() });
                  jQuery('.subPageNav').trigger('sticky_kit:recalc');
             }, 1000);*/
-
-
         })
+
+        //Search
+        // JavaScript to be fired on all pages
+        var $searchWrapper = jQuery('.search-wrapper');
+        var $hat = jQuery('.hat');
+        jQuery('#search-toggle--btn').bind('click', function(event) {
+            event.preventDefault();
+            jQuery(this).toggleClass('open');
+            jQuery('.search-form').toggleClass('open');
+            jQuery('.search').toggleClass('open');
+            $searchWrapper.toggleClass('open');
+            //set search field height
+            $searchWrapper.css('height',$hat.outerHeight());
+        })
+
         //automatically expand parent if we're on a subpage
         jQuery('#menu-primary-navigation .current-menu-parent, #menu-collapsible-sidenavigation .current-menu-parent').toggleClass('open').find('ul').slideToggle();
 
