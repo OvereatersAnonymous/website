@@ -53,10 +53,13 @@
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^3.4.0",
     "oscarotero/env": "^1.2.0",
-    "roots/wordpress": "5.2.2",
-    "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    "roots/wordpress": "^5.2.2",
+    "roots/wp-config": "^1.0.0",
+    "roots/wp-password-bcrypt": "^1.0.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/wp-mail-smtp": "1.7.0",
+    "wpackagist-plugin/wordpress-seo": "^12.3",
+    "wpackagist-plugin/w3-total-cache": "^0.10.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",
