@@ -1,6 +1,44 @@
 export default {
   init() {
+
     // JavaScript to be fired on all pages
+        jQuery('#primary-nav-toggle').bind('click', function(event) {
+            event.preventDefault();
+            jQuery(this).toggleClass('open');
+            jQuery('.overlay-nav').css({ 'height': jQuery(document).height() }).fadeToggle();
+            jQuery('html, body').animate({ scrollTop: 0 });
+        })
+        jQuery('#primary-nav-close').bind('click', function(event) {
+            event.preventDefault();
+            jQuery('.overlay-nav').fadeOut();
+            jQuery('#primary-nav-toggle').removeClass('open');
+            jQuery('#menu-primary-navigation .open').removeClass('open').find('ul').hide();
+        })
+        jQuery('#menu-primary-navigation .menu-item-has-children > a, #menu-collapsible-sidenavigation .menu-item-has-children > a').bind('click', function(event) {
+            event.preventDefault();
+            jQuery(this).parent().toggleClass('open').find('ul').slideToggle();
+            //adjust overlay height
+            //becuase we're animating the navigation items down, we have to wait for the animation to complete
+            /*setTimeout(function () {
+                jQuery('.overlay-nav').css({ 'height': jQuery(document).height() });
+                 jQuery('.subPageNav').trigger('sticky_kit:recalc');
+            }, 1000);*/
+
+
+        })
+        //automatically expand parent if we're on a subpage
+        jQuery('#menu-primary-navigation .current-menu-parent, #menu-collapsible-sidenavigation .current-menu-parent').toggleClass('open').find('ul').slideToggle();
+
+        //Logic to fire certain functions on resize, but only when resize has finished
+        var resizeTimer;
+        jQuery( window ).resize(function() {
+
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          
+        }, 250);
+
+      });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

@@ -1,41 +1,68 @@
 <header class="banner">
-  <div class="container">
-  	<!-- hat nav-->
-  	<div class="row hat">
-  		<div class="col-md-4">
-  			country select
-  		</div>
-  		<div class="col-md-4">
-  			Language select
-  		</div>
-  		<div class="col-md-4">
-  			@if (has_nav_menu('header_navigation'))
-        		{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
-        	@endif
+  <div class="container-fluid hat">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+        	<!-- hat nav-->
+        	<div class="row">
+        		<div class="col-md-4">
+        			@include('partials.widget-country-select')
+        		</div>
+        		<div class="col-md-3 col-lg-4">
+        			@include('partials.widget-language-select')
+        		</div>
+        		<div class="col-md-5 col-lg-4">
+        			@if (has_nav_menu('header_navigation'))
+              		{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
+              	@endif
+              </div>
+          </div>
+        	<!-- //END hat -->
         </div>
+      </div>
     </div>
-  	<!-- //END hat -->
+  </div>
+  <div class="container brand-nav">
   	<!-- Brand and main nav row -->
-    <div class="row brand-nav">
-    	<div class="col-md-6">
-    		<a class="brand" href="{{ home_url('/') }}">
+    <div class="row">
+    	<div class="col-5">
     			@if (get_custom_logo())
     				{!!  get_custom_logo() !!}
     			@else
     				{{ get_bloginfo('name', 'display') }}
     			@endif
-    		</a>
-    		
     	</div>
-    	<div class="col-md-6">
+    	<div class="col-7">
 		    <nav class="nav-primary">
-		    	<a href="#" class="btn primary">Find a meeting</a> 
-		      @if (has_nav_menu('primary_navigation'))
-		        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-		      @endif
+          @include('partials.widget-feature-btn')
+          <div class="overlay-toggle"><a href="#" tabindex="1" class="primary-nav-toggle" id="primary-nav-toggle"><span class="sr-only"> @php _e("Menu","sage"); @endphp</span></a></div>
 		    </nav>
 		</div>
 	</div>
     <!-- //END -->
   </div>
 </header>
+<div class="overlay-nav container-fluid no-gutters" style="">
+  <div class="container">
+    <div class="overlay-toggle">
+      <a href="#" id="primary-nav-close"><span class="sr-only"> @php _e("Close Menu","sage"); @endphp</span></a>
+    </div>
+    <div class="row">
+      <div class="wrapper">
+       
+        <!--<div class="site-search">
+          {!! get_search_form(false) !!}
+        </div>-->
+        <nav class="nav-primary">
+          @if (has_nav_menu('primary_navigation'))
+            {!! wp_nav_menu(['theme_location' => 'primary_navigation']) !!}
+          @endif
+        </nav>
+        @if (has_nav_menu('header_navigation'))
+          {!! wp_nav_menu(['theme_location' => 'header_navigation', 'menu_class' => 'supporting-nav']) !!}
+        @endif
+        @include('partials.widget-feature-btn')
+      </div>
+    </div>
+  </div>
+</div>
