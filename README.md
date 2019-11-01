@@ -84,39 +84,59 @@ For full deployment notes on the server and additional gotchas, please review th
 
 **Contrib Plugins**
 
-- Contrib plugins can be brought in via composer to `/web/app/plugins/yourpluginname` using `composer require <package_name>:<version`> 
+- Contrib plugins can be brought in via composer to `/web/app/plugins/plugin-name` using `composer require <package_name>:<version_number>`
 - Source for wordpress composer packages  https://wpackagist.org
 
 **Custom Plugins**
 
-- Custom plugins should be set up so that they can be brought in via composer to `/web/app/plugins/yourpluginname`
+- Custom plugins should be set up so that they can be brought in via composer to `/web/app/plugins/plugin-name`
 
 **Custom Must Use Plugins**
 
-- Custom must use plugins should be set up so that they can be brought in via composer to `/web/app/mu-plugins/yourpluginname`
+- Custom must use plugins should be set up so that they can be brought in via composer to `/web/app/mu-plugins/plugin-name`
 
 **Composer setup for custom plugins or must-use plugins**
 
 - This works via git's tagging system. 
--  After you commit files that your ready to deploy, within the plugin reposistory, `git pull origin --tags` to get all the remote tag references and  `git tag -l` to list all tags 
-- Create a tag increasing the version number. So if it's 1.0.0, increase to 1.0.1 for minor changes or 1.1.0 for more significant changes or 2.0.0 for complete overhaul or changes of code, this depends on self judgment.  `git tag <version_number>` and then run `git push origin --tags`
-- Go back to root directory. 
-- For creating a new setup via composer, open `composer.json` and add under `repositories` the following
-```,{
-"type": "package",
-"package": {
-"name": "oa/<plugin-name>",
-"version": "dev-master",
-"type": "wordpress-<muplugin or plugin>"
-"source": {
-"type": "git",
-"url": "https://github.com/OvereatersAnonymous/<plugin-name>.git",
-"reference": "<git-tag-number>"
-}
-}
+- After you commit your files ready for deployment, within the plugin repository, run `git pull origin --tags` to get all the remote tag references and `git tag -l` to list all tags 
+- Create a tag increasing the version number. So if it's 1.0.0, increase to 1.1.0 for minor code changes and updates or 2.0.0 for major code changes. Run `git tag <version_number>` and then run `git push origin --tags`
+
+***Creating a new plugin***
+- For creating a new plugin via composer, create a  `composer.json` and add the following template changing the name of your plugin where you see `<plugin-name>` and the type, either `wordpress-plugin` or `wordpress-muplugin` where you see `<plugin-type>`
+```
+{
+    "name": "OvereatersAnonymous/<plugin-name>",
+    "description": "",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/OvereatersAnonymous/<plugin-name>",
+    "authors": [
+        {
+            "name": "Cloudred",
+            "homepage": "https://cloudred.com"
+        }
+    ],
+    "type": "<plugin-type>",
+    "require": {
+        "php": ">=7.1"
+    }
 }
 ```
-- For updating the plugin, you will need to update the `reference` to the latest tag number everytime. 
-- Once you save, you can then run `composer update oa/<plugin-name>` , this will checkout the plugin directory to the tag, add reference in composer.json and composer.lock file.  
+- Make sure you commit and tag the plugin's `composer.json` file
+- Go back to root directory and open up the project's `composer.json` file and add the following at the end of the `repositories` array
+```
+    ,
+      {
+        "type": "git",
+        "url": "https://github.com/OvereatersAnonymous/<plugin-name>.git"
+      }
+
+```
+
+- Once you save, you can then run `composer require "OvereatersAnonymous/<plugin-name>:<version_number>"` , this will checkout the plugin directory to the tag and add references in both `composer.json` and `composer.lock` files.
+
+***Updating a new plugin***
+- For Updating, you just need to run `composer require "OvereatersAnonymous/<plugin-name>:<version_number>"`
+
+***Committing and deployment***
 - Commit both composer files and push. Run through deployment as usual
-- On server, you always only run `composer install`
+- On server, you only run `composer install`
