@@ -4,58 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb77f027472ccd25a009990f1c076700",
+    "content-hash": "03c1026fd4a46f2081539c5f6ff06df6",
     "packages": [
-        {
-            "name": "OvereatersAnonymous/wpmeetings",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "169cf165e868da079773c0a06b83ff5427f3de2b"
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "KSAND",
-                    "homepage": "https://ksand.com"
-                }
-            ],
-            "homepage": "https://github.com/OvereatersAnonymous/wpmeetings",
-            "keywords": [
-                "plugin",
-                "wordpress"
-            ],
-            "time": "2019-10-31T22:13:02+00:00"
-        },
-        {
-            "name": "OvereatersAnonymous/wpservicebodies",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "ccb9fffd8bcaee75b12ddafe294f7886df7bc85f"
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "KSAND",
-                    "homepage": "https://ksand.com"
-                }
-            ],
-            "homepage": "https://github.com/OvereatersAnonymous/wpservicebodies",
-            "keywords": [
-                "plugin",
-                "wordpress"
-            ],
-            "time": "2019-10-31T22:16:04+00:00"
-        },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.5",
@@ -315,6 +265,56 @@
                 "wordpress"
             ],
             "time": "2019-11-01T21:00:08+00:00"
+        },
+        {
+            "name": "overeatersanonymous/wpmeetings",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
+                "reference": "3dcd4bb774333853ae964d5ea0ec2d7e50507abc"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "KSAND",
+                    "homepage": "https://ksand.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/wpmeetings",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-11-01T21:09:05+00:00"
+        },
+        {
+            "name": "overeatersanonymous/wpservicebodies",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
+                "reference": "1e03a8d0d806dc66de31e90c1218e38bfdbaaf3e"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "KSAND",
+                    "homepage": "https://ksand.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/wpservicebodies",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-11-01T21:09:39+00:00"
         },
         {
             "name": "phpoption/phpoption",
