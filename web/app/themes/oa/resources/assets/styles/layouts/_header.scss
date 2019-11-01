@@ -36,6 +36,11 @@
         }
     }
 }
+/*shift down if admin bar is present*/
+.admin-bar .search-wrapper {
+    top: 31px;
+}
+
 .banner {
 
     .hat {
