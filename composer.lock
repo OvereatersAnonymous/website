@@ -4,8 +4,83 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a0c597d32bee32cbb05accffd868e15",
+    "content-hash": "4f9f893dc616db6ebfe41dbcf246c080",
     "packages": [
+        {
+            "name": "OvereatersAnonymous/oa-custom-configurations",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
+                "reference": "e7b0a049484dd7443479990763c7c10bc95b4183"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-muplugin",
+            "authors": [
+                {
+                    "name": "Cloudred",
+                    "homepage": "https://cloudred.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/oa-custom-configurations",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-10-31T22:23:07+00:00"
+        },
+        {
+            "name": "OvereatersAnonymous/wpmeetings",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
+                "reference": "169cf165e868da079773c0a06b83ff5427f3de2b"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "KSAND",
+                    "homepage": "https://ksand.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/wpmeetings",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-10-31T22:13:02+00:00"
+        },
+        {
+            "name": "OvereatersAnonymous/wpservicebodies",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
+                "reference": "ccb9fffd8bcaee75b12ddafe294f7886df7bc85f"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "KSAND",
+                    "homepage": "https://ksand.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/wpservicebodies",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-10-31T22:16:04+00:00"
+        },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.5",
@@ -17,7 +92,7 @@
             },
             "require": {
                 "composer/installers": "^1.0",
-                "ffraenz/private-composer-installer": "^3.0"
+                "ffraenz/private-composer-installer": "~2.0"
             },
             "type": "wordpress-plugin"
         },
@@ -145,26 +220,26 @@
         },
         {
             "name": "ffraenz/private-composer-installer",
-            "version": "v3.0.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ffraenz/private-composer-installer.git",
-                "reference": "e93e2f866e9ee885e104417aae8d804dbfcf54cb"
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ffraenz/private-composer-installer/zipball/e93e2f866e9ee885e104417aae8d804dbfcf54cb",
-                "reference": "e93e2f866e9ee885e104417aae8d804dbfcf54cb",
+                "url": "https://api.github.com/repos/ffraenz/private-composer-installer/zipball/dc54b0200952f8c03a08b5593a933c308343a2a9",
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0",
-                "php": "^7.1",
+                "php": "^5.6 || ^7.0",
                 "vlucas/phpdotenv": "^3.0"
             },
             "require-dev": {
                 "composer/composer": "1.0.*",
-                "phpunit/phpunit": "^8.0",
+                "phpunit/phpunit": "5.7.* || ^6.3",
                 "zendframework/zend-coding-standard": "^1.0"
             },
             "type": "composer-plugin",
@@ -196,7 +271,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2019-10-22T19:45:30+00:00"
+            "time": "2019-01-30T21:44:48+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -667,12 +742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85"
+                "reference": "f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eb59d9f35a47f567ae15e7179d7c666489cd4b85",
-                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa",
+                "reference": "f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa",
                 "shasum": ""
             },
             "conflict": {
@@ -875,20 +950,20 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-10-09T14:04:58+00:00"
+            "time": "2019-10-29T22:11:03+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.1",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060"
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/82cd0f854ceca17731d6d019c7098e3755c45060",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +1001,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-10-16T21:14:26+00:00"
+            "time": "2019-10-28T04:36:32+00:00"
         }
     ],
     "aliases": [],
