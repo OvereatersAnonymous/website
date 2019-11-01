@@ -4,33 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f9f893dc616db6ebfe41dbcf246c080",
+    "content-hash": "eb77f027472ccd25a009990f1c076700",
     "packages": [
-        {
-            "name": "OvereatersAnonymous/oa-custom-configurations",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "e7b0a049484dd7443479990763c7c10bc95b4183"
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "wordpress-muplugin",
-            "authors": [
-                {
-                    "name": "Cloudred",
-                    "homepage": "https://cloudred.com"
-                }
-            ],
-            "homepage": "https://github.com/OvereatersAnonymous/oa-custom-configurations",
-            "keywords": [
-                "plugin",
-                "wordpress"
-            ],
-            "time": "2019-10-31T22:23:07+00:00"
-        },
         {
             "name": "OvereatersAnonymous/wpmeetings",
             "version": "1.1.0",
@@ -315,6 +290,31 @@
                 "env"
             ],
             "time": "2019-04-03T18:28:43+00:00"
+        },
+        {
+            "name": "overeatersanonymous/oa-custom-configurations",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
+                "reference": "cb4fc43fe1222b72f2e183eac352c8dbe4e773f9"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-muplugin",
+            "authors": [
+                {
+                    "name": "Cloudred",
+                    "homepage": "https://cloudred.com"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/oa-custom-configurations",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-11-01T21:00:08+00:00"
         },
         {
             "name": "phpoption/phpoption",
