@@ -44,14 +44,24 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'header_navigation' => __('Header Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**
      * Enable post thumbnails
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
+    // Add featured image sizes
     add_theme_support('post-thumbnails');
+    add_image_size( 'square@2x', 800, 800, true);
+    add_image_size( 'square@1x', 400, 400, true);
+    //the following two are not made visible in admin b/c they are just the 1x of  medium and large
+    //images set in WP Media Settings
+    add_image_size( 'medium@1x', 350); 
+    add_image_size( 'large@1x', 540);
+    // Register filter is in filers.php
 
     /**
      * Enable HTML5 markup support
@@ -82,10 +92,10 @@ add_action('widgets_init', function () {
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
     ];
-    register_sidebar([
+    /*register_sidebar([
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
-    ] + $config);
+    ] + $config);*/
     register_sidebar([
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
@@ -130,3 +140,93 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+
+// Cloudred.com
+//  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+// / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+//`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'
+
+//Logo support
+function theme_prefix_setup() {
+
+    add_theme_support( 'custom-logo', array(
+        'height'      => 63,
+        'width'       => 230,
+        'flex-width' => true,
+        'flex-height' => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    ) );
+
+}
+add_action( 'after_setup_theme', 'App\\theme_prefix_setup' );
+
+//change the default WP login screen logo
+function oa_login_logo() {
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    ?>
+    <style type="text/css">
+        .login {
+            background-color: #ccc;
+        }
+        .login #login {
+            width:50%;
+        }
+        <?php if ($logo) { ?>
+            .login #login h1 a {
+                background-image: url('<?php echo $logo[0]; ?>');
+                background-size:100% auto;
+                width:230px;
+                height:63px;
+            }
+            @media (max-width: 768px) {
+              .login #login { width:95%;}  
+            }
+        <?php } ?>
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts','App\\oa_login_logo', 1 );
+
+//add SVG to allowed file uploads
+function add_file_types_to_uploads($file_types){
+
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+
+    return $file_types;
+}
+add_action('upload_mimes', 'App\\add_file_types_to_uploads');
+
+
+//Remove emoji scripts introduced by WP 4.2
+function disable_emojicons_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
+}
+function disable_wp_emojicons() {
+
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'App\\disable_emojicons_tinymce' );
+
+}
+add_action( 'init', 'App\\disable_wp_emojicons' );
+
+
+
+//_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
+// END
