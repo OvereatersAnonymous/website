@@ -3,34 +3,23 @@
     top: 0;
     left: 0;
     z-index: 988;
+    pointer-events: none;
+    @include transition(all .3s ease)
     &.open {
         background-color: map-get($supporting-colors, 'lightg');
-
+        pointer-events:all;
     }
     .search {          
         position: absolute;
-        top: 0;
+        top: 8px;
         right: 0;
         &.open {
             width: 100%;
         }
-        .search-toggle {
-            &--btn {
-                position: absolute;
-                right: 15px;
-                &:before {
-                    @include icon();
-                    content: "\f002";
-                    @include font-size(16);
-                }
-
-                &.open:before {
-                    content: "\f057";
-                }
-            }
-        }
+        
         .search-form {
             display: none;
+            @extend .container;
             &.open {
                 display: block;
             }
@@ -38,11 +27,8 @@
             .search-field {
                 width: 100%;
                 border:none;
-                outline: none;
                 background:none;
-                &:focus {
-                    outline:none;
-                }
+                border-radius: 0;
             }
             .search-submit {
                 display: none;
@@ -76,7 +62,30 @@
         .tools {
             position: relative;
         }
-        
+        .header-navigation-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            .search-toggle {
+                &--btn {
+                    position: absolute;
+                    padding-right: 29px;
+
+                    right: 15px;
+                    z-index: 988;
+                    &:before {
+                        @include icon();
+                        content: "\f002";
+                        @include font-size(16);
+                    }
+
+                    &.open:before {
+                        content: "\f057";
+                        top: 3px;
+                    }
+                }
+            }
+        }
     }
 
     .btn {
@@ -184,7 +193,7 @@
             margin-top: 15rem;
         }
     }
-    .site-search {
+    /*.site-search {
         padding: 0 20px 0;
         border-bottom: 3px solid map-get($theme-colors, 'base');
         position: relative;
@@ -246,7 +255,7 @@
             @include font-size(28);
             margin-top: -14px;
         }
-    }
+    }*/
     .menu-primary-navigation-container {
         margin-bottom: 30px;
         .menu {
@@ -259,7 +268,7 @@
                     @include font-size(24);
                 }
                 @include media-breakpoint-up(lg) {
-                    @include font-size(34);
+                    @include font-size(36);
                 }
                 border-bottom: 2px solid map-get($theme-colors, 'base');
                 padding:10px 0;
@@ -314,14 +323,14 @@
                 li {
                     border: 0;
                     @include NeutrifStudio_Regular();
-                    @include font-size(14);
+                    @include font-size(16);
                     line-height: normal;
                     padding:8px 0;
                     @include media-breakpoint-up(md) {
-                        @include font-size(18);
+                        @include font-size(24);
                     }
                     @include media-breakpoint-up(lg) {
-                        @include font-size(24);
+                        @include font-size(30);
                     }
                     a {
                         line-height: normal;

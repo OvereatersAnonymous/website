@@ -20,10 +20,11 @@
         		<div class="col-md-3">
         			@include('partials.widget-language-select')
         		</div>
-        		<div class="col-md-5">
+        		<div class="col-md-5 header-navigation-wrapper">
         			@if (has_nav_menu('header_navigation'))
               	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
               @endif
+              <div class="search-toggle"><a href="#" class="search-toggle--btn" id="search-toggle--btn"><span class="sr-only"> @php _e("Search","sage"); @endphp</span></a></div>
             </div>
           </div>
         	<!-- //END hat -->

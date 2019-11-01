@@ -37,6 +37,8 @@ export default {
             $searchWrapper.toggleClass('open');
             //set search field height
             $searchWrapper.css('height',$hat.outerHeight());
+            //put cursor into field if open
+             jQuery('.search-field').focus();
         })
 
         //automatically expand parent if we're on a subpage
