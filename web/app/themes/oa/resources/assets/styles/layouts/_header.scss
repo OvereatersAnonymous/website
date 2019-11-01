@@ -74,7 +74,7 @@
             .search-toggle {
                 &--btn {
                     position: absolute;
-                    padding-right: 29px;
+                    padding-right: 25px;
 
                     right: 15px;
                     z-index: 988;
@@ -158,10 +158,12 @@
     z-index: 1000;
     background: map-get($supporting-colors,'steal');
     left: 0;
-    padding-top: 26px;
+    top: 0;
+    padding-top: 140px;
     @include media-breakpoint-up(sm) {
-        top: 0;
+        padding-top: 26px;
     }
+    
     .overlay-toggle {
         position: absolute;
         right: 15px;
