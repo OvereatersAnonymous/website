@@ -4,6 +4,13 @@ import 'jquery';
 // Import everything from autoload
 import './autoload/**/*'
 
+/*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
+//Added by CLOUDRED */
+//Import slick
+import 'slick-carousel/slick/slick';
+//**** //END ******************/
+/*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
+
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';
