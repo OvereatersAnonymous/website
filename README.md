@@ -49,11 +49,21 @@ If you want to automatically generate the security keys (assuming you have wp-cl
 
 5. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
 
-6. In project root, run `composer install` to bring down wordpress core, dependencies and contributed plugins
+6. Go to github to set up an access token in your personal account (https://github.com/settings/tokens)
 
-7. Import your database provided by OA team or it will ask to install barebones copy
+7. Click on `Generate Token`, add a note for that this token is for and check off `repo` ( Full control of private repositories), which will check off all `repo` options
 
-8. Access WP admin at `http://oa.local/wp/wp-admin`
+8. Click on `Generate Token` at the bottom and copy/paste the token generated
+
+9. On your dev environment, execute `composer config -g github-oauth.github.com <token>` where `<token>` is the token you copied from github
+
+10. In project root, run `composer install` to bring down wordpress core, dependencies and contributed plugins
+
+11. In project theme `web/app/themes/oa/`, run `composer install`
+
+12. Import your database provided by OA team or it will ask to install barebones copy
+
+13. Access WP admin at `http://oa.local/wp/wp-admin`
 
 
 ## Development / Deployment Workflow
@@ -73,6 +83,7 @@ If you want to automatically generate the security keys (assuming you have wp-cl
 ### Theme Management
 
 * To get the initial theme build, navigate to the theme dir `cd web/app/themes/oa/`
+* Run `composer install` if you have not already from above install instructions
 * Run `yarn` to update dependencies
 * Run `yarn build` to compile the build, a `dist` dir will be created, do not commit it, prod and staging branches will be compiled for production by the OA team
 
