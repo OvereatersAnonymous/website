@@ -142,5 +142,9 @@ function oa_custom_sizes( $sizes ) {
     ) );
 }
 add_filter( 'image_size_names_choose', 'App\\oa_custom_sizes' );
+
+
+//enable shortcodes in widgets
+add_filter( 'widget_text', 'do_shortcode' );
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END
