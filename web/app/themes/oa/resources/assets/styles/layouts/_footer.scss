@@ -1,0 +1,33 @@
+footer {
+	flex-shrink: 0;
+	background-color: map-get($supporting-colors,'superlightg');
+	padding-top: 3rem;
+	padding-bottom: 1.3rem;
+	.primary-footer {
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(sm) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		section {
+			width: 100%;
+			margin-bottom: 2rem;
+			@include media-breakpoint-up(sm) {
+				width: 30%;
+			}
+			.menu {
+				@extend .inline-list;
+				li {
+					display: block;
+				}
+			}
+		}
+	}
+	.secondary-footer{
+		h3 {
+			display: none;
+		}
+	}
+}
