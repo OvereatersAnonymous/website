@@ -11,9 +11,11 @@
 
 .search-form .search-field {
   @extend .form-control;
+  @include NeutrifStudio_Regular();
+  height: calc(1.8em + 0.75rem + 2px);
 }
 
 .search-form .search-submit {
   @extend .btn;
-  @extend .btn-secondary;
+  @extend .smoky;
 }

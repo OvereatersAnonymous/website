@@ -2,6 +2,7 @@
 	padding: 0.6rem 1rem 0.4rem;
 	letter-spacing:0.2px;
 	@extend strong;
+	color: white;
 	&.big {
 		padding: 1.6rem 2rem 1.4rem;
 		@include font-size(24);
