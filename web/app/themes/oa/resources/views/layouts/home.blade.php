@@ -11,6 +11,21 @@
         </div>
       </div>
     </div>
+     <div class="container">
+         <div class="content">
+             @yield('signup')
+         </div>
+     </div>
+     <div class="container">
+         <div class="content">
+             @yield('podcasts')
+         </div>
+     </div>
+     <div class="container">
+         <div class="content">
+             @yield('news')
+         </div>
+     </div>
     @php(do_action('get_footer'))
     @include('partials.footer')
     @php(wp_footer())
