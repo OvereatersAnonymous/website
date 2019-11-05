@@ -13,7 +13,7 @@ class TemplateNewsListing extends Controller
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 		$pParamHash = array(
 			'post_type' => 'news',
-			'posts_per_page' => 11,
+			'posts_per_page' => 8,
 			'post_status' => 'publish',
 			'orderby' => 'post_date',
 			'order' => 'DESC',
