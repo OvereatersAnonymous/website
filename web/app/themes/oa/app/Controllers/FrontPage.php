@@ -68,6 +68,6 @@ class FrontPage extends Controller
 	 * @return array
 	 */
 	public function latestNews(){
-		//return TemplateNewsListing::getLatestNews();
+		return TemplateNewsListing::latestNews();
 	}
 }
