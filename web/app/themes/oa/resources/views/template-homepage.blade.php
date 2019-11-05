@@ -13,8 +13,8 @@
     @include('partials.homepage-signup')
 @endsection
 
-@section('podcasts')
-    @include('partials.homepage-podcasts')
+@section('podcast')
+    @include('partials.homepage-podcast')
 @endsection
 
 @section('news')

@@ -18,7 +18,7 @@
      </div>
      <div class="container">
          <div class="content">
-             @yield('podcasts')
+             @yield('podcast')
          </div>
      </div>
      <div class="container">
