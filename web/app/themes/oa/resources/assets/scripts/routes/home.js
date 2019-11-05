@@ -1,11 +1,36 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
-    jQuery('.hero-slider').slick({
-      dots:true,
-    });
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    jQuery('.hero-slider').slick({
+      dots:true,
+      speed: 300,
+      adaptiveHeight: true,
+      autoplaySpeed:5000,
+      autoplay: true,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+          },
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
+    });
   },
 };
