@@ -54,20 +54,24 @@
 </header>
 <div class="overlay-nav container-fluid no-gutters" style="">
   <div class="container">
-    <div class="overlay-toggle">
-      <a href="#" id="primary-nav-close"><span class="sr-only"> @php _e("Close Menu","sage"); @endphp</span></a>
-    </div>
     <div class="row">
-      <div class="wrapper">
-        <nav class="nav-primary">
-          @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation']) !!}
-          @endif
-        </nav>
-        @if (has_nav_menu('header_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'header_navigation', 'menu_class' => 'supporting-nav']) !!}
-        @endif
-        @include('partials.widget-feature-btn')
+      <div class="col-md-12">
+        <div class="overlay-toggle">
+          <a href="#" id="primary-nav-close"><span class="sr-only"> @php _e("Close Menu","sage"); @endphp</span></a>
+        </div>
+        <div class="row">
+          <div class="wrapper">
+            <nav class="nav-primary">
+              @if (has_nav_menu('primary_navigation'))
+                {!! wp_nav_menu(['theme_location' => 'primary_navigation']) !!}
+              @endif
+            </nav>
+            @if (has_nav_menu('header_navigation'))
+              {!! wp_nav_menu(['theme_location' => 'header_navigation', 'menu_class' => 'supporting-nav']) !!}
+            @endif
+            @include('partials.widget-feature-btn')
+          </div>
+        </div>
       </div>
     </div>
   </div>

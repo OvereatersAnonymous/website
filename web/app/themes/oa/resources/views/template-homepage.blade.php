@@ -9,3 +9,14 @@
     @include('partials.content-hero')
   @endwhile
 @endsection
+@section('signup')
+    @include('partials.homepage-signup')
+@endsection
+
+@section('podcast')
+    @include('partials.homepage-podcast')
+@endsection
+
+@section('news')
+    @include('partials.homepage-news')
+@endsection

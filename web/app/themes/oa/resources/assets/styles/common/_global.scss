@@ -1,9 +1,22 @@
+html, body {
+  height: 100%;
+}
 body {
+  display: flex;
+  flex-direction: column;
   @include NeutrifStudio_Regular();
   @include font-size(18);
   @include media-breakpoint-up(md) {
     @include font-size(16);
   }
+}
+.content-wrap {
+  flex: 1 0 auto;
+}
+
+.main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 p, ol, ul, dl {
@@ -12,18 +25,37 @@ p, ol, ul, dl {
 
 h1,
 h2,
-h3 {
-    
+h3,
+h4 {
+    @include NeutrifStudio_Bold();
 }
 
 h1 {
-  @include NeutrifStudio_Bold();
   @include font-size(36);
   @include media-breakpoint-up(sm) {
     @include font-size(40);
   }
   @include media-breakpoint-up(lg) {
     @include font-size(48);
+  }
+}
+h2 {
+  @include font-size(24);
+  @include media-breakpoint-up(sm) {
+    @include font-size(30);
+  }
+  @include media-breakpoint-up(lg) {
+    @include font-size(36);
+  }
+}
+
+h3, h4 {
+  @include font-size(18);
+  @include media-breakpoint-up(sm) {
+    @include font-size(20);
+  }
+  @include media-breakpoint-up(lg) {
+    @include font-size(24);
   }
 }
 
