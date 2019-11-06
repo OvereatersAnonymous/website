@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6f8ca013c9bea0cc7a0e38400ce4449",
+    "content-hash": "3107060798895371d5024197b894ffff",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.6",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.6",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.6#v5.8.6",
                 "reference": null,
                 "shasum": null
             },
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "44a1aa79675cd4c00c4c47aff01edcda2dc17013"
+                "reference": "828815ecbf53c488dfb895e62620f68ae8bb7fed"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-11-05T23:55:31+00:00"
+            "time": "2019-11-06T21:30:45+00:00"
         },
         {
             "name": "overeatersanonymous/wpmeetings",
@@ -685,7 +685,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.1.zip",
-                "reference": null,
+                "reference": "tags/0.10.1",
                 "shasum": null
             },
             "require": {
@@ -705,7 +705,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.4.zip",
-                "reference": null,
+                "reference": "tags/12.4",
                 "shasum": null
             },
             "require": {
@@ -725,7 +725,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.0.zip",
-                "reference": null,
+                "reference": "tags/1.7.0",
                 "shasum": null
             },
             "require": {
