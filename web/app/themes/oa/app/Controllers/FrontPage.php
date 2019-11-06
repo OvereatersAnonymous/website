@@ -36,8 +36,13 @@ class FrontPage extends Controller
 	public function podcastCallout(){
 		$podcastHash = $this->getCallout('podcast');
 		//Get Image
-		$podcastHash['podcast_home_image'] = App::get_field('podcast_home_image');
-		return $podcastHash;
+		$podcast_home_image = App::get_field('podcast_home_image');
+		if($podcast_home_image) {
+			$podcastHash['podcast_home_image'] = App::get_field('podcast_home_image');
+			return $podcastHash;
+		}else {
+			return false;
+		}
 	}
 
 	/**

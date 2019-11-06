@@ -3,6 +3,7 @@
         <div class="news__callout">
             @include('partials.content-callout',['callout'=>$news_callout])
         </div>
+        @if ($latest_news)
         <div class="news__latest">
             <h3>{!! __('Recently Posted', 'sage')  !!}</h3>
             <div class="news__latest__link">
@@ -11,5 +12,6 @@
                 </a>
             </div>
         </div>
+        @endif
     </div>
 </div>
