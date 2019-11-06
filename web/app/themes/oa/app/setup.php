@@ -55,12 +55,12 @@ add_action('after_setup_theme', function () {
      */
     // Add featured image sizes
     add_theme_support('post-thumbnails');
-    add_image_size( 'square@2x', 800, 800, true);
-    add_image_size( 'square@1x', 400, 400, true);
+    add_image_size( 'thumbnail@1x', 300, 300, true);
+    add_image_size( 'thumbnail@3x', 600, 600, true);
     //the following two are not made visible in admin b/c they are just the 1x of  medium and large
     //images set in WP Media Settings
-    add_image_size( 'medium@1x', 350); 
-    add_image_size( 'large@1x', 540);
+    add_image_size( 'medium@2x', 700); 
+    add_image_size( 'large@2x', 1080);
     // Register filter is in filers.php
 
     /**
