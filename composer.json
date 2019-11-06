@@ -76,7 +76,7 @@
     "wpackagist-plugin/w3-total-cache": "^0.10.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "overeatersanonymous/oa-custom-configurations": "1.4.2",
-    "overeatersanonymous/wpmeetings": "1.3.0",
+    "overeatersanonymous/wpmeetings": "1.4.0",
     "overeatersanonymous/wpservicebodies": "1.3.0"
   },
   "require-dev": {
