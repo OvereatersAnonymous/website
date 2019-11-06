@@ -4,7 +4,9 @@
 
         </div>
         <div class="signup__callout">
-            @include('partials.content-callout',['callout'=>$signup_callout])
+        	@if ($signup_callout) 
+            	@include('partials.content-callout',['callout'=>$signup_callout])
+            @endif
         </div>
     </div>
 </div>

@@ -46,7 +46,7 @@ class TemplateNewsListing extends Controller
 		if($news->post_count){
 			return $news->next_post();
 		}else{
-			return array();
+			return false;
 		}
 	}
 
