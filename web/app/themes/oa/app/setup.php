@@ -55,7 +55,7 @@ add_action('after_setup_theme', function () {
      */
     // Add featured image sizes
     add_theme_support('post-thumbnails');
-    add_image_size( 'thumbnail@1x', 300, 300, true);
+    add_image_size( 'thumbnail@2x', 300, 300, true);
     add_image_size( 'thumbnail@3x', 600, 600, true);
     //the following two are not made visible in admin b/c they are just the 1x of  medium and large
     //images set in WP Media Settings
