@@ -621,7 +621,6 @@ class App extends Controller
 		$twitter = get_field('twitter_handle', 'option');
 		$instagram = get_field('instagram_handle', 'option');
 		$youtube = get_field('youtube_link', 'option');
-		$young_friends = get_field('young_friends', 'option');
 
 		if ($facebook) {
 			$social .='<a href="'.$facebook.'" target="_blank" onclick="return trackOutboundLink(\''.$facebook.'\', true)"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
@@ -634,9 +633,6 @@ class App extends Controller
 		}
 		if ($youtube) {
 			$social .='<a href="'.$youtube.'" target="_blank" onclick="return trackOutboundLink(\''.$youtube.'\', true)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>';
-		}
-		if ($young_friends) {
-			$social .='<a href="'.$young_friends.'" target="_blank" onclick="return trackOutboundLink(\''.$young_friends.'\', true)" class="yf"><img src="'.get_stylesheet_directory_uri().'/dist/images/young-friends.png" alt="'.__("Young Friends","sage").'"></a>';
 		}
 
 		return $social;
@@ -698,5 +694,19 @@ class App extends Controller
 			wp_redirect( home_url() );
 			exit;
 		}
+	}
+	/**
+	 * Get countries menu from acf options page
+	 *
+	 * @return array
+	 */
+	public function countriesMenu(){
+		$countries = App::get_repeater_field('countries_menu_repeater','option');
+		foreach($countries AS $country){
+			$countryHash[$country['country_name']]= $country;
+		}
+		//Sort alphabetically
+		ksort($countryHash);
+		return $countryHash;
 	}
 }

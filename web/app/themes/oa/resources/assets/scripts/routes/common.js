@@ -54,6 +54,18 @@ export default {
         }, 250);
 
       });
+      //Enable popover on the country flag menu items
+      jQuery('.country[data-toggle="popover"]').popover({
+          html: true,
+          placement: 'auto',
+
+      });
+      //Disable hiding dropdown menu on click
+      jQuery('.dropdown__countries .dropdown-menu').on({
+          'click':function(e){
+              e.stopPropagation();
+          },
+      });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
