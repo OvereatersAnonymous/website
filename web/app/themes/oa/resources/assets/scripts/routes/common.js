@@ -66,6 +66,10 @@ export default {
               e.stopPropagation();
           },
       });
+      //Manually hide popover if any are displaying when dropdown menu is hidden
+      jQuery('.dropdown__countries').on('hide.bs.dropdown', function(){
+          jQuery('.country[data-toggle="popover"]').popover('hide');
+      });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
