@@ -27,4 +27,15 @@
 .goog-te-gadget {
 	display: flex;
 	align-items: center;
+	font-size: 10px !important;
+	font-weight: normal !important;
+}
+.goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active {
+	font-size: 10px !important;
+	color: map-get($supporting-colors, 'lightg');
+	img {
+		padding-left: 3px;
+    	margin-top: 4px;
+    	width: auto !important;
+	}
 }
