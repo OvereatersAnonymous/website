@@ -19,3 +19,12 @@
   @extend .btn;
   @extend .smoky;
 }
+
+/*Google Translate Widget */
+.goog-te-gadget .goog-te-combo {
+    margin: 0 4px !important;
+}
+.goog-te-gadget {
+	display: flex;
+	align-items: center;
+}
