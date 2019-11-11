@@ -5,6 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('partials.content-tabs-category-filter', ['terms'=>$podcast_categories,'active_tab'=>$podcast_category_request,'base_tab_url'=> APP::getPermalink()])
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.content-page')
@@ -18,6 +19,9 @@
                     <option value="post_title" @if($podcast_order_request == 'post_title') selected @endif>{!! _e("Title","sage"); !!}</option>
                 </select>
             </div>
+            @if($podcast_category_request)
+            <input type="hidden" name="podcast-category" value="{!! $podcast_category_request !!}" />
+            @endif
           </form>
       </div>
       <div class="podcast-listing-wrapper">
@@ -32,7 +36,7 @@
       @endif
   @else
       <div style="margin: 4rem 0;">
-          <div class="alert alert-warning">{!! __("There are no news to display","sage") !!} </div>
+          <div class="alert alert-warning">{!! __("There are no podcasts to display","sage") !!} </div>
           {!! get_search_form(false) !!}
       </div>
   @endif
