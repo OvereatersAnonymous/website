@@ -97,13 +97,7 @@ class TemplatePodcastListing extends Controller
 	 * @return array
 	 */
 	public function podcastCategories() {
-		 $terms = get_terms( array(
-			'taxonomy' => 'podcast_category',
-			'hide_empty' => false,
-			'orderby'    => 'name',
-			'order'      => 'ASC',
-		) );
-		return $terms;
+		return App::getPostCategories('podcast_category');
 	}
 
 	/**
