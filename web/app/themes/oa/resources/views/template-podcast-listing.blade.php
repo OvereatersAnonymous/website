@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('partials.content-tabs-category-filter', ['terms'=>$podcast_categories,'active_tab'=>$podcast_category_request,'base_tab_url'=> APP::getPermalink()])
+    @include('partials.content-tabs-category-filter', ['terms'=>$podcast_categories,'active_tab'=>$podcast_category_request,'tab_query_string_param'=>'podcast-category','base_tab_url'=> APP::getPermalink()])
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.content-page')
