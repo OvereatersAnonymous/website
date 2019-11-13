@@ -35,7 +35,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.6",
+        "version": "5.8.7",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -71,7 +71,7 @@
     "roots/wordpress": "^5.2.2",
     "roots/wp-config": "^1.0.0",
     "roots/wp-password-bcrypt": "^1.0.0",
-    "wpackagist-plugin/wp-mail-smtp": "1.7.0",
+    "wpackagist-plugin/wp-mail-smtp": "^1.7.0",
     "wpackagist-plugin/wordpress-seo": "^12.3",
     "wpackagist-plugin/w3-total-cache": "^0.10.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
