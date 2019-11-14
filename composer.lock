@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d656ea453f7823aee8b862b0b2a5040",
+    "content-hash": "be464fcf92722e2a4b78758c290155d3",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.8.6",
+            "version": "5.8.7",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.6",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7",
                 "reference": null,
                 "shasum": null
             },
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.4.4",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "3507cde74b3fde06ad2e94482b3f1a7cc70799e0"
+                "reference": "59d51ecb83051109cdd14a317c577d127ee4da52"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-11-08T01:02:00+00:00"
+            "time": "2019-11-13T21:35:10+00:00"
         },
         {
             "name": "overeatersanonymous/wpmeetings",
@@ -676,15 +676,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.10.1",
+            "version": "0.10.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.10.1"
+                "reference": "tags/0.10.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -696,15 +696,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "12.4",
+            "version": "12.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/12.4"
+                "reference": "tags/12.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -716,15 +716,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.7.0"
+                "reference": "tags/1.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.1.zip",
                 "reference": null,
                 "shasum": null
             },

@@ -709,4 +709,18 @@ class App extends Controller
 			return false;
 		}
 	}
+	/**
+	 * Return post categories
+	 *
+	 * @param string $post_type
+	 * @return array
+	 */
+	public static function getPostCategories($post_type) {
+		return get_terms( array(
+			'taxonomy' => $post_type,
+			'hide_empty' => true,
+			'orderby'    => 'name',
+			'order'      => 'ASC',
+		) );
+	}
 }
