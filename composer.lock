@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "be464fcf92722e2a4b78758c290155d3",
+    "content-hash": "969cb0d33cc7defb981c72bb1a0122e6",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "59d51ecb83051109cdd14a317c577d127ee4da52"
+                "reference": "00eae0d91d01c1670ed79a4cdbe2f7d141892db0"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-11-13T21:35:10+00:00"
+            "time": "2019-11-14T18:31:22+00:00"
         },
         {
             "name": "overeatersanonymous/wpmeetings",
@@ -685,7 +685,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.2.zip",
-                "reference": null,
+                "reference": "tags/0.10.2",
                 "shasum": null
             },
             "require": {
@@ -705,7 +705,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.5.zip",
-                "reference": null,
+                "reference": "tags/12.5",
                 "shasum": null
             },
             "require": {
@@ -725,7 +725,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.1.zip",
-                "reference": null,
+                "reference": "tags/1.7.1",
                 "shasum": null
             },
             "require": {
