@@ -61,13 +61,13 @@ export default {
 
       });
       //Disable hiding dropdown menu on click
-      jQuery('.dropdown__countries .dropdown-menu').on({
+      jQuery('.country-select .dropdown-menu').on({
           'click':function(e){
               e.stopPropagation();
           },
       });
       //Manually hide popover if any are displaying when dropdown menu is hidden
-      jQuery('.dropdown__countries').on('hide.bs.dropdown', function(){
+      jQuery('.country-select').on('hide.bs.dropdown', function(){
           jQuery('.country[data-toggle="popover"]').popover('hide');
       });
   },
