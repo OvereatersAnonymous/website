@@ -235,6 +235,13 @@ function year_shortcode() {
 }
 add_shortcode('current_year', 'App\\year_shortcode');
 
+/**
+ * Include google translate javascript script
+ */
+function oa_google_translate_enqueue_scripts (){
+	wp_enqueue_script('google_translate', 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2', null, null, true);
 
+}
+add_action( 'wp_enqueue_scripts', 'App\\oa_google_translate_enqueue_scripts',100 );
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END
