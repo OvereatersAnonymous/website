@@ -567,6 +567,99 @@ class App extends Controller
 		return $pages;
 	}
 	/**
+	 * Build parent/child nav menu hash of current page
+	 *
+	 * @return mixed
+	 */
+	public function menusNav(){
+		$pagesHash = array();
+		$pagesHash['pages'] = App::get_ancestor_tree(get_the_ID());
+		if(!empty($pagesHash['pages'])){
+			// Set up variables for the menu template
+			// Get ancestors of current page
+			$ancestors = get_post_ancestors(get_the_ID());
+			if(!empty($ancestors)){
+				if(count($ancestors) ==1){
+					// This is a direct child of the top most page on menu tree
+					$pagesHash['top_parent'] = array_pop($ancestors);
+					$pagesHash['active'] = get_the_ID();
+				}else{
+					// This is a child of one of the children of the top most page on menu tree.
+					// Only direct child of parent have an active state
+					$pagesHash['top_parent'] = array_pop($ancestors);
+					// Only direct child of parent have an active state
+					$pagesHash['active'] = array_pop($ancestors);
+				}
+			}else{
+				// This is the top most page on menu tree
+				$pagesHash['top_parent'] = get_the_ID();
+				$pagesHash['active'] = get_the_ID();
+			}
+			return $pagesHash;
+		}
+		return false;
+	}
+	/**
+	 * Recursive function to build out tree
+	 *
+	 * @param int $post_id
+	 * @param int $top_parent
+	 * @return mixed
+	 */
+	private static function get_ancestor_tree($post_id, $top_parent=0) {
+		// Check if this is a page.
+		if ( ! is_page() ) {
+			return false;
+		}
+		// If top parent is not set, let's fetch it
+		if(empty($top_parent)) {
+			$parent = App::get_post_top_parent($post_id);
+		}else{
+			$parent = $post_id;
+		}
+
+		// Get all pages that are a direct children of current parent
+		$pages = get_pages( [
+			'child_of' => $parent,
+			'parent' => $parent,
+		] );
+
+		// Return empty if no children
+		if ( ! $pages ) {
+			return array();
+		}
+
+		// Loop through children and use recursion by self calling this function if the child has it's own children
+		$page_ids = array($parent => array());
+		foreach ( $pages as $page ) {
+			$page_ids[$parent][$page->ID] = array();
+			if(App::is_ancestor( $page->ID )){
+				$page_ids[$parent][$page->ID][] = App::get_ancestor_tree($page->ID,$parent);
+			}
+		}
+		return $page_ids;
+	}
+	/**
+	 * Get post's highest top parent post id
+	 *
+	 * @param int $post_id
+	 * @return int
+	 */
+	public static function get_post_top_parent($post_id) {
+		/**
+		 * Get array of post ancestor IDs.
+		 * Note: The direct parent is returned as the first value in the array.
+		 * The highest level ancestor is returned as the last value in the array.
+		 * See https://codex.wordpress.org/Function_Reference/get_post_ancestors
+		 */
+		$ancestors = get_post_ancestors($post_id);
+
+		// If there are ancestors, get the top level parent.
+		// Otherwise use the current post's ID.
+		$parent = (!empty($ancestors)) ? array_pop($ancestors) : $post_id;
+		return $parent;
+	}
+	/**
 	 * Format pagination as numbered links
 	 *
 	 * @return string
