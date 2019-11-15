@@ -27,8 +27,8 @@
             @endif
         </div>
     </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#">{{__('Available in','sage')}}<br>{{__('20+ countries','sage')}}</a>
+    <li class="nav-item country-select--statement">
+        {{__('Available in','sage')}}<br>{{__('20+ countries','sage')}}
     </li>
 </ul>
 

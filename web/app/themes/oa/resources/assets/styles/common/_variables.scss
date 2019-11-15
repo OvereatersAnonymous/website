@@ -35,6 +35,9 @@ $button-colors: (
   navyblack-highlight:#273042
 );
 
+/* image path */
+$image-path: '../images' !default;
+
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;

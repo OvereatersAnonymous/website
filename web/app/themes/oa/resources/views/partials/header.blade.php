@@ -14,13 +14,13 @@
         <div class="container" style="position: relative;">
         	<!-- hat nav-->
         	<div class="row">
-        		<div class="col-md-4">
+        		<div class="col-md-3">
         			@include('partials.widget-country-select')
         		</div>
         		<div class="col-md-3">
         			@include('partials.widget-language-select')
         		</div>
-        		<div class="col-md-5 header-navigation-wrapper">
+        		<div class="col-md-6 header-navigation-wrapper">
         			@if (has_nav_menu('header_navigation'))
               	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
               @endif
