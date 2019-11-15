@@ -630,11 +630,11 @@ class App extends Controller
 		}
 
 		// Loop through children and use recursion by self calling this function if the child has it's own children
-		$page_ids = array($parent => array());
+		$page_ids = array();
 		foreach ( $pages as $page ) {
-			$page_ids[$parent][$page->ID] = array();
+			$page_ids[$page->ID] = array();
 			if(App::is_ancestor( $page->ID )){
-				$page_ids[$parent][$page->ID][] = App::get_ancestor_tree($page->ID,$parent);
+				$page_ids[$page->ID] = App::get_ancestor_tree($page->ID,$parent);
 			}
 		}
 		return $page_ids;
