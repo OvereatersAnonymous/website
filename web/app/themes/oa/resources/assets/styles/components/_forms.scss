@@ -20,6 +20,18 @@
   @extend .smoky;
 }
 
+
+/* Form fields default styles */
+.input-field,
+.select-field {
+  border-radius: 5px;
+
+  &--small {
+    background-color: map-get($supporting-colors, 'lightg');
+  }
+
+}
+
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {
     margin: 0 4px !important;
@@ -39,3 +51,5 @@
     	width: auto !important;
 	}
 }
+
+

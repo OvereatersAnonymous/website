@@ -796,14 +796,8 @@ class App extends Controller
 	public function countriesMenu(){
 		$countries = App::get_repeater_field('countries_menu_repeater','option');
 		if($countries) {
-			//declare countryHash array
-			$countryHash = array();
-			foreach($countries as $country){
-				$countryHash[$country['country_name']]= $country;
-			}
-			//Sort alphabetically
-			ksort($countryHash);
-			return $countryHash;
+			ksort($countries);
+			return $countries;
 		} else {
 			return false;
 		}
