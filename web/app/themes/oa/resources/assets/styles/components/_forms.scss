@@ -22,12 +22,36 @@
 
 
 /* Form fields default styles */
-.input-field,
 .select-field {
   border-radius: 5px;
-
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:-ms-expand {
+      display: none;
+  }
+  &:after {
+      margin-left:15px;
+      vertical-align: 0.1em;
+      @include icon();
+      content: '\f107';
+      @include font-size(24);
+      border:none;
+  }
   &--small {
     background-color: map-get($supporting-colors, 'lightg');
+    background-image: url('#{$image-path}/arrow-down-blueberry.png');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    border:none;
+    padding: 0.5rem 1rem;
+    @include font-size(14);
+    &:after {
+      vertical-align: 0.1em;
+      @include font-size(18);
+    }
   }
 
 }
@@ -35,6 +59,11 @@
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {
     margin: 0 4px !important;
+}
+.goog-te-combo {
+  @extend .select-field;
+  @extend .select-field--small;
+  color: map-get($theme-colors, 'blueberry');
 }
 .goog-te-gadget {
 	display: flex;
