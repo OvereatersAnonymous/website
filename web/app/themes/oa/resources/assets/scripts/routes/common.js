@@ -44,15 +44,6 @@ export default {
     //automatically expand parent if we're on a subpage
     jQuery('#menu-primary-navigation .current-menu-parent, #menu-collapsible-sidenavigation .current-menu-parent').toggleClass('open').find('ul').slideToggle();
 
-    //Logic to fire certain functions on resize, but only when resize has finished
-    var resizeTimer;
-    jQuery( window ).resize(function() {
-
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function() {
-      }, 250);
-
-    });
     //Enable popover on the country flag menu items
     jQuery('.country[data-toggle="popover"]').popover({
       html: true,
@@ -75,11 +66,35 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
+
+    var moveElementsAround = function() {
+      if (jQuery(window).width() < 720) {
+        //in mobile view, move the language select into the overlay nav
+        jQuery('.language-select-mobile').append( jQuery('#google_translate_element2') );
+      } else {
+        //in desktop view, keep it in header hat
+        jQuery('.goog-lang').append( jQuery('#google_translate_element2') );
+      }
+    };
+
     //remove the badly aligned word from translate widget
     setTimeout(fireAfterDelay, 500);
     function fireAfterDelay(){
       var child = jQuery('.goog-logo-link').children('img');
       jQuery('.goog-logo-link').html(child);
+      moveElementsAround();
     }
+
+    //Logic to fire certain functions on resize, but only when resize has finished
+    var resizeTimer;
+    jQuery( window ).resize(function() {
+
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        moveElementsAround();
+      }, 250);
+
+    });
+      
   },
 };

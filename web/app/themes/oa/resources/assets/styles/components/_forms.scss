@@ -32,7 +32,7 @@
       display: none;
   }
   &:after {
-      margin-left:15px;
+      right:15px;
       vertical-align: 0.1em;
       @include icon();
       content: '\f107';
@@ -58,7 +58,7 @@
 
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {
-    margin: 0 4px !important;
+    margin: 0 4px 0 0 !important;
 }
 .goog-te-combo {
   @extend .select-field;
