@@ -4,7 +4,7 @@
 	@extend strong;
 	color: white;
 	&.big {
-		padding: 1.6rem 2rem 1.4rem;
+		padding: 0.9rem 1.4rem 0.8rem;
 		@include font-size(24);
 	}
 	&.primary {

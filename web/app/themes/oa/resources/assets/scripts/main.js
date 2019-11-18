@@ -8,6 +8,7 @@ import './autoload/**/*'
 //Added by CLOUDRED */
 //Import slick
 import 'slick-carousel/slick/slick';
+import 'unveil2/dist/jquery.unveil2.min';
 //**** //END ******************/
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 

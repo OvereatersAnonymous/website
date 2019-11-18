@@ -61,7 +61,10 @@ export default {
         jQuery('.country[data-toggle="popover"]').popover('hide');
     });
 
-    
+    //add img unveil
+    jQuery('img').unveil();
+    //add unveil to bg images 
+    jQuery('.unveil-bg').unveil();
 
   },
   finalize() {
