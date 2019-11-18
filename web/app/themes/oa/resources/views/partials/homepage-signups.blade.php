@@ -1,4 +1,4 @@
-<div class="container-fluid signups">
+<div class="jumbotron-fluid signups">
 	<div class="container">
     	<div class="row signup">
 	        <div class="col-md-6 signups--form">

@@ -54,6 +54,20 @@
         background-size: 25px;
         padding-left: 50px;
         padding-right: 40px;
+        padding-bottom: 0px;
+        
+        @include media-breakpoint-up(lg) {
+             max-width: 125px;
+        }
+        @include media-breakpoint-up(xl) {
+             max-width: 160px;
+        }
+       
+        span {
+            max-width: 100%;
+            overflow: hidden;
+            display: inline-block;
+        }
     }
     .dropdown-menu {
         @extend .container;
@@ -80,6 +94,7 @@
     }
     &--countries {
         padding-bottom: 0.75rem; /* need this here so the colors connects with dropdown */
+        max-width: 100%;
         &.show {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -499,6 +514,44 @@
 
     }
 }
+
+
+/*country and language selects for overlay nav */
+.country-select-mobile,
+.language-select-mobile {
+    margin-top: 1rem;
+    border-top: 2px solid map-get($supporting-colors, 'lightg');
+    padding-top: 1rem;
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+.country-select-mobile {
+    margin-top: 3rem;
+    .country-select {
+        &--countries {
+            width: 100%;
+        }
+        .dropdown-menu.show {
+            padding-top: 25px;
+        }
+        .country {
+            margin-right: 25px;
+            margin-bottom: 25px;
+            a {
+                background-size: 55px;
+                min-width: 55px;
+                padding-top: 39px;
+            }
+        }
+    }
+   
+}
+.language-select-mobile {
+    
+}
+/* END */
+
 
 .popover {
    z-index: 100001;

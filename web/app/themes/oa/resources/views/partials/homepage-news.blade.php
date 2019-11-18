@@ -1,5 +1,5 @@
 @if ($news_callout)
-    <div class="container-fluid news">
+    <div class="jumbotron-fluid news">
         <div class="container">
             <div class="row newsrow">
                 <div class="col-md-6 newsrow--callout">

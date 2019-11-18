@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs country-select">
     <li class="nav-item dropdown country-select--countries">
-       <a class="nav-link dropdown-toggle country--USA" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{__('USA','sage')}}</a>
+       <a class="nav-link dropdown-toggle country--USA" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span>{{__('USA','sage')}}</span></a>
         <div class="dropdown-menu">
             @if($countries_menu)
                 @foreach($countries_menu as $country)

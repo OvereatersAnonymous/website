@@ -17,7 +17,7 @@
         		<div class="col-md-3">
         			@include('partials.widget-country-select')
         		</div>
-        		<div class="col-md-3">
+        		<div class="col-md-3 goog-lang">
         			@include('partials.widget-language-select')
         		</div>
         		<div class="col-md-6 header-navigation-wrapper">
@@ -70,6 +70,13 @@
               {!! wp_nav_menu(['theme_location' => 'header_navigation', 'menu_class' => 'supporting-nav']) !!}
             @endif
             @include('partials.widget-feature-btn')
+            <div class="country-select-mobile">
+              <h4>{{__('Available in 20+ countries','sage')}}</h4>
+              @include('partials.widget-country-select')
+            </div>
+            <div class="language-select-mobile">
+              <!-- language select moves here in mobile view -->
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 @if($podcast_callout)
-    <div class="container-fluid podcasts">
+    <div class="jumbotron-fluid podcasts">
         <div class="container">
             <div class="row podcast">
                 <div class="col-12">
