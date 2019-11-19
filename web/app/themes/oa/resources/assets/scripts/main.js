@@ -18,6 +18,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import podcasts from './routes/podcasts';
+import faqs from './routes/faqs';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -29,6 +30,8 @@ const routes = new Router({
   aboutUs,
   //Podcasts
   podcasts,
+  //Faqs
+  faqs,
 });
 
 // Load Events
