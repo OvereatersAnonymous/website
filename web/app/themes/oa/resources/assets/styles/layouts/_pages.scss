@@ -1,3 +1,57 @@
+.home {
+	.main {
+  		padding-bottom: 0;
+	}
+	.signups {
+		@extend .section-padding;
+		background-color: map-get($supporting-colors,'steal');
+		&--form {
+			margin-bottom: 2rem;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.podcasts {
+		@extend .section-padding;
+		padding-bottom: 0 !important;
+
+		&--image {
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+	.news {
+		@extend .section-padding;
+		background-color: map-get($supporting-colors,'pear');
+	}
+}
+
+.callout {
+	
+    .h2, .title {
+    	font-size: 2rem;
+		line-height: 2rem;
+    	@include media-breakpoint-up(lg) {
+			font-size: 4rem;
+			line-height: 4rem;
+		}
+		
+	}
+	.title {
+		@include NeutrifStudio_Bold();
+		@include font-size(48);
+		@include media-breakpoint-up(lg) {
+			@include font-size(64);
+		}
+	}
+	.copy {
+		margin: 2rem 0;
+	}
+}
+
 .slick-slider {
 	.slick-track {
 		padding-bottom: 1rem;
@@ -17,22 +71,7 @@
 				@include media-breakpoint-up(lg) {
 					padding: 2rem 0;
 				}
-                .title {
-                	@extend strong;
-                	font-size: 2rem;
-					line-height: 2rem;
-					
-                	@include media-breakpoint-up(lg) {
-						font-size: 4rem;
-						line-height: 4rem;
-					}
-					
-				}
-				.copy {
-					margin: 2rem 0;
-				}
 			}
-			
 		}
 	}
 	.slick-dots{

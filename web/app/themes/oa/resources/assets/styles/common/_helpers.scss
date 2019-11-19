@@ -26,3 +26,10 @@
 	text-indent: 0;
 	position: absolute;
 }
+
+@mixin PortraitText-Medium-Web() {
+  font-family: 'Portrait-Text-Web';
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}

@@ -1,5 +1,5 @@
 <div class="callout">
-    <div class="title">{!! $callout['callout_title'] !!}</div>
+    <h2>{!! $callout['callout_title'] !!}</h2>
     <div class="copy">{!! $callout['callout_copy'] !!}</div>
     @if($callout['button_url'] || $callout['internal_button_link'])
         <div class="button-container">
