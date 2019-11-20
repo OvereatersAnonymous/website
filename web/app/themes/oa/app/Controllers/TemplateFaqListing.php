@@ -16,14 +16,14 @@ class TemplateFaqListing extends Controller
 	 */
 	function __construct()
 	{
-		//Podcast Categories filter
+		//Faq Categories filter
 		$this->faqCategory ='';
 		if( !empty($_REQUEST['faq-category']) ){
 			$this->faqCategory = (int)$_REQUEST['faq-category'];
 		}
 	}
 	/**
-	 * Return podcasts listing
+	 * Return faqs listing
 	 *
 	 * @return mixed
 	 */
@@ -32,7 +32,7 @@ class TemplateFaqListing extends Controller
 
 		if (!empty($this->faqCategory) ){
 			$pParamHash = array(
-				'post_type' => 'faq',
+				'post_type' => 'faqs',
 				'posts_per_page' => -1,
 				'post_status' => 'publish',
 			);
@@ -95,7 +95,7 @@ class TemplateFaqListing extends Controller
 	/**
 	 * Return top categories
 	 *
-	 * @return array
+	 * @return mixed
 	 */
 	public function faqTopCategories() {
 
