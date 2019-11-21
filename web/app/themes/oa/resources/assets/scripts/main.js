@@ -9,6 +9,7 @@ import './autoload/**/*'
 //Import slick
 import 'slick-carousel/slick/slick';
 import 'unveil2/dist/jquery.unveil2.min';
+import 'js.cookie/dst/Cookie.js';
 //**** //END ******************/
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 
@@ -19,6 +20,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import podcasts from './routes/podcasts';
 import faqs from './routes/faqs';
+import quizzes from './routes/quizzes';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -32,6 +34,8 @@ const routes = new Router({
   podcasts,
   //Faqs
   faqs,
+  //Quizzes
+  quizzes,
 });
 
 // Load Events
