@@ -8,8 +8,22 @@ import './autoload/**/*'
 //Added by CLOUDRED */
 //Import slick
 import 'slick-carousel/slick/slick';
+
+//Import unviel
 import 'unveil2/dist/jquery.unveil2.min';
+
+//Import Cookie.js
 import 'js.cookie/dst/Cookie.js';
+
+//Import Font Awesome
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import the regular and solid icons
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+// add the imported icons to the library
+library.add(far, fas);
+// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 //**** //END ******************/
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 
