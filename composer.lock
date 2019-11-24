@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f9c95a1ccf5282a41a619e778102e28",
+    "content-hash": "050cca7678d03cc72312e353a3f1bd24",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -676,15 +676,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.10.2",
+            "version": "0.11.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.10.2"
+                "reference": "tags/0.11.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.11.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -696,15 +696,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "12.5",
+            "version": "12.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/12.5"
+                "reference": "tags/12.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.5.1.zip",
                 "reference": null,
                 "shasum": null
             },
