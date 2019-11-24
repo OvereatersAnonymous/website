@@ -16,21 +16,15 @@
                 @endif
             </div>
         </div>
-        @dump($question)
         @if(!empty($question['resources_repeater']))
         <div class="quizzes--quiz--resources">
-        <div class="card">
-            <div class="card-body">
-                @foreach ($question['resources_repeater'] as $resource)
-                    <div class="quizzes--quiz--resource">
-                        @dump($resource)
-                        {!! $resource['icon'] !!}
-                        <div class="quizzes--quiz--resource--link"><a href="{!! $resource['link']['url'] !!}" target="{!! $resource['link']['target'] !!}">{!! $resource['link']['title'] !!}</a></div>
-                        <div class="quizzes--quiz--resource--type">{!! $resource['type'] !!}</div>
-                    </div>
-                @endforeach
+            <div class="card">
+                <div class="card-body">
+                    @foreach ($question['resources_repeater'] as $resource)
+                        @include('partials.content-resource',['resource'=>$resource])
+                    @endforeach
+                </div>
             </div>
-        </div>
         </div>
         @endif
     </div>
