@@ -567,6 +567,99 @@ class App extends Controller
 		return $pages;
 	}
 	/**
+	 * Build parent/child nav menu hash of current page
+	 *
+	 * @return mixed
+	 */
+	public function menusNav(){
+		$pagesHash = array();
+		$pagesHash['pages'] = App::get_ancestor_tree(get_the_ID());
+		if(!empty($pagesHash['pages'])){
+			// Set up variables for the menu template
+			// Get ancestors of current page
+			$ancestors = get_post_ancestors(get_the_ID());
+			if(!empty($ancestors)){
+				if(count($ancestors) ==1){
+					// This is a direct child of the top most page on menu tree
+					$pagesHash['top_parent'] = array_pop($ancestors);
+					$pagesHash['active'] = get_the_ID();
+				}else{
+					// This is a child of one of the children of the top most page on menu tree.
+					// Only direct child of parent have an active state
+					$pagesHash['top_parent'] = array_pop($ancestors);
+					// Only direct child of parent have an active state
+					$pagesHash['active'] = array_pop($ancestors);
+				}
+			}else{
+				// This is the top most page on menu tree
+				$pagesHash['top_parent'] = get_the_ID();
+				$pagesHash['active'] = get_the_ID();
+			}
+			return $pagesHash;
+		}
+		return false;
+	}
+	/**
+	 * Recursive function to build out tree
+	 *
+	 * @param int $post_id
+	 * @param int $top_parent
+	 * @return mixed
+	 */
+	private static function get_ancestor_tree($post_id, $top_parent=0) {
+		// Check if this is a page.
+		if ( ! is_page() ) {
+			return false;
+		}
+		// If top parent is not set, let's fetch it
+		if(empty($top_parent)) {
+			$parent = App::get_post_top_parent($post_id);
+		}else{
+			$parent = $post_id;
+		}
+
+		// Get all pages that are a direct children of current parent
+		$pages = get_pages( [
+			'child_of' => $parent,
+			'parent' => $parent,
+		] );
+
+		// Return empty if no children
+		if ( ! $pages ) {
+			return array();
+		}
+
+		// Loop through children and use recursion by self calling this function if the child has it's own children
+		$page_ids = array();
+		foreach ( $pages as $page ) {
+			$page_ids[$page->ID] = array();
+			if(App::is_ancestor( $page->ID )){
+				$page_ids[$page->ID] = App::get_ancestor_tree($page->ID,$parent);
+			}
+		}
+		return $page_ids;
+	}
+	/**
+	 * Get post's highest top parent post id
+	 *
+	 * @param int $post_id
+	 * @return int
+	 */
+	public static function get_post_top_parent($post_id) {
+		/**
+		 * Get array of post ancestor IDs.
+		 * Note: The direct parent is returned as the first value in the array.
+		 * The highest level ancestor is returned as the last value in the array.
+		 * See https://codex.wordpress.org/Function_Reference/get_post_ancestors
+		 */
+		$ancestors = get_post_ancestors($post_id);
+
+		// If there are ancestors, get the top level parent.
+		// Otherwise use the current post's ID.
+		$parent = (!empty($ancestors)) ? array_pop($ancestors) : $post_id;
+		return $parent;
+	}
+	/**
 	 * Format pagination as numbered links
 	 *
 	 * @return string
@@ -621,7 +714,6 @@ class App extends Controller
 		$twitter = get_field('twitter_handle', 'option');
 		$instagram = get_field('instagram_handle', 'option');
 		$youtube = get_field('youtube_link', 'option');
-		$young_friends = get_field('young_friends', 'option');
 
 		if ($facebook) {
 			$social .='<a href="'.$facebook.'" target="_blank" onclick="return trackOutboundLink(\''.$facebook.'\', true)"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
@@ -634,9 +726,6 @@ class App extends Controller
 		}
 		if ($youtube) {
 			$social .='<a href="'.$youtube.'" target="_blank" onclick="return trackOutboundLink(\''.$youtube.'\', true)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>';
-		}
-		if ($young_friends) {
-			$social .='<a href="'.$young_friends.'" target="_blank" onclick="return trackOutboundLink(\''.$young_friends.'\', true)" class="yf"><img src="'.get_stylesheet_directory_uri().'/dist/images/young-friends.png" alt="'.__("Young Friends","sage").'"></a>';
 		}
 
 		return $social;
@@ -698,5 +787,33 @@ class App extends Controller
 			wp_redirect( home_url() );
 			exit;
 		}
+	}
+	/**
+	 * Get countries menu from acf options page
+	 *
+	 * @return array
+	 */
+	public function countriesMenu(){
+		$countries = App::get_repeater_field('countries_menu_repeater','option');
+		if($countries) {
+			ksort($countries);
+			return $countries;
+		} else {
+			return false;
+		}
+	}
+	/**
+	 * Return post categories
+	 *
+	 * @param string $post_type
+	 * @return array
+	 */
+	public static function getPostCategories($post_type) {
+		return get_terms( array(
+			'taxonomy' => $post_type,
+			'hide_empty' => true,
+			'orderby'    => 'name',
+			'order'      => 'ASC',
+		) );
 	}
 }

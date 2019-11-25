@@ -1,1 +1,5 @@
-Language select
+{{-- Google translate eternal javascript source is included ins footer via wp_enqueue_scripts in app/setup file --}}
+<div id="google_translate_element2"></div>
+<script type="text/javascript">
+function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+</script>

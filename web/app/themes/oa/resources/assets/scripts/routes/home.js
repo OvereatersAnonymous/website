@@ -1,14 +1,19 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
+    
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    
     jQuery('.hero-slider').slick({
       dots:true,
       speed: 300,
-      adaptiveHeight: true,
-      autoplaySpeed:5000,
+      fade: true,
+      arrows: false,
+      cssEase: 'linear',
+      adaptiveHeight: false,
+      autoplaySpeed:10000,
       autoplay: true,
       pauseOnHover: true,
       responsive: [

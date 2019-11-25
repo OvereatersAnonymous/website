@@ -8,6 +8,22 @@ import './autoload/**/*'
 //Added by CLOUDRED */
 //Import slick
 import 'slick-carousel/slick/slick';
+
+//Import unviel
+import 'unveil2/dist/jquery.unveil2.min';
+
+//Import Cookie.js
+import 'js.cookie/dst/Cookie.js';
+
+//Import Font Awesome
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import the regular and solid icons
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+// add the imported icons to the library
+library.add(far, fas);
+// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 //**** //END ******************/
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 
@@ -16,6 +32,9 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import podcasts from './routes/podcasts';
+import faqs from './routes/faqs';
+import quizzes from './routes/quizzes';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -25,6 +44,12 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  //Podcasts
+  podcasts,
+  //Faqs
+  faqs,
+  //Quizzes
+  quizzes,
 });
 
 // Load Events

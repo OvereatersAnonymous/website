@@ -28,6 +28,16 @@ class FrontPage extends Controller
 		return $this->getCallout('signup');
 	}
 
+
+	/**
+	 * Get Custom Callout
+	 *
+	 * @return array
+	 */
+	public function customCallout(){
+		return $this->getCallout('custom');
+	}
+
 	/**
 	 * Get Podcast Callout
 	 *
@@ -39,6 +49,8 @@ class FrontPage extends Controller
 		$podcast_home_image = App::get_field('podcast_home_image');
 		if($podcast_home_image) {
 			$podcastHash['podcast_home_image'] = App::get_field('podcast_home_image');
+		}
+		if($podcastHash) {
 			return $podcastHash;
 		}else {
 			return false;

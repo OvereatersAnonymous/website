@@ -1,0 +1,101 @@
+.home {
+	.main {
+  		padding-bottom: 0;
+	}
+	.signups {
+		@extend .section-padding;
+		background-color: map-get($supporting-colors,'steal');
+		&--form {
+			margin-bottom: 2rem;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.podcasts {
+		@extend .section-padding;
+		padding-bottom: 0 !important;
+
+		&--image {
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+	.news {
+		@extend .section-padding;
+		background-color: map-get($supporting-colors,'pear');
+	}
+}
+
+.callout {
+	
+    .h2, .title {
+    	font-size: 2rem;
+		line-height: 2rem;
+    	@include media-breakpoint-up(lg) {
+			font-size: 4rem;
+			line-height: 4rem;
+		}
+		
+	}
+	.title {
+		@include NeutrifStudio_Bold();
+		@include font-size(48);
+		@include media-breakpoint-up(lg) {
+			@include font-size(64);
+		}
+	}
+	.copy {
+		margin: 2rem 0;
+	}
+}
+
+.slick-slider {
+	.slick-track {
+		padding-bottom: 1rem;
+
+		.slick-slide {
+
+			.hero {
+				
+			}
+			.slide-wrapper {
+				background-repeat: no-repeat;
+				background-position: 80%;
+				background-size: contain;
+			}
+			.callout {
+				padding: 4rem 0;
+				@include media-breakpoint-up(lg) {
+					padding: 2rem 0;
+				}
+			}
+		}
+	}
+	.slick-dots{
+		@extend .inline-list;
+		text-align: center;
+		li {
+			vertical-align: top;
+			button {
+				text-indent: -99999px;
+				overflow: hidden;
+				border-radius: 50%;
+				padding: 0;
+				border:2px solid map-get($supporting-colors, 'smoke');
+				height: 20px;
+				width: 20px;
+				background-color: white;
+			}
+			&.slick-active {
+				button {
+					border:6px solid white;
+					background-color: map-get($supporting-colors, 'smoke');
+				}
+			}
+		}
+	}
+	
+}

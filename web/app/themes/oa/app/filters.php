@@ -137,8 +137,8 @@ add_filter( 'body_class', 'App\\bs4_remove_tag_body_class' );
 //See the setup.php for the actual setting of these sizes
 function oa_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'square@2x' => __( 'Large square' ),
-        'square@1x' => __( 'Medium square' )
+        'thumbnail@2x' => __( 'Thumbnail@2x' ),
+        'thumbnail@3x' => __( 'Thumbnail@3x' )
     ) );
 }
 add_filter( 'image_size_names_choose', 'App\\oa_custom_sizes' );

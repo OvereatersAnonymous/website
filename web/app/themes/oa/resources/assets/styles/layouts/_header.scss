@@ -41,19 +41,539 @@
     top: 31px;
 }
 
+
+.country-select {
+    border-bottom: none;
+
+    .dropdown-toggle {
+        @extend .select-field;
+        @extend .select-field--small;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 25px;
+        padding-left: 50px;
+        padding-right: 40px;
+        padding-bottom: 0px;
+        
+        @include media-breakpoint-up(lg) {
+             max-width: 125px;
+        }
+        @include media-breakpoint-up(xl) {
+             max-width: 160px;
+        }
+       
+        span {
+            max-width: 100%;
+            overflow: hidden;
+            display: inline-block;
+        }
+    }
+    .dropdown-menu {
+        @extend .container;
+        @include media-breakpoint-up(md) {
+            width: 720px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 960px;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 1140px;
+        }
+      
+        z-index: 100000;
+        background-color: map-get($supporting-colors, 'lightg');
+        &.show {
+            display: flex;
+            flex-wrap: wrap;
+            top:12px !important;
+            padding-top: 50px;
+
+            border-color: map-get($supporting-colors, 'lightg') !important;
+        }
+    }
+    &--countries {
+        padding-bottom: 0.75rem; /* need this here so the colors connects with dropdown */
+        max-width: 100%;
+        &.show {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: map-get($supporting-colors, 'lightg') !important;
+            border-color: map-get($supporting-colors, 'lightg') !important;
+            
+            .dropdown-toggle {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                background-color: map-get($supporting-colors, 'lightg') !important;
+                border-color: map-get($supporting-colors, 'lightg') !important;
+            }
+        }
+    }
+    &--statement {
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: list-item;
+        }
+        @include font-size(12);
+        line-height: normal;
+        padding: 0.4rem 0 0 0.5rem;
+        color: map-get($theme-colors, 'navyblack');
+    }
+    .country {
+        margin-right: 50px;
+        margin-bottom: 50px;
+        a {
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: 85px;
+            min-width: 85px;
+            display: block;
+            padding-top: 54px;
+            text-align: center;
+        }
+        &--AFG {
+            background-image: url('#{$image-path}/flags/AFG.svg');     
+        }
+        &--ALB {
+            background-image: url('#{$image-path}/flags/ALB.svg');  
+        }
+        &--AND {
+            background-image: url('#{$image-path}/flags/AND.svg');  
+        }
+        &--ARE {
+            background-image: url('#{$image-path}/flags/ARE.svg');  
+        }
+        &--ARG {
+            background-image: url('#{$image-path}/flags/ARG.svg');  
+        }
+        &--ARM {
+            background-image: url('#{$image-path}/flags/ARM.svg');  
+        }
+        &--ATG {
+            background-image: url('#{$image-path}/flags/ATG.svg');  
+        }
+        &--AUS {
+            background-image: url('#{$image-path}/flags/AUS.svg');  
+        }
+        &--AUT {
+            background-image: url('#{$image-path}/flags/AUT.svg');  
+        }
+        &--AZE {
+            background-image: url('#{$image-path}/flags/AZE.svg');  
+        }
+        &--BEL {
+            background-image: url('#{$image-path}/flags/BEL.svg');  
+        }
+        &--BEN {
+            background-image: url('#{$image-path}/flags/BEN.svg');  
+        }
+        &--BGD {
+            background-image: url('#{$image-path}/flags/BGD.svg');  
+        }
+        &--BGR {
+            background-image: url('#{$image-path}/flags/BGR.svg');  
+        }
+        &--BHS {
+            background-image: url('#{$image-path}/flags/BHS.svg');  
+        }
+        &--BIH {
+            background-image: url('#{$image-path}/flags/BIH.svg');  
+        }
+        &--BRA {
+            background-image: url('#{$image-path}/flags/BRA.svg');  
+        }
+        &--BRN {
+            background-image: url('#{$image-path}/flags/BRN.svg');  
+        }
+        &--BTN {
+            background-image: url('#{$image-path}/flags/BTN.svg');  
+        }
+        &--BWA {
+            background-image: url('#{$image-path}/flags/BWA.svg');  
+        }
+        &--CAF {
+            background-image: url('#{$image-path}/flags/CAF.svg');  
+        }
+        &--CAN {
+            background-image: url('#{$image-path}/flags/CAN.svg');  
+        }
+        &--CHE {
+            background-image: url('#{$image-path}/flags/CHE.svg');  
+        }
+        &--CHL {
+            background-image: url('#{$image-path}/flags/CHL.svg');  
+        }
+        &--CHN {
+            background-image: url('#{$image-path}/flags/CHN.svg');  
+        }
+        &--CIV {
+            background-image: url('#{$image-path}/flags/CIV.svg');  
+        }
+        &--COG {
+            background-image: url('#{$image-path}/flags/COG.svg');  
+        }
+        &--COL {
+            background-image: url('#{$image-path}/flags/COL.svg');  
+        }
+        &--CRI {
+            background-image: url('#{$image-path}/flags/CRI.svg');  
+        }
+        &--CYP {
+            background-image: url('#{$image-path}/flags/CYP.svg');  
+        }
+        &--CZE {
+            background-image: url('#{$image-path}/flags/CZE.svg');  
+        }
+        &--DEU {
+            background-image: url('#{$image-path}/flags/DEU.svg');  
+        }
+        &--DJI {
+            background-image: url('#{$image-path}/flags/DJI.svg');  
+        }
+        &--DNK {
+            background-image: url('#{$image-path}/flags/DNK.svg');  
+        }
+        &--DZA {
+            background-image: url('#{$image-path}/flags/DZA.svg');  
+        }
+        &--ECU {
+            background-image: url('#{$image-path}/flags/ECU.svg');  
+        }
+        &--EGY {
+            background-image: url('#{$image-path}/flags/EGY.svg');  
+        }
+        &--ESP {
+            background-image: url('#{$image-path}/flags/ESP.svg');  
+        }
+        &--EST {
+            background-image: url('#{$image-path}/flags/EST.svg');  
+        }
+        &--FIN {
+            background-image: url('#{$image-path}/flags/FIN.svg');  
+        }
+        &--FRA {
+            background-image: url('#{$image-path}/flags/FRA.svg');  
+        }
+        &--GBR {
+            background-image: url('#{$image-path}/flags/GBR.svg');  
+        }
+        &--GEO {
+            background-image: url('#{$image-path}/flags/GEO.svg');  
+        }
+        &--GHA {
+            background-image: url('#{$image-path}/flags/GHA.svg');  
+        }
+        &--GRC {
+            background-image: url('#{$image-path}/flags/GRC.svg');  
+        }
+        &--GRD {
+            background-image: url('#{$image-path}/flags/GRD.svg');  
+        }
+        &--GTM {
+            background-image: url('#{$image-path}/flags/GTM.svg');  
+        }
+        &--GUY {
+            background-image: url('#{$image-path}/flags/GUY.svg');  
+        }
+        &--HRV {
+            background-image: url('#{$image-path}/flags/HRV.svg');  
+        }
+        &--HTI {
+            background-image: url('#{$image-path}/flags/HTI.svg');  
+        }
+        &--HUN {
+            background-image: url('#{$image-path}/flags/HUN.svg');  
+        }
+        &--IDN {
+            background-image: url('#{$image-path}/flags/IDN.svg');  
+        }
+        &--IRL {
+            background-image: url('#{$image-path}/flags/IRL.svg');  
+        }
+        &--IRQ {
+            background-image: url('#{$image-path}/flags/IRQ.svg');  
+        }
+        &--ISL {
+            background-image: url('#{$image-path}/flags/ISL.svg');  
+        }
+        &--ISR {
+            background-image: url('#{$image-path}/flags/ISR.svg');  
+        }
+        &--ITA {
+            background-image: url('#{$image-path}/flags/ITA.svg');  
+        }
+        &--JAM {
+            background-image: url('#{$image-path}/flags/JAM.svg');  
+        }
+        &--JPN {
+            background-image: url('#{$image-path}/flags/JPN.svg');  
+        }
+        &--KAZ {
+            background-image: url('#{$image-path}/flags/KAZ.svg');  
+        }
+        &--KEN {
+            background-image: url('#{$image-path}/flags/KEN.svg');  
+        }
+        &--KOR {
+            background-image: url('#{$image-path}/flags/KOR.svg');  
+        }
+        &--KWT {
+            background-image: url('#{$image-path}/flags/KWT.svg');  
+        }
+        &--LAO {
+            background-image: url('#{$image-path}/flags/LAO.svg');  
+        }
+        &--LBN {
+            background-image: url('#{$image-path}/flags/LBN.svg');  
+        }
+        &--LCA {
+            background-image: url('#{$image-path}/flags/LCA.svg');  
+        }
+        &--LIE {
+            background-image: url('#{$image-path}/flags/LIE.svg');  
+        }
+        &--LKA {
+            background-image: url('#{$image-path}/flags/LKA.svg');  
+        }
+        &--LTU {
+            background-image: url('#{$image-path}/flags/LTU.svg');  
+        }
+        &--LUX {
+            background-image: url('#{$image-path}/flags/LUX.svg');  
+        }
+        &--LVA {
+            background-image: url('#{$image-path}/flags/LVA.svg');  
+        }
+        &--MAR {
+            background-image: url('#{$image-path}/flags/MAR.svg');  
+        }
+        &--MCO {
+            background-image: url('#{$image-path}/flags/MCO.svg');  
+        }
+        &--MDA {
+            background-image: url('#{$image-path}/flags/MDA.svg');  
+        }
+        &--MDG {
+            background-image: url('#{$image-path}/flags/MDG.svg');  
+        }
+        &--MDV {
+            background-image: url('#{$image-path}/flags/MDV.svg');  
+        }
+        &--MEX {
+            background-image: url('#{$image-path}/flags/MEX.svg');  
+        }
+        &--MLI {
+            background-image: url('#{$image-path}/flags/MLI.svg');  
+        }
+        &--MLT {
+            background-image: url('#{$image-path}/flags/MLT.svg');  
+        }
+        &--MMR {
+            background-image: url('#{$image-path}/flags/MMR.svg');  
+        }
+        &--MNE {
+            background-image: url('#{$image-path}/flags/MNE.svg');  
+        }
+        &--MNG {
+            background-image: url('#{$image-path}/flags/MNG.svg');  
+        }
+        &--MOZ {
+            background-image: url('#{$image-path}/flags/MOZ.svg');  
+        }
+        &--MYS {
+            background-image: url('#{$image-path}/flags/MYS.svg');  
+        }
+        &--NAM {
+            background-image: url('#{$image-path}/flags/NAM.svg');  
+        }
+        &--NGA {
+            background-image: url('#{$image-path}/flags/NGA.svg');  
+        }
+        &--NLD {
+            background-image: url('#{$image-path}/flags/NLD.svg');  
+        }
+        &--NOR {
+            background-image: url('#{$image-path}/flags/NOR.svg');  
+        }
+        &--NZL {
+            background-image: url('#{$image-path}/flags/NZL.svg');  
+        }
+        &--OMN {
+            background-image: url('#{$image-path}/flags/OMN.svg');  
+        }
+        &--PAK {
+            background-image: url('#{$image-path}/flags/PAK.svg');  
+        }
+        &--PAN {
+            background-image: url('#{$image-path}/flags/PAN.svg');  
+        }
+        &--PER {
+            background-image: url('#{$image-path}/flags/PER.svg');  
+        }
+        &--PHL {
+            background-image: url('#{$image-path}/flags/PHL.svg');  
+        }
+        &--POL {
+            background-image: url('#{$image-path}/flags/POL.svg');  
+        }
+        &--PRT {
+            background-image: url('#{$image-path}/flags/PRT.svg');  
+        }
+        &--PRY {
+            background-image: url('#{$image-path}/flags/PRY.svg');  
+        }
+        &--QAT {
+            background-image: url('#{$image-path}/flags/QAT.svg');  
+        }
+        &--ROU {
+            background-image: url('#{$image-path}/flags/ROU.svg');  
+        }
+        &--RUS {
+            background-image: url('#{$image-path}/flags/RUS.svg');  
+        }
+        &--SAU {
+            background-image: url('#{$image-path}/flags/SAU.svg');  
+        }
+        &--SGP {
+            background-image: url('#{$image-path}/flags/SGP.svg');  
+        }
+        &--SLV {
+            background-image: url('#{$image-path}/flags/SLV.svg');  
+        }
+        &--SMR {
+            background-image: url('#{$image-path}/flags/SMR.svg');  
+        }
+        &--SRB {
+            background-image: url('#{$image-path}/flags/SRB.svg');  
+        }
+        &--SVK {
+            background-image: url('#{$image-path}/flags/SVK.svg');  
+        }
+        &--SVN {
+            background-image: url('#{$image-path}/flags/SVN.svg');  
+        }
+        &--SWE {
+            background-image: url('#{$image-path}/flags/SWE.svg');  
+        }
+        &--SYR {
+            background-image: url('#{$image-path}/flags/SYR.svg');  
+        }
+        &--THA {
+            background-image: url('#{$image-path}/flags/THA.svg');  
+        }
+        &--TJK {
+            background-image: url('#{$image-path}/flags/TJK.svg');  
+        }
+        &--TLS {
+            background-image: url('#{$image-path}/flags/TLS.svg');  
+        }
+        &--TTO {
+            background-image: url('#{$image-path}/flags/TTO.svg');  
+        }
+        &--TUN {
+            background-image: url('#{$image-path}/flags/TUN.svg');  
+        }
+        &--TUR {
+            background-image: url('#{$image-path}/flags/TUR.svg');  
+        }
+        &--TUV {
+            background-image: url('#{$image-path}/flags/TUV.svg');  
+        }
+        &--UAE {
+            background-image: url('#{$image-path}/flags/UAE.svg');  
+        }
+        &--UKR {
+            background-image: url('#{$image-path}/flags/UKR.svg');  
+        }
+        &--UNF {
+            background-image: url('#{$image-path}/flags/UNF.svg');  
+        }
+        &--URY {
+            background-image: url('#{$image-path}/flags/URY.svg');  
+        }
+        &--USA {
+            background-image: url('#{$image-path}/flags/USA.svg');  
+        }
+        &--VAT {
+            background-image: url('#{$image-path}/flags/VAT.svg');  
+        }
+        &--VEN {
+            background-image: url('#{$image-path}/flags/VEN.svg');  
+        }
+        &--VNM {
+            background-image: url('#{$image-path}/flags/VNM.svg');  
+        }
+        &--WSM {
+            background-image: url('#{$image-path}/flags/WSM.svg');  
+        }
+        &--ZAF {
+            background-image: url('#{$image-path}/flags/ZAF.svg');  
+        }     
+
+    }
+}
+
+
+/*country and language selects for overlay nav */
+.country-select-mobile,
+.language-select-mobile {
+    margin-top: 1rem;
+    border-top: 2px solid map-get($supporting-colors, 'lightg');
+    padding-top: 1rem;
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+.country-select-mobile {
+    margin-top: 3rem;
+    .country-select {
+        &--countries {
+            width: 100%;
+        }
+        .dropdown-menu.show {
+            padding-top: 25px;
+        }
+        .country {
+            margin-right: 25px;
+            margin-bottom: 25px;
+            a {
+                background-size: 55px;
+                min-width: 55px;
+                padding-top: 39px;
+            }
+        }
+    }
+   
+}
+.language-select-mobile {
+    
+}
+/* END */
+
+
+.popover {
+   z-index: 100001;
+}
 .banner {
 
     .hat {
-        padding-top: 1rem;
+        padding-top: 0.5rem;
         border-bottom: 1px solid map-get($supporting-colors, 'lightg');
         @include font-size(14);
         /*header nav*/
         .menu-header-navigation-container {
             text-align: right;
             padding-right: 45px;
+            display: none;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
             .menu {
+                padding-top: 0.5rem;
+                margin-bottom: 0;
                 @extend .inline-list;
-                margin-bottom: 1rem;
                 li {
                     padding: 0 0 0 1rem;
                 }
@@ -75,7 +595,7 @@
                 &--btn {
                     position: absolute;
                     padding-right: 25px;
-
+                    top: 8px;
                     right: 15px;
                     z-index: 988;
                     &:before {

@@ -1,20 +1,20 @@
 @mixin NeutrifStudio_Bold() { 
-	font-family: NeutrifStudio-Bold;
+	font-family: NeutrifStudio-Bold, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
 @mixin NeutrifStudio_BoldItalic() { 
-	font-family: NeutrifStudio-BoldItalic;
+	font-family: NeutrifStudio-BoldItalic, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
 @mixin NeutrifStudio_Regular() { 
-	font-family: NeutrifStudio-Regular;
+	font-family: NeutrifStudio-Regular, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
 @mixin NeutrifStudio_RegularItalic() { 
-	font-family: NeutrifStudio-RegularItalic;
+	font-family: NeutrifStudio-RegularItalic, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,4 +25,11 @@
 	-moz-osx-font-smoothing: grayscale;
 	text-indent: 0;
 	position: absolute;
+}
+
+@mixin PortraitText-Medium-Web() {
+  font-family: 'Portrait-Text-Web';
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
 }
