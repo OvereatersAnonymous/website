@@ -12,13 +12,7 @@ module.exports = {
       optipng: { optimizationLevel: 2 },
       gifsicle: { optimizationLevel: 3 },
       pngquant: { quality: '65-90', speed: 4 },
-      svgo: {
-        plugins: [
-          { removeUnknownsAndDefaults: false },
-          { cleanupIDs: false },
-          { removeViewBox: false },
-        ],
-      },
+      svgo: null,
       plugins: [imageminMozjpeg({ quality: 75 })],
       disable: (config.enabled.watcher),
     }),
