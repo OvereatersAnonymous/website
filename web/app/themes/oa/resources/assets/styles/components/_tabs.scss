@@ -1,0 +1,24 @@
+.oa-tabs {
+	margin-top:3rem;
+	.nav-tabs {
+		border-bottom:none;
+		.nav-item {
+			margin-right: 5px;
+			.nav-link.active, .nav-item.show, .nav-link {
+				background-color: map-get($supporting-colors, 'lightg');
+				border-color: map-get($supporting-colors, 'lightg');
+				color: map-get($theme-colors, 'base');
+				@extend strong;
+				opacity: 0.4;
+
+				&:hover {
+					background-color: map-get($supporting-colors, 'smoke');
+					border-color: map-get($supporting-colors, 'smoke');
+				}
+			}
+			.nav-link.active, .nav-item.show {
+				opacity:1;
+			}
+		}
+	}
+}

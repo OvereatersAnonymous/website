@@ -20,6 +20,9 @@ body {
   }
   padding-bottom: 3rem;
 }
+.main-wrapper {
+  background-color: map-get($supporting-colors, 'lightg');
+}
 
 
 p, ol, ul, dl {
