@@ -4,6 +4,8 @@ if (post_password_required()) {
 }
 @endphp
 
+{{--
+<!-- comments disabled 
 <section id="comments" class="comments">
   @if (have_comments())
     <h2>
@@ -36,3 +38,5 @@ if (post_password_required()) {
 
   @php comment_form() @endphp
 </section>
+-->
+--}}
