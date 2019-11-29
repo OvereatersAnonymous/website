@@ -14,8 +14,9 @@
 	}
 	.podcasts {
 		@extend .section-padding;
-		padding-bottom: 0 !important;
-
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0;
+		}
 		&--image {
 			display: none;
 			@include media-breakpoint-up(md) {
@@ -26,6 +27,14 @@
 	.news {
 		@extend .section-padding;
 		background-color: map-get($supporting-colors,'pear');
+		.newsrow {
+			&--callout {
+				padding-bottom: 2rem;
+				@include media-breakpoint-up(md) {
+					padding-bottom: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -98,4 +107,22 @@
 		}
 	}
 	
+}
+
+.pagination {
+	nav {
+		p > * {
+			display: inline-block;
+			padding:5px;
+			margin-right: .5rem;
+			@extend strong;
+			color: map-get($theme-colors, 'base');
+
+		}
+		.current {
+			color: white;
+			@extend .btn;
+			@extend .smoky;
+		}
+	}
 }
