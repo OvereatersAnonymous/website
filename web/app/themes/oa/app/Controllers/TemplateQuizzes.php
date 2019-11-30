@@ -74,6 +74,8 @@ class TemplateQuizzes extends Controller
 		switch($request) {
 			//Get the quiz results ajax call
 			case 'quizResult':
+				// Check the referrer for the ajax call (setup.php creates nonce)
+				check_ajax_referer( 'oa_ajax_nonce', 'oa_quiz_result_nonce' );
 				$pParamHash['content_quiz_result'] ='';
 				$pid = (int)$_REQUEST['pid'];
 				$quizScore = (int)$_REQUEST['quizScore'];
@@ -112,6 +114,8 @@ class TemplateQuizzes extends Controller
 			break;
 			//Get the next quiz ajax call
 			case 'loadNextQuiz':
+				// Check the referrer for the ajax call (setup.php creates nonce)
+				check_ajax_referer( 'oa_ajax_nonce', 'oa_load_next_quiz_nonce' );
 				//Get the next quiz
 				$nextQuiz = TemplateQuizzes::quizzesList($oa_quiz_page);
 				if (!empty($nextQuiz[0])) {

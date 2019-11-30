@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', function () {
 
 	$ajax_params = array(
 		'ajax_url' => admin_url('admin-ajax.php'),
-		'ajax_nonce' => wp_create_nonce('my_nonce'),
+		'ajax_nonce' => wp_create_nonce('oa_ajax_nonce'),
 	);
 
 	wp_localize_script('sage/main.js', 'ajax_object', $ajax_params);
