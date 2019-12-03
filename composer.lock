@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ebdfb239e47f73fc6a96b6562003824",
+    "content-hash": "a05b63c61a920a95535803b4c159f0d7",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -695,6 +695,24 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/f4-media-taxonomies",
+            "version": "1.0.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/f4-media-taxonomies/",
+                "reference": "tags/1.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/f4-media-taxonomies/"
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
