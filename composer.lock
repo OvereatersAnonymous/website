@@ -1,19 +1,17 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "050cca7678d03cc72312e353a3f1bd24",
+    "content-hash": "4ebdfb239e47f73fc6a96b6562003824",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.7",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7",
-                "reference": null,
-                "shasum": null
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -267,6 +265,31 @@
             "time": "2019-11-24T06:28:16+00:00"
         },
         {
+            "name": "overeatersanonymous/posts-table-pro",
+            "version": "2.1.4",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:OvereatersAnonymous/posts-table-pro.git",
+                "reference": "fcd06218b5bffc0d77d4608e6400200ea47be371"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "andykeith, barn2media",
+                    "homepage": "https://barn2.co.uk/wordpress-plugins/posts-table-pro"
+                }
+            ],
+            "homepage": "https://github.com/OvereatersAnonymous/posts-table-pro.git",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-11-29T19:45:18+00:00"
+        },
+        {
             "name": "overeatersanonymous/wpmeetings",
             "version": "1.4.0",
             "source": {
@@ -377,8 +400,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3",
-                "reference": "5.3",
-                "shasum": null
+                "reference": "5.3"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -684,9 +706,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.11.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.11.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -704,9 +724,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.6.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.6.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -724,9 +742,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.1.zip",
-                "reference": "tags/1.7.1",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
