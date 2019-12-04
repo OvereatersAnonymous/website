@@ -1,21 +1,24 @@
 <article @php post_class() @endphp>
-  <header> <h1 class="entry-title">{!! get_the_title() !!} PPP</h1></header>
+  <div class="back-btn">
+    <i class="fas fa-chevron-left"></i> &nbsp; <a href="/podcasts?podcast-category={!! APP::get_uri_param('podcast-category') !!}&page={!! APP::get_uri_param('page') !!}&podcast-order={!! APP::get_uri_param('podcast-order') !!}">{!! _e('All podcasts','sage'); !!}</a>
+  </div>
+  <header> <h1 class="entry-title">{!! get_the_title() !!}</h1></header>
   {{--@include('partials/entry-meta')--}}
   @include('partials/content-share')
   @include('partials.content-featured-image')
 <div class="entry-content">
   @php the_content() @endphp
 </div>
-  <div class="entry-content__links">
-    <a href="{!! get_field("podcast_google_link"); !!}" alt="" class="entry-content__podcast_link__google">
-      <span>Google</span>
-    </a>
-    <a href="{!! get_field("podcast_itunes_link"); !!}" alt="" class="entry-content__podcast_link__itunes">
-      <span>Itunes</span>
-    </a>
+  <div class="entry-content--links">
+      @if(get_field("podcast_google_link"))
+      <a href="{!! get_field('podcast_google_link'); !!}" class="google">
+        <img src="@asset('images/en_badge_google.png')" alt="{!! _e('Get it on Google play','sage'); !!}">
+      </a>
+    @endif
+    @if(get_field("podcast_itunes_link"))
+      <a href="{!! get_field('podcast_itunes_link'); !!}" class="itunes">
+        <img src="@asset('images/en_badge_itunes.png')" alt="{!! _e('Listen on Apple Podcasts','sage'); !!}">
+      </a>
+    @endif
   </div>
-<footer>
-{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-</footer>
-@php comments_template('/partials/comments.blade.php') @endphp
 </article>

@@ -29,13 +29,13 @@ p, ol, ul, dl {
     margin-bottom: 1.7em;
 }
 
-h1,
 h3,
 h4 {
     @include NeutrifStudio_Bold();
 }
 
 h1 {
+  @include PortraitText-Medium-Web();
   @include font-size(36);
   @include media-breakpoint-up(sm) {
     @include font-size(40);
