@@ -30,3 +30,20 @@ function oa_add_rewrite_rules_news($aRules) {
 	return $aRules;
 }
 add_filter('rewrite_rules_array', 'App\\oa_add_rewrite_rules_news');
+
+/**
+ * Add redirect of search to custom url for the google results
+ *
+ * @hook template_redirect
+ */
+function oa_google_search_results_url_rewrite() {
+	if ( is_search() && ! empty( $_GET['s'] ) ) {
+		$post_id = get_field('google_search_results_page','option');
+		if(!empty($post_id)){
+			$path = get_permalink($post_id);
+		}
+		wp_redirect( $path."?q=". urlencode( get_query_var( 's' ) ) );
+		exit();
+	}
+}
+add_action( 'template_redirect', 'App\\oa_google_search_results_url_rewrite' );
