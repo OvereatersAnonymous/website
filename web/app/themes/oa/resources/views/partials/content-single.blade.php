@@ -5,7 +5,7 @@
 <div class="entry-content">
   @php the_content() @endphp
 </div>
-<div class="pagination">
+<div class="post-pagination">
 	{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('', 'sage'), 'after' => '</p></nav>']) !!}
 </div>
 @php comments_template('/partials/comments.blade.php') @endphp
