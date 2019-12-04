@@ -20,8 +20,9 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the regular and solid icons
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 // add the imported icons to the library
-library.add(far, fas);
+library.add(far, fas, fab);
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();
 //**** //END ******************/

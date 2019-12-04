@@ -41,3 +41,18 @@
 		box-shadow: 0 3px map-get($button-colors, 'navyblack-highlight');
 	}
 }
+
+.share {
+	margin-bottom: 3rem;
+	.share-options {
+		.share-channel {
+			display: inline-block;
+			a {
+				display: block;
+				@extend .btn;
+				@extend .smoky;
+				color: white;
+			}
+		}
+	}
+}

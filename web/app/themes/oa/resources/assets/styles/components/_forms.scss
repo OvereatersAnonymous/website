@@ -53,6 +53,9 @@
       @include font-size(18);
     }
   }
+  &--white {
+    background-color: white;
+  }
 
 }
 

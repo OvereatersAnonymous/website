@@ -61,6 +61,8 @@ export default {
             data['quizScore'] = quizScore;
             data['pid'] = pid;
             data['oa_quiz_page'] = oa_quiz_page;
+            // eslint-disable-next-line no-undef
+            data['oa_quiz_result_nonce'] = ajax_object.ajax_nonce;
             //Ajax call
             jQuery.ajax({
                 // eslint-disable-next-line no-undef
@@ -91,6 +93,8 @@ export default {
             data['action'] = 'ajaxQuizzes';
             data['request'] = 'loadNextQuiz';
             data['oa_quiz_page'] = oa_quiz_page;
+            // eslint-disable-next-line no-undef
+            data['oa_load_next_quiz_nonce'] = ajax_object.ajax_nonce;
             //Ajax call
             jQuery.ajax({
                 // eslint-disable-next-line no-undef
