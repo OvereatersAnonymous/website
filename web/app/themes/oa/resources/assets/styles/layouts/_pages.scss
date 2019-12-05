@@ -150,8 +150,42 @@
 		}
 	}
 }
-/* Podcast single */
-.single-podcasts {
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* NEWS listing */
+.news-listing-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.content-wrapper {
+		margin-bottom: 3rem;
+		@extend h3;
+		@include media-breakpoint-up(md) {
+			width:32%;
+		}
+		&.item-4, &.item-5 {
+			@include media-breakpoint-up(md) {
+				width:48.7%;
+			}
+		}
+		.content-item {
+			&--image {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* SINGLE posts */
+.single-podcasts, .single-news {
 	article {
 		@include media-breakpoint-up(md) {
 			width: 66.66%;
@@ -173,6 +207,9 @@
 						width: 150px;
 					}
 				}
+			}
+			&--featured-image {
+				margin-bottom: 1rem;
 			}
 		}
 	}

@@ -44,11 +44,11 @@
                   </article>
               @endforeach
           </div>
-          <div class="post-pagination">
             @if ($get_max_num_pages)
+              <div class="post-pagination">
                 @include('partials.pagination',['max_num_pages'=>$get_max_num_pages])
+              </div>
             @endif
-          </div>
       @else
           <div style="margin: 4rem 0;">
               <div class="alert alert-warning">{!! __("There are no podcasts to display","sage") !!} </div>
