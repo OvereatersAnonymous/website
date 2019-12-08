@@ -66,7 +66,7 @@ export default {
     //add unveil to bg images 
     jQuery('.unveil-bg').unveil();
 
-     jQuery('.animsition').animsition({
+     /*jQuery('.animsition').animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
         inDuration: 1500,
@@ -87,9 +87,7 @@ export default {
         overlayClass: 'animsition-overlay-slide',
         overlayParentElement: 'body',
         transition: function(url) { window.location.href = url; },
-    }).one('animsition.inStart', function(){
-      //transition finished
-    });
+    });*/
 
     //trigger page load onChange for tab-selects
     // bind change event to select
