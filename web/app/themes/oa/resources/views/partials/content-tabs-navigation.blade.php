@@ -1,5 +1,5 @@
 @if ($menus_nav)
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs desktop">
         <li class="nav-item">
             <a class="nav-link @if($menus_nav['active']==$menus_nav['top_parent'])active @endif" href="{{ get_the_permalink($menus_nav['top_parent']) }}">{!! App::postTitle($menus_nav['top_parent']) !!}</a>
         </li>
@@ -17,4 +17,17 @@
             </li>
         @endforeach
     </ul>
+    <div class="nav nav-select mobile">
+        <select id="nav-select" class="select-field">
+           <option @if($menus_nav['active']==$menus_nav['top_parent'])selected @endif>{{ App::postTitle($menus_nav['top_parent']) }}</option>
+            @foreach($menus_nav['pages'] as $page_id => $child_pages)
+                <option @if($menus_nav['active']==$page_id)selected @endif value="{{ get_the_permalink($page_id) }}">{!! App::postTitle($page_id) !!}</option>
+                @if($child_pages)
+                    @foreach($child_pages as $child_page_id => $pages)
+                        <option value="{{ get_the_permalink($child_page_id) }}">&#8212; {!!  App::postTitle($child_page_id) !!}</option>
+                    @endforeach
+                @endif
+            @endforeach
+        </select>
+    </div>
 @endif

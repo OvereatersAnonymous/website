@@ -887,3 +887,10 @@
         }
     }
 }
+
+.page-header {
+    padding-top: 3rem;
+    @include media-breakpoint-up(md) {
+        padding-top: 0;
+    }
+}

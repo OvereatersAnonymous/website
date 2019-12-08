@@ -6,6 +6,10 @@ import './autoload/**/*'
 
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 //Added by CLOUDRED */
+
+//Import animsition library
+import 'animsition/dist/js/animsition.min';
+
 //Import slick
 import 'slick-carousel/slick/slick';
 

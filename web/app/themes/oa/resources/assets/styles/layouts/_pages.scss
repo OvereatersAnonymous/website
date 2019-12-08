@@ -42,7 +42,7 @@
 	
     .h2, .title {
     	font-size: 2rem;
-		line-height: 2rem;
+		line-height: normal;
     	@include media-breakpoint-up(lg) {
 			font-size: 4rem;
 			line-height: 4rem;

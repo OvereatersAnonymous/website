@@ -8,28 +8,24 @@
   </div>
 </div>
 <header class="banner">
-  <div class="container-fluid hat">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="container" style="position: relative;">
-        	<!-- hat nav-->
-        	<div class="row">
-        		<div class="col-md-3">
-        			@include('partials.widget-country-select')
-        		</div>
-        		<div class="col-md-3 goog-lang">
-        			@include('partials.widget-language-select')
-        		</div>
-        		<div class="col-md-6 header-navigation-wrapper">
-        			@if (has_nav_menu('header_navigation'))
-              	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
-              @endif
-              <div class="search-toggle"><a href="#" class="search-toggle--btn" id="search-toggle--btn"><span class="sr-only"> @php _e("Search","sage"); @endphp</span></a></div>
-            </div>
-          </div>
-        	<!-- //END hat -->
+  <div class="jambotron hat">
+    <div class="container" style="position: relative;">
+    	<!-- hat nav-->
+    	<div class="row">
+    		<div class="col-md-3">
+    			@include('partials.widget-country-select')
+    		</div>
+    		<div class="col-md-3 goog-lang">
+    			@include('partials.widget-language-select')
+    		</div>
+    		<div class="col-md-6 header-navigation-wrapper">
+    			@if (has_nav_menu('header_navigation'))
+          	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
+          @endif
+          <div class="search-toggle"><a href="#" class="search-toggle--btn" id="search-toggle--btn"><span class="sr-only"> @php _e("Search","sage"); @endphp</span></a></div>
         </div>
       </div>
+    	<!-- //END hat -->
     </div>
   </div>
   <div class="container brand-nav">
@@ -52,7 +48,7 @@
     <!-- //END -->
   </div>
 </header>
-<div class="overlay-nav container-fluid no-gutters" style="">
+<div class="overlay-nav" style="">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
