@@ -4,6 +4,7 @@
 		border-bottom:none;
 		.nav-item {
 			margin-right: 5px;
+			margin-bottom: 0;
 			.nav-link.active, .nav-item.show, .nav-link {
 				background-color: map-get($supporting-colors, 'lightg');
 				border-color: map-get($supporting-colors, 'lightg');
@@ -13,12 +14,49 @@
 				white-space: nowrap;
 
 				&:hover {
+					@include transition(all .3s ease);
 					background-color: map-get($supporting-colors, 'smoke');
 					border-color: map-get($supporting-colors, 'smoke');
+					opacity: 1;
 				}
 			}
 			.nav-link.active, .nav-item.show {
 				opacity:1;
+			}
+			&.dropdown {
+
+				&.show {
+					a {
+						background-color: map-get($supporting-colors, 'smoke');
+						border-color: map-get($supporting-colors, 'smoke');
+						opacity: 1;
+					}
+				}
+				.dropdown-toggle {
+					&:after {
+						border:none;
+						margin-left: 3rem;
+					}
+					border:none;
+					padding-bottom:10px;
+					background-image: url('#{$image-path}/arrow-down-navyblack.png');
+					background-repeat: no-repeat;
+					background-position: 90% 50%;
+					background-size:14px;
+				}
+			}
+			.dropdown-menu {
+				border-color: map-get($supporting-colors, 'smoke');
+				background-color: map-get($supporting-colors, 'smoke');
+				.dropdown-item {
+					padding: 0.25rem 1rem;
+					color: map-get($theme-colors, 'base');
+					@extend strong;
+					@include transition(color .3s ease);
+					&:hover {
+						color: map-get($supporting-colors, 'lightg');
+					}
+				}
 			}
 		}
 	}
