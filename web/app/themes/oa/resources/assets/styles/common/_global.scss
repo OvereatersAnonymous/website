@@ -86,6 +86,26 @@ strong i, bold i, strong em, bold em {
   @include NeutrifStudio_BoldItalic();
 }
 
+blockquote {
+  @include Portrait-RegularItalic-Web();
+  @include font-size(19);
+  position: relative;
+  margin-bottom: 1.7rem;
+  @include media-breakpoint-up(md) {
+    width:80%;
+    margin: 0 auto 1.7rem auto;
+  }
+  &:before {
+    content: "\201C";
+    position: absolute;
+    left: -10px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
 /* Default link styles */
 a:link, a:visited {
     text-decoration: none;

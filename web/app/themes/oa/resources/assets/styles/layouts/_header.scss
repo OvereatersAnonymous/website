@@ -716,6 +716,12 @@
     .row {
         justify-content: center !important;
     }
+
+    .widget {
+        h3 {
+            display: none;
+        }
+    }
     .wrapper {
         padding: 0;
         @include make-col-ready();
