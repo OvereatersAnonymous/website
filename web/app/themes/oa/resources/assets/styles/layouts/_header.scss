@@ -629,14 +629,18 @@
             position: relative;
             z-index: 10001;
         }
-        .feature-btn {
-            display: none;
-            @include media-breakpoint-up(md) {
-                display: inline-block;
-            }
-        }
+       
         .nav-primary {
             text-align: right;
+            .widget {
+                display: none;
+                @include media-breakpoint-up(md) {
+                    display: inline-block;
+                }
+                h3 {
+                    display: none;
+                }
+            }
             .overlay-toggle {
                 z-index: 10002;
                 position: relative;
