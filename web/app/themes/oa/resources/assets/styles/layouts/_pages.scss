@@ -217,22 +217,20 @@
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* //END */
 
-.post-pagination {
+.page-nav {
 	margin-top: 3rem;
-	nav {
-		.nav-links > *,
-		p > * {
-			display: inline-block;
-			margin-right: .5rem;
-			@extend strong;
-			color: map-get($theme-colors, 'base');
+	.nav-links > *,
+	p > * {
+		display: inline-block;
+		margin-right: .5rem;
+		@extend strong;
+		color: map-get($theme-colors, 'base');
 
-		}
+	}
 
-		.current {
-			color: white;
-			@extend .btn;
-			@extend .smoky;
-		}
+	.current {
+		color: white;
+		@extend .btn;
+		@extend .smoky;
 	}
 }
