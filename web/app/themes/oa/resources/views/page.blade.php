@@ -14,7 +14,14 @@
 @endsection
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-    @include('partials.content-page')
+  	<div class="row">
+  		<div class="col-md-2"></div>
+  		<div class="col-md-8">
+	    	@include('partials.page-header')
+	    	@include('partials/content-share')
+	    	@include('partials.content-page')
+	    </div>
+	    <div class="col-md-2"></div>
+    </div>
   @endwhile
 @endsection
