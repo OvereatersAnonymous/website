@@ -2,7 +2,7 @@
 <html @php(language_attributes())>
   @include('partials.head')
   <body @php(body_class())>
-    <!--<div class="animsition">-->
+    <div class="animsition">
       <div class="content-wrap" role="document">
         @php(do_action('get_header'))
         @include('partials.header')
@@ -15,7 +15,7 @@
       </div>
       @php(do_action('get_footer'))
       @include('partials.footer')
-    <!--</div>-->
-    @php(wp_footer())
+      @php(wp_footer())
+    </div>
   </body>
 </html>
