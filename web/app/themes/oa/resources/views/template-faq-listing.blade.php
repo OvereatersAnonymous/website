@@ -15,18 +15,18 @@
       @if(!empty($faq_category_request) && !empty($faqs))
           <div class="faq-listing-wrapper">
               <div class="faq-listing-nav">
-                  <div class="faq--back"><a class="link--back" href="{!! get_permalink() !!}">{!! __("Back","sage") !!}</a></div>
-                  <div class="faq--expand"><a class="link--expand" href="#">{!! __("Expand all","sage") !!}</a></div>
-                  <div class="faq--collapse"><a class="link--collapse" href="#">{!! __("Collapse all","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item back"><a class="link--back" href="{!! get_permalink() !!}"><i class="fas fa-chevron-left" style="font-size: 14px;"></i> {!! __("Back","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item expand-all"><a class="link--expand" href="#"><i class="fas fa-plus" style="font-size: 14px;"></i>  {!! __("Expand all","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item collapse-all"><a class="link--collapse" href="#"><i class="fas fa-minus" style="font-size: 14px;"></i> {!! __("Collapse all","sage") !!}</a></div>
               </div>
-              <div class="faqs accordion" id="accordion">
+              <div class="faq-accordion" id="accordion">
                   @foreach ($faqs as $faq)
                       @include('partials.content-faq-card', ['item_id'=>$faq->ID,"loop"=>$loop])
                   @endforeach
               </div>
           </div>
       @elseif( !empty($faq_categories) )
-          <div class="faq-category-listing-wrapper">
+          <div class="faq-category-listing-wrapper unveil-bg" @if(has_post_thumbnail(get_the_ID())) data-src="{{ App::featuredImageSrc('medium',get_the_ID()) }}|{{ App::featuredImageSrc('medium@2x',get_the_ID()) }}" @endif>
               @if(!empty($faq_top_categories) )
                   @include('partials.content-faq-category-group', ['category_group_name'=>__("Top FAQs","sage"),'category_group_terms'=>$faq_top_categories])
               @endif

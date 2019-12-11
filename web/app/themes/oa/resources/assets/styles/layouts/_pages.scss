@@ -221,6 +221,9 @@
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* FAQs listing */
 .faq-category-listing-wrapper {
+	background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: top right;
 	.faq-group {
 		&--child{
 			list-style: none;
@@ -228,6 +231,42 @@
 		}
 		&--item{
 
+		}
+	}
+}
+/* FAQ category page */
+.faq-listing-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	&--item{
+		&.back {
+
+		}
+		&.expand-all {
+			display: inline-block;
+		}
+		&.collpase-all {
+			margin-left: 1.5rem;
+			display: inline-block;
+		}
+	}
+}
+.faq-accordion {
+	.faq {
+		margin-bottom: 2rem;
+		&--heading {
+			&:hover {
+				cursor: s-resize;
+			}
+		}
+		&--body {
+			padding:1rem 1.4rem;
+			border-radius: 5px;
+			background-color: map-get($supporting-colors,'superlightg');
+		}
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
