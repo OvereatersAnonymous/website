@@ -31,6 +31,7 @@
   &:-ms-expand {
       display: none;
   }
+  /* for non select html-selects*/
   &:after {
       right:15px;
       vertical-align: 0.1em;
@@ -39,20 +40,29 @@
       @include font-size(24);
       border:none;
   }
-  &--small {
-    background-color: map-get($supporting-colors, 'lightg');
-    background-image: url('#{$image-path}/arrow-down-blueberry.png');
-    background-size: 10px;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    border:none;
-    padding: 0.5rem 1rem;
+
+  background-color: map-get($supporting-colors, 'lightg');
+  background-image: url('#{$image-path}/arrow-down-blueberry.png');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size:18px;
+  border:none;
+  padding: 0.5rem 3.3rem 0.5rem 1rem;
+  
+  &:after {
+    vertical-align: 0.1em;
+    @include font-size(18);
+  }
+
+   &--small {
     @include font-size(14);
+    background-size: 10px;
     &:after {
       vertical-align: 0.1em;
       @include font-size(18);
     }
-  }
+   }
+
   &--white {
     background-color: white;
   }
