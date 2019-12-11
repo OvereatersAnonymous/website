@@ -217,6 +217,26 @@
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* //END */
 
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* FAQs listing */
+.faq-category-listing-wrapper {
+	.faq-group {
+		&--child{
+			list-style: none;
+  			padding: 0; 
+		}
+		&--item{
+
+		}
+	}
+}
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+
+
 .page-nav {
 	margin-top: 3rem;
 	.nav-links > *,

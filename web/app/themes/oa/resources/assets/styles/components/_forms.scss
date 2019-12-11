@@ -13,11 +13,16 @@
   @extend .form-control;
   @include NeutrifStudio_Regular();
   height: calc(1.8em + 0.75rem + 2px);
+  width: 100%;
 }
 
 .search-form .search-submit {
   @extend .btn;
   @extend .smoky;
+  margin-top: 0.5rem;
+}
+.search-form label {
+  width: 100%;
 }
 
 
@@ -33,9 +38,6 @@
       display: none;
   }
   padding: 0.8rem;
-  &--white {
-    background-color: white;
-  }
 }
 .select-field {
   /* for non select html-selects*/
@@ -68,11 +70,17 @@
       @include font-size(18);
     }
    }
+   &--white {
+    background-color: white;
+  }
 
 }
 
 .input-field {
   width: 100%;
+  &--white {
+    background-color: white;
+  }
 }
 .input--hidden {
   display: none;
@@ -106,8 +114,10 @@ label {
     	width: auto !important;
 	}
 }
+/* //END */
 
-/*send in blue*/
+/*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
+/* send in blue */
 .progress-indicator{-webkit-align-items:center;align-items:center;background:hsla(0,0%,100%,.9);display:-webkit-flex;display:flex;height:100%;-webkit-justify-content:center;justify-content:center;width:100%}
 .progress-indicator .progress-indicator__icon{fill:#fff;height:2rem;width:2rem}
 .progress-indicator_small .progress-indicator__icon{height:1rem;width:1rem}
@@ -130,3 +140,4 @@ label {
 .sib-hide-loader-icon {
   display: none;
 }
+/* //END SEND IN BLUE */
