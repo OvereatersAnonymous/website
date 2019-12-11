@@ -22,7 +22,8 @@
 
 
 /* Form fields default styles */
-.select-field {
+.select-field, .input-field {
+  border:none;
   border-radius: 5px;
   white-space: nowrap;
   -webkit-appearance: none;
@@ -31,6 +32,12 @@
   &:-ms-expand {
       display: none;
   }
+  padding: 0.8rem;
+  &--white {
+    background-color: white;
+  }
+}
+.select-field {
   /* for non select html-selects*/
   &:after {
       right:15px;
@@ -46,8 +53,7 @@
   background-repeat: no-repeat;
   background-position: 90% 50%;
   background-size:18px;
-  border:none;
-  padding: 0.5rem 3.3rem 0.5rem 1rem;
+  padding-right:3.3rem;
   
   &:after {
     vertical-align: 0.1em;
@@ -63,11 +69,18 @@
     }
    }
 
-  &--white {
-    background-color: white;
-  }
-
 }
+
+.input-field {
+  width: 100%;
+}
+.input--hidden {
+  display: none;
+}
+label {
+  margin-bottom: 0;
+}
+
 
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {

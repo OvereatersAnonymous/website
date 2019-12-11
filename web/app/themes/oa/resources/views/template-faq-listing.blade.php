@@ -28,12 +28,14 @@
               @include('partials.content-faq-category-group', ['category_group_name'=>__("Top FAQs","sage"),'category_group_terms'=>$faq_top_categories])
           @endif
           @foreach ($faq_categories as $faq_category)
-                  @include('partials.content-faq-category-group', ['category_group_name'=>$faq_category['parent']->name,'category_group_terms'=>$faq_category['child']])
+            @if ( !empty($faq_category['child']) )
+              @include('partials.content-faq-category-group', ['category_group_name'=>$faq_category['parent']->name,'category_group_terms'=>$faq_category['child']])
+             @endif
           @endforeach
       </div>
   @else
       <div style="margin: 4rem 0;">
-          <div class="alert alert-warning">{!! __("There are no faq to display","sage") !!} </div>
+          <div class="alert alert-warning">{!! __("There are no FAQs to display","sage") !!} </div>
           {!! get_search_form(false) !!}
       </div>
   @endif

@@ -2,9 +2,13 @@
 	<div class="container">
     	<div class="row signup">
 	        <div class="col-md-6 signups--form">
-	        	@if ($signup_callout) 
-	            	@include('partials.content-callout',['callout'=>$signup_callout])
-	            @endif
+	        	<h2>{!! App::get_field('signup_title') !!}</h2>
+	        	<div class="copy">
+	        		<p>{!! App::get_field('signup_teaser') !!}</p>
+	        	</div>
+	        	<div class="form-markup">
+	        		{!! App::get_field('signup_html') !!}
+	        	</div>
 	        </div>
 	        <div class="col-md-6 signups--callout">
 	        	@if ($custom_callout) 

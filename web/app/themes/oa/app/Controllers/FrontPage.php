@@ -20,16 +20,6 @@ class FrontPage extends Controller
 	}
 
 	/**
-	 * Get Signup Callout
-	 *
-	 * @return array
-	 */
-	public function signupCallout(){
-		return $this->getCallout('signup');
-	}
-
-
-	/**
 	 * Get Custom Callout
 	 *
 	 * @return array
