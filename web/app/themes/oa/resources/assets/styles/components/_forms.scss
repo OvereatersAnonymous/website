@@ -107,4 +107,26 @@ label {
 	}
 }
 
-
+/*send in blue*/
+.progress-indicator{-webkit-align-items:center;align-items:center;background:hsla(0,0%,100%,.9);display:-webkit-flex;display:flex;height:100%;-webkit-justify-content:center;justify-content:center;width:100%}
+.progress-indicator .progress-indicator__icon{fill:#fff;height:2rem;width:2rem}
+.progress-indicator_small .progress-indicator__icon{height:1rem;width:1rem}
+.progress-indicator__icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 1rem;
+    margin-top: -4px;
+    fill: #ffffff;
+  -webkit-animation:indicator-spin 1.3s cubic-bezier(.46,.35,.39,.85) infinite;animation:indicator-spin 1.3s cubic-bezier(.46,.35,.39,.85) infinite}@-webkit-keyframes indicator-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes indicator-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+.form__entry {
+  margin-top: 0.5rem;
+}
+.sib-form-message-panel {
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+.sib-hide-loader-icon {
+  display: none;
+}
