@@ -224,7 +224,16 @@
 	background-repeat: no-repeat;
     background-size: 40%;
     background-position: top right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 	.faq-group {
+		width: 48%;
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(3) {
+			width: 100%;
+		}
 		&--child{
 			list-style: none;
   			padding: 0; 

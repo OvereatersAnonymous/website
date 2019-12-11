@@ -65,6 +65,7 @@
    &--small {
     @include font-size(14);
     background-size: 10px;
+    padding: .5rem 1rem;
     &:after {
       vertical-align: 0.1em;
       @include font-size(18);
