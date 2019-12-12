@@ -1,5 +1,5 @@
 <article @php post_class() @endphp>
-  <div class="back-btn">
+  <div class="back-btn page-header">
     <i class="fas fa-chevron-left"></i> &nbsp; <a href="/podcasts?podcast-category={!! APP::get_uri_param('podcast-category') !!}&page={!! APP::get_uri_param('page') !!}&podcast-order={!! APP::get_uri_param('podcast-order') !!}">{!! _e('All podcasts','sage'); !!}</a>
   </div>
   <header> <h1 class="entry-title">{!! get_the_title() !!}</h1></header>
