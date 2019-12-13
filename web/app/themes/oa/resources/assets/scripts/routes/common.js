@@ -106,6 +106,9 @@ export default {
         return false;
     });
 
+    //adjust dropdown nav child width, we want it to be at least the width of the parent, not auto width of child content
+    //$navtabs = jQuery('.nav-tabs ')
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

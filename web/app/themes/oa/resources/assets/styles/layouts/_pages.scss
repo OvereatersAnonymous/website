@@ -280,6 +280,22 @@
 /* //END */
 
 
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* FIND MEETINGS PAGES/PLUGIN */
+.template-find-a-meeting {
+	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
+	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link {
+		background-color: map-get($supporting-colors,'nude');
+		border-color: map-get($supporting-colors,'nude');
+	}
+	.main-wrapper {
+		background-color: map-get($supporting-colors,'nude');
+	}
+}
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+
 
 .page-nav {
 	margin-top: 3rem;
