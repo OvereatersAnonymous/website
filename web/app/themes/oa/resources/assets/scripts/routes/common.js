@@ -106,6 +106,9 @@ export default {
         return false;
     });
 
+    //adjust dropdown nav child width, we want it to be at least the width of the parent, not auto width of child content
+    //$navtabs = jQuery('.nav-tabs ')
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
@@ -133,12 +136,19 @@ export default {
     var $nav_tabs = jQuery('.nav-tabs.desktop');
     var $nav_select = jQuery('.nav-select.mobile');
     var toggleTabSelectNav = function() {
-      //alert($nav_tabs.outerWidth(true) +' vs ' + jQuery(window).width());
-      if ($nav_tabs.outerWidth(true) + 50 > jQuery(window).width()) {
+      var combined_nav_width = 0;
+      $nav_tabs.css('visibility','hidden');
+      $nav_tabs.css('display','flex');
+      jQuery('.nav-tabs.desktop .nav-item').each(function() {
+        combined_nav_width += jQuery(this).width();
+      });
+      //alert(combined_nav_width);
+      if (combined_nav_width > $nav_tabs.width()) {
         $nav_tabs.css('display','none');
         $nav_select.css('display','block');
       } else {
         $nav_tabs.css('display','flex');
+        $nav_tabs.css('visibility','visible');
         $nav_select.css('display','none');
       }
     }

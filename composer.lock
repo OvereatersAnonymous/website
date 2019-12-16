@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab3bebec11a20b976d8a6b8efa9e5498",
+    "content-hash": "6e3a7dad1a1f4aee00fa65932960e34e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -241,11 +241,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.5.3",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "0b3d008838875d5c8baa42d6731a2d69867f44e4"
+                "reference": "dfd7dacbfccb95aeb28cfad86ec787b11afdad09"
             },
             "require": {
                 "php": ">=7.1"
@@ -262,7 +262,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-12-04T22:05:04+00:00"
+            "time": "2019-12-13T06:22:17+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -341,33 +341,34 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.5.2",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793"
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/2ba2586380f8d2b44ad1b9feb61c371020b27793",
-                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^5.5.9 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.7|^5.0"
+                "bamarni/composer-bin-plugin": "^1.3",
+                "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PhpOption\\": "src/"
+                "psr-4": {
+                    "PhpOption\\": "src/PhpOption/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -378,6 +379,10 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Option Type for PHP",
@@ -387,20 +392,20 @@
                 "php",
                 "type"
             ],
-            "time": "2019-11-06T22:27:00+00:00"
+            "time": "2019-12-15T19:35:24+00:00"
         },
         {
             "name": "roots/wordpress",
-            "version": "5.3",
+            "version": "5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.3"
+                "reference": "5.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3",
-                "reference": "5.3"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3.1",
+                "reference": "5.3.1"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -424,7 +429,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-11-12T20:34:22+00:00"
+            "time": "2019-12-12T20:52:07+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -583,7 +588,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.13.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -697,6 +702,24 @@
             "time": "2019-09-10T21:37:39+00:00"
         },
         {
+            "name": "wpackagist-plugin/advanced-forms",
+            "version": "1.6.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-forms/",
+                "reference": "tags/1.6.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-forms/"
+        },
+        {
             "name": "wpackagist-plugin/f4-media-taxonomies",
             "version": "1.0.7",
             "source": {
@@ -734,15 +757,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "12.6.2",
+            "version": "12.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/12.6.2"
+                "reference": "tags/12.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.6.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.7.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -752,15 +775,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.7.1",
+            "version": "1.8.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.7.1"
+                "reference": "tags/1.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.7.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -776,12 +799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "7b05f1705362f8a8a4b535ec5c0f174eaf4d09ec"
+                "reference": "e4ee2c8e4ccd908debc64069faf023c684a76760"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7b05f1705362f8a8a4b535ec5c0f174eaf4d09ec",
-                "reference": "7b05f1705362f8a8a4b535ec5c0f174eaf4d09ec",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/e4ee2c8e4ccd908debc64069faf023c684a76760",
+                "reference": "e4ee2c8e4ccd908debc64069faf023c684a76760",
                 "shasum": ""
             },
             "conflict": {
@@ -884,7 +907,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.18",
+                "simplesamlphp/simplesamlphp": "<1.17.8",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "slim/slim": "<2.6",
                 "smarty/smarty": "<3.1.33",
@@ -986,20 +1009,20 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-11-27T20:26:33+00:00"
+            "time": "2019-12-02T13:03:15+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.2",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7"
+                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
-                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
+                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
                 "shasum": ""
             },
             "require": {
@@ -1037,7 +1060,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-10-28T04:36:32+00:00"
+            "time": "2019-12-04T04:46:47+00:00"
         }
     ],
     "aliases": [],

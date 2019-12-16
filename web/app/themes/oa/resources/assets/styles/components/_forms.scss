@@ -13,16 +13,22 @@
   @extend .form-control;
   @include NeutrifStudio_Regular();
   height: calc(1.8em + 0.75rem + 2px);
+  width: 100%;
 }
 
 .search-form .search-submit {
   @extend .btn;
   @extend .smoky;
+  margin-top: 0.5rem;
+}
+.search-form label {
+  width: 100%;
 }
 
 
 /* Form fields default styles */
-.select-field {
+.select-field, .input-field {
+  border:none;
   border-radius: 5px;
   white-space: nowrap;
   -webkit-appearance: none;
@@ -31,6 +37,9 @@
   &:-ms-expand {
       display: none;
   }
+  padding: 0.8rem;
+}
+.select-field {
   /* for non select html-selects*/
   &:after {
       right:15px;
@@ -46,8 +55,7 @@
   background-repeat: no-repeat;
   background-position: 90% 50%;
   background-size:18px;
-  border:none;
-  padding: 0.5rem 3.3rem 0.5rem 1rem;
+  padding-right:3.3rem;
   
   &:after {
     vertical-align: 0.1em;
@@ -57,17 +65,31 @@
    &--small {
     @include font-size(14);
     background-size: 10px;
+    padding: .5rem 1rem;
     &:after {
       vertical-align: 0.1em;
       @include font-size(18);
     }
    }
-
-  &--white {
+   &--white {
     background-color: white;
   }
 
 }
+
+.input-field {
+  width: 100%;
+  &--white {
+    background-color: white;
+  }
+}
+.input--hidden {
+  display: none;
+}
+label {
+  margin-bottom: 0;
+}
+
 
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {
@@ -93,5 +115,40 @@
     	width: auto !important;
 	}
 }
+/* //END */
 
+/*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
+/* send in blue */
+.progress-indicator{-webkit-align-items:center;align-items:center;background:hsla(0,0%,100%,.9);display:-webkit-flex;display:flex;height:100%;-webkit-justify-content:center;justify-content:center;width:100%}
+.progress-indicator .progress-indicator__icon{fill:#fff;height:2rem;width:2rem}
+.progress-indicator_small .progress-indicator__icon{height:1rem;width:1rem}
+.progress-indicator__icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 1rem;
+    margin-top: -4px;
+    fill: #ffffff;
+  -webkit-animation:indicator-spin 1.3s cubic-bezier(.46,.35,.39,.85) infinite;animation:indicator-spin 1.3s cubic-bezier(.46,.35,.39,.85) infinite}@-webkit-keyframes indicator-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes indicator-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+.form__entry {
+  margin-top: 0.5rem;
+}
+.sib-form-message-panel {
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+.sib-hide-loader-icon {
+  display: none;
+}
+/* //END SEND IN BLUE */
 
+/* Contact form */
+.page.contact {
+  .acf-form {
+    .af-field-contact-validate-email {
+      display: none;
+    }
+  }
+}
+/* //END Contact form */
