@@ -11,9 +11,9 @@
 
 @if(!empty($result['resources_repeater']))
     <div class="quiz-resources">
-        <div class="resources-card">
+        <div class="quiz-resources--card">
             <h3>{{ __('Available resources','sage') }}</h3>
-            <div class="resources-body">
+            <div class="quiz-resources--body">
                 @foreach ($result['resources_repeater'] as $resource)
                     @include('partials.content-resource',['resource'=>$resource])
                 @endforeach
