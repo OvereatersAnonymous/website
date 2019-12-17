@@ -16,9 +16,11 @@ class TemplateQuizzes extends Controller
 	 */
 	function __construct()
 	{
+		
 		// Get quiz set page from cookie.
 		if(!empty($_COOKIE['oa_quiz_page'])){
 			$this->paged = (int) $_COOKIE['oa_quiz_page'];
+
 		}else{
 			$this->paged = 1;
 		}

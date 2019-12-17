@@ -95,11 +95,11 @@ blockquote {
     width:80%;
     margin: 0 auto 1.7rem auto;
   }
-  &:before {
+  /*&:before {
     content: "\201C";
     position: absolute;
     left: -10px;
-  }
+  }*/
   p {
     margin-bottom: 0;
   }
@@ -149,4 +149,18 @@ iframe{
 .section-padding {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+#CybotCookiebotDialog {
+  -webkit-box-shadow: 0 -1px 10px 0 rgba(0,0,0,0.1) !important;
+  box-shadow: 0 -1px 10px 0 rgba(0,0,0,0.1) !important;
+}
+#CybotCookiebotDialogBodyButtonAccept {
+  @extend .btn;
+  @extend strong;
+  padding-bottom: 12px !important;
+  border: none !important;
+  &:hover {
+    border:none !important;
+  }
 }

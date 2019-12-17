@@ -296,6 +296,138 @@
 /* //END */
 
 
+.quizzes {
+
+	&--questions {
+		&:before,
+		&:after {
+			content: "";
+		    position: absolute;
+		    height: 1px;
+		    background-color: map-get($supporting-colors, 'ocean');
+		}
+		&:before {
+			right: 15px;
+		    left: 15px;
+		    top: -4px;
+		}
+		&:after {
+			right: 10px;
+		    left: 10px;
+		    top: -2px;
+		}
+
+		.quiz-question {
+			@include font-size(24);
+			@include media-breakpoint-up(md) {
+				@include font-size(36);
+			}
+			line-height: normal;
+			margin-bottom: 2rem;
+		}
+
+		.quiz-quote {
+			display: block;
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-top-color: map-get($theme-colors, 'base');
+			padding-top: 2rem;
+			margin-top: 4rem;
+			position: relative;
+			
+			&:before {
+				content: '\201C';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 5rem;
+				height: 5.5rem;
+				background-color: map-get($supporting-colors, 'ocean');
+				@include font-size(78);
+				@include Portrait-RegularItalic-Web();
+				color: map-get($theme-colors, 'base');
+				text-align: center;
+			}
+			
+			&--text {
+				@extend blockquote;
+				text-align: center;
+			}
+			&--attribute {
+				@include font-size(14);
+			}
+		}
+	}
+	.quiz-card,
+	.quiz-resources,
+	.results-card {
+		margin-bottom: 2rem;
+		border-radius: 5px;
+		position: relative;
+		padding: 2rem 3rem;
+		text-align: center;
+	}
+	.quiz-card {
+		background-color: map-get($supporting-colors, 'ocean');
+	}
+	.results-card {
+		background-color: map-get($supporting-colors, 'cadet');
+		color: white;
+		.results-text {
+			margin-top: 2rem;
+			@include font-size(20);
+		}
+	}
+	.quiz-btn,
+	.quiz-btn-next {
+		@include media-breakpoint-up(md) {
+			padding: 0.9rem 1.4rem 0.8rem;
+			@include font-size(24);
+			min-width: 120px;
+		}
+		&:hover {
+			background-color: map-get($button-colors, 'smoky');
+			box-shadow: 0 3px map-get($button-colors, 'smoky-highlight');
+		}
+	}
+	.quiz-resources {
+		background-color: map-get($supporting-colors, 'superlightg');
+		&--body {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			margin-top: 2rem;
+			@include media-breakpoint-up(md) {
+				flex-direction: row;
+			}
+			.resource {
+				margin-bottom: 1rem;
+				@include media-breakpoint-up(md) {
+					width: 50%;
+					text-align: left;
+					margin-bottom: 0;
+				}
+				&--icon {
+					@include font-size(20);
+					@include media-breakpoint-up(md) {
+						text-align: right;
+					}
+				}
+				&--link {
+					a {
+						@extend h4;
+					}
+				}
+				&--type{
+
+				}
+			}
+		}
+
+	}
+}
 
 .page-nav {
 	margin-top: 3rem;

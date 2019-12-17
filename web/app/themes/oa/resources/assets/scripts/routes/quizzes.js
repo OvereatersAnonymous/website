@@ -6,7 +6,7 @@ export default {
         var currentQuizFinish = false;
         var pid = 0;
         var oa_quiz_page =0;
-        var slickElement = jQuery('.quizzes--quiz');
+        var slickElement = jQuery('.quizzes--questions');
         var resultsElement = jQuery('.results');
         //Store quiz set page from cookie
         if(Cookie.get( 'oa_quiz_page' )){
@@ -33,13 +33,13 @@ export default {
                 fade: true,
                 adaptiveHeight: true,
                 cssEase: 'linear',
-                slide: '.quizzes--quiz--questions',
+                slide: '.slide',
                 rows: 0,
                 swipe: false,
 
             });
             //On yes/no btn click, add to total score and slide to next element. Call quizResult after last slide
-            jQuery('.btn--quiz--slick').on('click', function () {
+            jQuery('.quiz-btn').on('click', function () {
                 quizScore = quizScore + Number(jQuery(this).val());
                 if (currentQuizFinish) {
                     quizResult();
@@ -113,7 +113,7 @@ export default {
         }
         //Adds listener to button to trigger loading of next quiz
         function loadNextQuizListener(){
-            jQuery('.btn--quiz--next').on('click', function () {
+            jQuery('.quiz-btn-next').on('click', function () {
                 loadNextQuiz();
             });
         }

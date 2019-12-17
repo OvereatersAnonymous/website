@@ -1,17 +1,19 @@
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">{!! __('Recap','sage') !!}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{!! __('You have answered','sage') !!} &ldquo;{!! __('No','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $wrong_answers !!} {!! __('questions and','sage') !!} &ldquo;{!! __('Yes','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $correct_answers !!} {!! __(' questions','sage') !!}</h6>
-        <p class="card-text quizzes--result">{!! $result['results'] !!}</p>
+<div class="results-card">
+    <div class="results-body">
+        <h4 class="results-title">{!! __('Recap','sage') !!}</h4>
+        <div class="results-subtitle">{!! __('You have answered','sage') !!} &ldquo;{!! __('No','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $wrong_answers !!} {!! __('question(s) and','sage') !!} &ldquo;{!! __('Yes','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $correct_answers !!} {!! __(' question(s)','sage') !!}</div>
+        <p class="results-text quiz-result">{!! $result['results'] !!}</p>
         @if($load_next_quiz)
-            <button class="btn btn--quiz--next" value="next" type="button">{!! __('See more questions','sage') !!}</button>
+            <button class="btn navyblack quiz-btn-next" value="next" type="button">{!! __('See more questions','sage') !!}</button>
         @endif
     </div>
 </div>
+
 @if(!empty($result['resources_repeater']))
-    <div class="quizzes--quiz--resources">
-        <div class="card">
-            <div class="card-body">
+    <div class="quiz-resources">
+        <div class="resources-card">
+            <h3>{{ __('Available resources','sage') }}</h3>
+            <div class="resources-body">
                 @foreach ($result['resources_repeater'] as $resource)
                     @include('partials.content-resource',['resource'=>$resource])
                 @endforeach
