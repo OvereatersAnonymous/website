@@ -52,8 +52,10 @@
 	.title {
 		@include NeutrifStudio_Bold();
 		@include font-size(48);
+		line-height: 3rem;
 		@include media-breakpoint-up(lg) {
 			@include font-size(64);
+			line-height: 4rem;
 		}
 	}
 	.copy {
@@ -74,6 +76,9 @@
 				background-repeat: no-repeat;
 				background-position: 80%;
 				background-size: contain;
+				@media (max-width: 991px) { 
+					background-image: none !important;
+				}
 			}
 			.callout {
 				padding: 4rem 0;
@@ -88,6 +93,7 @@
 		text-align: center;
 		li {
 			vertical-align: top;
+			margin:0 5px;
 			button {
 				text-indent: -99999px;
 				overflow: hidden;
@@ -97,6 +103,11 @@
 				height: 20px;
 				width: 20px;
 				background-color: white;
+				outline: none;
+				@include transition(all .3s ease);
+				&:hover {
+					background-color: map-get($supporting-colors, 'smoke');
+				}
 			}
 			&.slick-active {
 				button {
