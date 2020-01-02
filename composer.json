@@ -81,11 +81,11 @@
     "wpackagist-plugin/w3-total-cache": "^0.12.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "overeatersanonymous/oa-custom-configurations": "1.5.8",
-    "overeatersanonymous/wpmeetings": "1.0.0",
-    "overeatersanonymous/wpservicebodies": "1.0.0",
     "overeatersanonymous/posts-table-pro": "2.1.4",
     "wpackagist-plugin/f4-media-taxonomies": "^1.0",
-    "wpackagist-plugin/advanced-forms": "^1.6"
+    "wpackagist-plugin/advanced-forms": "^1.6",
+    "overeatersanonymous/wpmeetings": "1.0.0",
+    "overeatersanonymous/wpservicebodies": "1.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",

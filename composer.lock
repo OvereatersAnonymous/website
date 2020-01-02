@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7cba968231867ef749df4d7cf167b1f",
+    "content-hash": "4695335021f806c3423101335cdc8cd1",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -295,7 +295,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "3ba83d125e921a8c515fc23b12fce25970725d37"
+                "reference": "c06adb59b5b0c8797af570165b911cafa8c4748b"
             },
             "require": {
                 "php": ">=7.1"
@@ -312,7 +312,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-12-11T00:38:23+00:00"
+            "time": "2020-01-02T16:39:25+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
@@ -320,7 +320,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "a67459a4d3ba113fe73b83c2a35b60e757aeee06"
+                "reference": "58c78062bb15a1ba404c7b0751b640181c46daf9"
             },
             "require": {
                 "php": ">=7.1"
@@ -337,7 +337,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-12-11T00:37:21+00:00"
+            "time": "2020-01-02T19:16:24+00:00"
         },
         {
             "name": "phpoption/phpoption",

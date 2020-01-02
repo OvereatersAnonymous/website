@@ -12,7 +12,7 @@ export default {
       fade: true,
       arrows: false,
       cssEase: 'linear',
-      adaptiveHeight: false,
+      adaptiveHeight: true,
       autoplaySpeed:10000,
       autoplay: true,
       pauseOnHover: true,
