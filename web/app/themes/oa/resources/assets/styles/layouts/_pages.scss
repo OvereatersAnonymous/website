@@ -34,6 +34,11 @@
 					padding-bottom: 0;
 				}
 			}
+			&--latest {
+				@include media-breakpoint-up(md) {
+					margin-top:75px;
+				}
+			}
 		}
 	}
 }
@@ -307,6 +312,8 @@
 /* //END */
 
 
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* QUIZZES */
 .quizzes {
 
 	&--questions {
@@ -440,6 +447,50 @@
 	}
 }
 
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* DOCUMENT LIBRARY */
+
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+.oaresources {
+	.posts-table-controls {
+		background-color: map-get($supporting-colors,'steal');
+		padding: 1rem;
+		border-radius: 5px;
+		.posts-table-select-filters {
+			width: 100%;
+			select {
+				@extend .select-field;
+			}
+		}
+		.dataTables_length {
+			float: none;
+			select {
+				@extend .select-field;
+			}
+		}
+		.dataTables_filter {
+			input {
+				@extend .input-field;
+			}
+			float: none;
+			clear: both;
+			text-align: left;
+			margin-top:0.25em;
+		}
+	}
+}
+
+
+
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* COMMON */
 .page-nav {
 	margin-top: 3rem;
 	.nav-links > *,
