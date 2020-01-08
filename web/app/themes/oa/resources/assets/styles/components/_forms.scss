@@ -28,6 +28,7 @@
 
 /* Form fields default styles */
 .select-field, .input-field {
+  background-color: map-get($supporting-colors, 'lightg');
   border:none;
   border-radius: 5px;
   white-space: nowrap;
@@ -50,7 +51,7 @@
       border:none;
   }
 
-  background-color: map-get($supporting-colors, 'lightg');
+  
   background-image: url('#{$image-path}/arrow-down-blueberry.png');
   background-repeat: no-repeat;
   background-position: 90% 50%;
