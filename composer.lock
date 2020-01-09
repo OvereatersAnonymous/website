@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43c3a85dd62eead6dafa3ed36f489ff8",
+    "content-hash": "c5729c93a36cb5a0f514ca155013739d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -291,11 +291,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "c06adb59b5b0c8797af570165b911cafa8c4748b"
+                "reference": "7adbf19558b62bd2406766e213116875b96fceaf"
             },
             "require": {
                 "php": ">=7.1"
@@ -312,15 +312,15 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-02T16:39:25+00:00"
+            "time": "2020-01-09T02:00:27+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "58c78062bb15a1ba404c7b0751b640181c46daf9"
+                "reference": "26362b830b68d0bed6ba0e198045f250bc4ff895"
             },
             "require": {
                 "php": ">=7.1"
@@ -337,7 +337,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-02T19:16:24+00:00"
+            "time": "2020-01-09T01:50:13+00:00"
         },
         {
             "name": "phpoption/phpoption",
