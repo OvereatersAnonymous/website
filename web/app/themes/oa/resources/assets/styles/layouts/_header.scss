@@ -622,6 +622,11 @@
         .custom-logo {
             width: 100%;
             height: auto;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            -ms-interpolation-mode: nearest-neighbor;
+
             @include media-breakpoint-up(md) {
                 width: 230px;
                 height: 63px;

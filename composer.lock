@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4695335021f806c3423101335cdc8cd1",
+    "content-hash": "c5729c93a36cb5a0f514ca155013739d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -241,11 +241,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.5.8",
+            "version": "1.5.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "6af63b5375130a90a43b8ab40213c6f8aad81214"
+                "reference": "cfae7465facd16110495b08e1e9f6ed12800927a"
             },
             "require": {
                 "php": ">=7.1"
@@ -262,7 +262,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-12-17T20:19:53+00:00"
+            "time": "2020-01-08T22:20:03+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -291,11 +291,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "c06adb59b5b0c8797af570165b911cafa8c4748b"
+                "reference": "7adbf19558b62bd2406766e213116875b96fceaf"
             },
             "require": {
                 "php": ">=7.1"
@@ -312,15 +312,15 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-02T16:39:25+00:00"
+            "time": "2020-01-09T02:00:27+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "58c78062bb15a1ba404c7b0751b640181c46daf9"
+                "reference": "26362b830b68d0bed6ba0e198045f250bc4ff895"
             },
             "require": {
                 "php": ">=7.1"
@@ -337,7 +337,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-02T19:16:24+00:00"
+            "time": "2020-01-09T01:50:13+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -757,15 +757,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "12.7.1",
+            "version": "12.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/12.7.1"
+                "reference": "tags/12.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.7.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
