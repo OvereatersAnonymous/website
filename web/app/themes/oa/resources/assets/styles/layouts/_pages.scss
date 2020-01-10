@@ -591,6 +591,18 @@
 
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* SEARCH RESULTS */
+.gsc-control-cse {
+	border-radius: 5px;
+}
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
+/* //END */
+
+
+
+
+/* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* COMMON */
 .page-nav {
 	margin-top: 3rem;
@@ -606,6 +618,7 @@
 	.current {
 		color: white;
 		@extend .btn;
+		@extend .small;
 		@extend .smoky;
 	}
 }

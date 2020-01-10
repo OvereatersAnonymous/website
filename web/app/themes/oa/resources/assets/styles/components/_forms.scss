@@ -144,12 +144,34 @@ label {
 }
 /* //END SEND IN BLUE */
 
-/* Contact form */
-.page.contact {
-  .acf-form {
+/*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
+/* CONTACT FORM OVERWRITES*/
+.af-form {
+  .af-fields {
+    .af-field-type-group, .acf-field {
+      padding: 0;
+      border:none;
+    }
+    .acf-fields.-border {
+      border:none;
+      background-color: transparent;
+    }
+    .af-label {
+      display: none;
+    }
     .af-field-contact-validate-email {
       display: none;
+    }
+    input, textarea {
+      @extend .input-field;
+    }
+    select {
+      @extend .select-field;
     }
   }
 }
 /* //END Contact form */
+
+
+
+

@@ -7,6 +7,9 @@
 		padding: 0.9rem 1.4rem 0.8rem;
 		@include font-size(24);
 	}
+	&.small {
+		padding:0.3rem 0.6rem 0rem;
+	}
 	&.primary {
 		background-color: map-get($button-colors, 'blueberry');
 		box-shadow: 0 3px map-get($button-colors, 'blueberry-highlight');
@@ -50,6 +53,7 @@
 			a {
 				display: block;
 				@extend .btn;
+				@extend .small;
 				@extend .smoky;
 				color: white;
 			}
