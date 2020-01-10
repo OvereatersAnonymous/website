@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5729c93a36cb5a0f514ca155013739d",
+    "content-hash": "404f00f0f0e5e1400ebd96670c1eb115",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -241,11 +241,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.5.9",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "cfae7465facd16110495b08e1e9f6ed12800927a"
+                "reference": "9e5c13f7e6284bbd9fd978f07f6cefa668b17b01"
             },
             "require": {
                 "php": ">=7.1"
@@ -262,7 +262,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-08T22:20:03+00:00"
+            "time": "2020-01-10T03:35:35+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
