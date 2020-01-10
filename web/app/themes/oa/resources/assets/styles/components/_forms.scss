@@ -147,27 +147,47 @@ label {
 /*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
 /* CONTACT FORM OVERWRITES*/
 .af-form {
-  .af-fields {
-    .af-field-type-group, .acf-field {
-      padding: 0;
-      border:none;
+  .acf-hidden, .af-field-contact-validate-email, .name-group .af-label {
+    display: none;
+  }
+  .name-group .acf-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .acf-field {
+      width: 100%;
+      @include media-breakpoint-up(md) {
+        width: 48%;
+      }
     }
-    .acf-fields.-border {
-      border:none;
-      background-color: transparent;
+  }
+  .acf-field {
+    margin-bottom: 1rem;
+  }
+  .acf-notice  {
+    p {
+      margin-bottom: 0;
     }
-    .af-label {
-      display: none;
+    &.-error {
+      @extend .alert;
+      @extend .alert-danger;
     }
-    .af-field-contact-validate-email {
-      display: none;
+  }
+  input, textarea {
+    @extend .input-field;
+    @extend .input-field--white;
+  }
+  select {
+    @extend .select-field;
+    @extend .select-field--white;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 48%;
     }
-    input, textarea {
-      @extend .input-field;
-    }
-    select {
-      @extend .select-field;
-    }
+  }
+  button {
+     @extend .btn;
+     @extend .coralred;
   }
 }
 /* //END Contact form */
