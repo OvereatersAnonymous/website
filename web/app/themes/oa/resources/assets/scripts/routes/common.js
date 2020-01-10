@@ -5,7 +5,8 @@ export default {
     jQuery('#primary-nav-toggle').bind('click', function(event) {
       event.preventDefault();
       jQuery(this).toggleClass('open');
-      jQuery('.overlay-nav').css({ 'height': jQuery(document).height() }).fadeToggle();
+      jQuery('.overlay-nav').fadeToggle();
+      setOverlayHeight();
       jQuery('html, body').animate({ scrollTop: 0 });
     })
     jQuery('#primary-nav-close').bind('click', function(event) {
@@ -19,11 +20,16 @@ export default {
       jQuery(this).parent().toggleClass('open').find('ul').slideToggle();
       //adjust overlay height
       //becuase we're animating the navigation items down, we have to wait for the animation to complete
-      /*setTimeout(function () {
-          jQuery('.overlay-nav').css({ 'height': jQuery(document).height() });
-           jQuery('.subPageNav').trigger('sticky_kit:recalc');
-      }, 1000);*/
+      setOverlayHeight();
     })
+
+    var setOverlayHeight = function() {
+      setTimeout(function () {
+          jQuery('.overlay-nav').css({ 'height': jQuery(document).height() });
+          //alert(jQuery(document).height());
+      }, 500);
+    };
+    
 
     //Search
     // JavaScript to be fired on all pages
