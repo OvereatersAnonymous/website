@@ -10,7 +10,7 @@
     <div class="col-md-8">
       @while(have_posts()) @php the_post() @endphp
         @include('partials.page-header')
-        @include('partials.content-share')
+        @include('partials.content-subheader')
         @include('partials.content-page')
       @if(!empty($faq_category_request) && !empty($faqs))
           <div class="faq-listing-wrapper">
