@@ -123,15 +123,17 @@
     }
     .country {
         margin-right: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         a {
             background-position: top center;
             background-repeat: no-repeat;
             background-size: 85px;
-            min-width: 85px;
+            width: 85px;
             display: block;
             padding-top: 54px;
             text-align: center;
+            @include font-size(12);
+            line-height: normal;
         }
         &--AFG {
             background-image: url('#{$image-path}/flags/AFG.svg');     
