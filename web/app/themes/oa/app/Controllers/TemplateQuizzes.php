@@ -16,7 +16,7 @@ class TemplateQuizzes extends Controller
 	 */
 	function __construct()
 	{
-		
+
 		// Get quiz set page from cookie.
 		if(!empty($_COOKIE['oa_quiz_page'])){
 			$this->paged = (int) $_COOKIE['oa_quiz_page'];
@@ -35,7 +35,15 @@ class TemplateQuizzes extends Controller
 	 */
 	public function quiz()
 	{
-		return TemplateQuizzes::quizzesList($this->paged);
+		$quiz = TemplateQuizzes::quizzesList($this->paged);
+		// If no quiz is set, let's reset the cookie and fetch the first quiz
+		if(empty($quiz)){
+            setcookie('oa_quiz_page',"", time() - 3600,"/");
+            $this->paged = 1;
+            return TemplateQuizzes::quizzesList($this->paged);
+        }else{
+		    return $quiz;
+        }
 	}
 	/**
 	 * Static function to query a single quiz
