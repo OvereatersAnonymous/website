@@ -622,6 +622,7 @@ class App extends Controller
 		$pages = get_pages( [
 			'child_of' => $parent,
 			'parent' => $parent,
+            'sort_column' => 'menu_order',
 		] );
 
 		// Return empty if no children
