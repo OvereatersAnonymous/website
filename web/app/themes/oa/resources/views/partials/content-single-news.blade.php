@@ -5,7 +5,7 @@
   <header>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     {{--@include('partials/entry-meta')--}}
-    @include('partials/content-share')
+    @include('partials/content-subheader')
   </header>
   <div class="entry-content">
    @if(has_post_thumbnail(get_the_ID()))
@@ -13,6 +13,6 @@
     @endif
     @php the_content() @endphp
   </div>
-  
+
   {{--@php comments_template('/partials/comments.blade.php') @endphp--}}
 </article>

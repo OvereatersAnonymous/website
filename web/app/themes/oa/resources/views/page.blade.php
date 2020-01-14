@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
- 
+
 @endsection
 @section('content')
   @while(have_posts()) @php the_post() @endphp
@@ -18,7 +18,7 @@
   		<div class="col-md-2"></div>
   		<div class="col-md-8">
 	    	@include('partials.page-header')
-	    	@include('partials/content-share')
+        @include('partials/content-subheader')
 	    	@include('partials.content-page')
 	    </div>
 	    <div class="col-md-2"></div>

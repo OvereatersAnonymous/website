@@ -4,7 +4,7 @@
   </div>
   <header> <h1 class="entry-title">{!! get_the_title() !!}</h1></header>
   {{--@include('partials/entry-meta')--}}
-  @include('partials/content-share')
+  @include('partials/content-subheader')
   @include('partials.content-featured-image')
 <div class="entry-content">
   @php the_content() @endphp
