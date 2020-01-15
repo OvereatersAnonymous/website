@@ -18,8 +18,10 @@ class TemplateFaqListing extends Controller
 	{
 		//Faq Categories filter
 		$this->faqCategory ='';
-		if( !empty($_REQUEST['faq-category']) ){
-			$this->faqCategory = (int)$_REQUEST['faq-category'];
+        $faq_cat = get_query_var( 'faq-cat' );
+		var_dump(get_query_var( 'faq-cat' ));
+		if( !empty($faq_cat) ){
+			$this->faqCategory = (int)$faq_cat;
 		}
 	}
 	/**

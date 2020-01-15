@@ -32,6 +32,31 @@ function oa_add_rewrite_rules_news($aRules) {
 add_filter('rewrite_rules_array', 'App\\oa_add_rewrite_rules_news');
 
 /**
+ * Add query_var for faq category filter
+ *
+ * @hook query_vars
+ * @return array
+ */
+function oa_add_query_vars_faqs($aVars) {
+    $aVars[] = "faq-cat";
+    return $aVars;
+}
+add_filter('query_vars', 'App\\oa_add_query_vars_faqs');
+
+/**
+ * Add rewrite rule for faq category filter pretty url
+ *
+ * @hook rewrite_rules_array
+ * @return array
+ */
+function oa_add_rewrite_rules_faqs($aRules) {
+    $aNewRules = array('faqs/faq-cat/?([0-9]{1,})/?$' => 'index.php?pagename=faqs&faq-cat=$matches[1]');
+    $aRules = $aNewRules + $aRules;
+    return $aRules;
+}
+add_filter('rewrite_rules_array', 'App\\oa_add_rewrite_rules_faqs');
+
+/**
  * Add redirect of search to custom url for the google results
  *
  * @hook template_redirect
