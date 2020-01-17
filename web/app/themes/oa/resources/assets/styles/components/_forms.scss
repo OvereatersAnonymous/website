@@ -92,6 +92,7 @@ label {
 }
 
 
+
 /*Google Translate Widget */
 .goog-te-gadget .goog-te-combo {
     margin: 0 4px 0 0 !important;
@@ -173,7 +174,10 @@ label {
       @extend .alert-danger;
     }
   }
-  input, textarea {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
     @extend .input-field;
     @extend .input-field--white;
   }
@@ -193,5 +197,38 @@ label {
 /* //END Contact form */
 
 
+/* DONATION FORM */
+#mongo-form {
+  .BBFormContainer {
+    border-radius: 0;
+    padding: 0;
+  }
+  .BBFormSectionHeading {
+    padding:0;
+    label {
+      @extend h3;
+    }
+  }
+  select, .BBFormSelectList {
+    @extend .select-field;
+    @extend .select-field--white;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    @extend .input-field;
+    @extend .input-field--white;
+  }
+  label {
+    margin-top: 7px;
+  }
+  .BBFormSubmitbutton, .BBFormSubmitbuttonEdit {
+    @extend .btn;
+    @extend .big;
+    @extend .kiwi;
+    width: auto;
+  }
+}
 
 
