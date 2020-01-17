@@ -93,6 +93,9 @@ Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 Config::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', true);
+// WP Mail SMTP Settings
+Config::define('WPMS_ON', env('WPMS_ON') ?: false);
+Config::define('WPMS_SMTP_PASS', env('WPMS_SMTP_PASS') ?: '');
 
 /**
  * Debugging Settings

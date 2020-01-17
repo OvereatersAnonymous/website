@@ -6,7 +6,7 @@
       <div class="content-wrap" role="document">
         @php(do_action('get_header'))
         @include('partials.header')
-        <div class="main" role="main">   
+        <div class="main" role="main">
           @yield('hero')
           @yield('signups')
           @yield('podcasts')
@@ -17,5 +17,6 @@
       @include('partials.footer')
       @php(wp_footer())
     </div>
+    @include('partials.trackers')
   </body>
 </html>
