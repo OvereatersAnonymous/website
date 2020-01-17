@@ -3,7 +3,7 @@
 	@if ($category_group_terms)
 		<ul class="faq-group--child">
 			@foreach($category_group_terms as $term)
-				<li class="faq-group--item"><a href="{!! get_permalink() !!}faq-cat/{!! $term->term_id !!}">{!! $term->name !!}</a></li>
+				<li class="faq-group--item"><a href="{!! get_permalink() !!}categories/{!! $term->slug !!}">{!! $term->name !!}</a></li>
 			@endforeach
 		</ul>
 	@endif
