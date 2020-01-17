@@ -19,7 +19,7 @@
     </ul>
     <div class="nav nav-select mobile">
         <select id="nav-select" class="select-field">
-           <option @if($menus_nav['active']==$menus_nav['top_parent'])selected @endif>{!!  App::postTitle($menus_nav['top_parent']) !!}</option>
+           <option @if($menus_nav['active']==$menus_nav['top_parent'])selected @endif value="{{ get_the_permalink($menus_nav['top_parent']) }}">{!!  App::postTitle($menus_nav['top_parent']) !!}</option>
             @foreach($menus_nav['pages'] as $page_id => $child_pages)
                 <option @if($menus_nav['active']==$page_id)selected @endif value="{{ get_the_permalink($page_id) }}">{!! App::postTitle($page_id) !!}</option>
                 @if($child_pages)
