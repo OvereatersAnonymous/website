@@ -78,8 +78,8 @@
   "images/flags/IND.svg": "images/flags/IND_2fc6dee0.svg",
   "images/flags/IRL.svg": "images/flags/IRL_31f32c8b.svg",
   "images/flags/IRQ.svg": "images/flags/IRQ_ea88b745.svg",
-  "images/flags/ISL.svg": "images/flags/ISL_0e9e8c3a.svg",
-  "images/flags/ISR.svg": "images/flags/ISR_ef03119e.svg",
+  "images/flags/ISL.svg": "images/flags/ISL_da8c4319.svg",
+  "images/flags/ISR.svg": "images/flags/ISR_6421d84f.svg",
   "images/flags/ITA.svg": "images/flags/ITA_7d4a81ad.svg",
   "images/flags/JAM.svg": "images/flags/JAM_f7a22347.svg",
   "images/flags/JPN.svg": "images/flags/JPN_900d8808.svg",
@@ -153,7 +153,7 @@
   "images/icon-hamburger-close.svg": "images/icon-hamburger-close_b13a921c.svg",
   "images/icon-hamburger.svg": "images/icon-hamburger_12c773ca.svg",
   "images/placeholder.png": "images/placeholder_3bd297a2.png",
-  "scripts/customizer.js": "scripts/customizer_99242571.js",
-  "styles/main.css": "styles/main_99242571.css",
-  "scripts/main.js": "scripts/main_99242571.js"
+  "scripts/customizer.js": "scripts/customizer_e10dd161.js",
+  "styles/main.css": "styles/main_e10dd161.css",
+  "scripts/main.js": "scripts/main_e10dd161.js"
 }
