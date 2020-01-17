@@ -1,19 +1,17 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3e079fd221ed3b4ce24228ffa15d395",
+    "content-hash": "320dab141664233540ff1f7ac38e3e96",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.7",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7",
-                "reference": null,
-                "shasum": null
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -407,8 +405,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3.2",
-                "reference": "5.3.2",
-                "shasum": null
+                "reference": "5.3.2"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -714,9 +711,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip",
-                "reference": "tags/1.6.6",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -734,9 +729,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip",
-                "reference": "tags/1.0.7",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -754,35 +747,13 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412",
-                "reference": "trunk",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/redirection/"
-        },
-        {
-            "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.12.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.12.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.12.0.zip",
-                "reference": "tags/0.12.0",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
@@ -794,9 +765,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.8.zip",
-                "reference": "tags/12.8",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -814,9 +783,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip",
-                "reference": "tags/1.8.1",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -834,9 +801,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205",
-                "reference": "trunk",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205"
             },
             "require": {
                 "composer/installers": "~1.0"
