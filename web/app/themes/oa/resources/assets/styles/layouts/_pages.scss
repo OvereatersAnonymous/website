@@ -604,6 +604,10 @@
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* COMMON */
+.post-subheader {
+	display: flex;
+	justify-content: space-between;
+}
 .page-nav {
 	margin-top: 3rem;
 	.nav-links > *,

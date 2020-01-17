@@ -9,6 +9,7 @@
 	}
 	&.small {
 		padding:0.3rem 0.6rem 0rem;
+		@include NeutrifStudio_Regular();
 	}
 	&.primary {
 		background-color: map-get($button-colors, 'blueberry');
