@@ -1,10 +1,10 @@
 .btn {
-	padding: 0.6rem 1rem 0.4rem;
+	padding: 8px 1rem 6px;
 	letter-spacing:0.2px;
 	@extend strong;
 	color: white;
 	&.big {
-		padding: 0.9rem 1.4rem 0.8rem;
+		padding: 0.8rem 1.4rem;
 		@include font-size(24);
 	}
 	&.small {
