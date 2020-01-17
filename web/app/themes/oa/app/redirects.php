@@ -38,7 +38,7 @@ add_filter('rewrite_rules_array', 'App\\oa_add_rewrite_rules_news');
  * @return array
  */
 function oa_add_query_vars_faqs($aVars) {
-    $aVars[] = "faq-cat";
+    $aVars[] = "categories";
     return $aVars;
 }
 add_filter('query_vars', 'App\\oa_add_query_vars_faqs');
@@ -50,7 +50,7 @@ add_filter('query_vars', 'App\\oa_add_query_vars_faqs');
  * @return array
  */
 function oa_add_rewrite_rules_faqs($aRules) {
-    $aNewRules = array('faqs/faq-cat/?([0-9]{1,})/?$' => 'index.php?pagename=faqs&faq-cat=$matches[1]');
+    $aNewRules = array('faqs/categories/([^/]+)/?$' => 'index.php?pagename=faqs&categories=$matches[1]');
     $aRules = $aNewRules + $aRules;
     return $aRules;
 }
