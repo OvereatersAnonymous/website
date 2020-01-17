@@ -78,7 +78,6 @@
     "roots/wp-password-bcrypt": "^1.0.0",
     "wpackagist-plugin/wp-mail-smtp": "^1.7.0",
     "wpackagist-plugin/wordpress-seo": "^12.3",
-    "wpackagist-plugin/w3-total-cache": "^0.12.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "overeatersanonymous/oa-custom-configurations": "1.6.8",
     "overeatersanonymous/posts-table-pro": "2.1.4",
