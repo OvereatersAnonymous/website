@@ -68,8 +68,8 @@ h4 {
   @include font-size(18);
 }
 
-img {
-  width: 100%;
+img, figure {
+  max-width: 100%;
   height: auto;
 }
 

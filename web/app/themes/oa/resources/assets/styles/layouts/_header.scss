@@ -88,8 +88,8 @@
             flex-wrap: wrap;
             top:12px !important;
             padding-top: 50px;
-
-            border-color: map-get($supporting-colors, 'lightg') !important;
+            background-color:map-get($supporting-colors, 'mediumlightg') !important;
+            border-color: map-get($supporting-colors, 'mediumlightg') !important;
         }
     }
     &--countries {
@@ -100,14 +100,14 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
-            background-color: map-get($supporting-colors, 'lightg') !important;
-            border-color: map-get($supporting-colors, 'lightg') !important;
+            background-color: map-get($supporting-colors, 'mediumlightg') !important;
+            border-color: map-get($supporting-colors, 'mediumlightg') !important;
             
             .dropdown-toggle {
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
-                background-color: map-get($supporting-colors, 'lightg') !important;
-                border-color: map-get($supporting-colors, 'lightg') !important;
+                background-color: map-get($supporting-colors, 'mediumlightg') !important;
+                border-color: map-get($supporting-colors, 'mediumlightg') !important;
             }
         }
     }
@@ -628,6 +628,7 @@
             image-rendering: -o-crisp-edges;
             image-rendering: -webkit-optimize-contrast;
             -ms-interpolation-mode: nearest-neighbor;
+            image-rendering: crisp-edges;
 
             @include media-breakpoint-up(md) {
                 width: 230px;

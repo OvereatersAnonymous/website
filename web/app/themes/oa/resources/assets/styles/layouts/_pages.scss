@@ -79,7 +79,7 @@
 			}
 			.slide-wrapper {
 				background-repeat: no-repeat;
-				background-position: 80%;
+				background-position: 100%;
 				background-size: contain;
 				@media (max-width: 991px) { 
 					background-image: none !important;
@@ -234,7 +234,7 @@
 /* FAQs listing */
 .faq-category-listing-wrapper {
 	background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 50%;
     background-position: top right;
     display: flex;
     flex-wrap: wrap;
@@ -604,6 +604,10 @@
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* COMMON */
+.post-subheader {
+	display: flex;
+	justify-content: space-between;
+}
 .page-nav {
 	margin-top: 3rem;
 	.nav-links > *,
