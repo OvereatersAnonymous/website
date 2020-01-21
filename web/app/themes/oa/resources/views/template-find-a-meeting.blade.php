@@ -2,7 +2,12 @@
   Template Name: Find a Meeting Template
 --}}
 
-@extends('layouts.app')
+@extends('layouts.find-a-meeting')
+@section('page-title')
+  <div class="container">
+    @include('partials.page-header')
+  </div>
+@endsection
 @section('tabs')
   <div class="container oa-tabs">
     <div class="row">
@@ -11,7 +16,6 @@
       </div>
     </div>
   </div>
- 
 @endsection
 @section('content')
   @while(have_posts()) @php the_post() @endphp
