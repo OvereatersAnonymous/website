@@ -11,12 +11,12 @@
     </div>
     <div class="content-item--podcast_links">
       @if(get_field("podcast_google_link", $item_id))
-        <a href="{!! get_field('podcast_google_link', $item_id); !!}" class="google">
+        <a href="{!! get_field('podcast_google_link', $item_id); !!}" class="google" target="_blank">
           <img src="@asset('images/en_badge_google.png')" alt="{!! _e('Get it on Google play','sage'); !!}">
         </a>
       @endif
       @if(get_field("podcast_itunes_link", $item_id))
-        <a href="{!! get_field('podcast_itunes_link', $item_id); !!}" class="itunes">
+        <a href="{!! get_field('podcast_itunes_link', $item_id); !!}" class="itunes" target="_blank">
           <img src="@asset('images/en_badge_itunes.png')" alt="{!! _e('Listen on Apple Podcasts','sage'); !!}">
         </a>
       @endif
