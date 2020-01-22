@@ -40,6 +40,8 @@ class TemplateFaqListing extends Controller
 				'post_type' => 'faqs',
 				'posts_per_page' => -1,
 				'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'asc',
 			);
 			$pParamHash['tax_query'] =  array(
 				'relation'      => 'AND',
