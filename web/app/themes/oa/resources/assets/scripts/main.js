@@ -7,6 +7,9 @@ import './autoload/**/*'
 /*^*^*^**^*^*^*^*^*^*^*^*^*^*^*/
 //Added by CLOUDRED */
 
+// Import custom event pollyfill for IE support
+import 'custom-event-polyfill';
+
 //Import animsition library
 import 'animsition/dist/js/animsition.min';
 
