@@ -9,15 +9,20 @@
     </div>
 </div>
 
-@if(!empty($result['resources_repeater']))
+@if(!empty($result['resources_repeater']) || !empty($result['results_resources_title']))
     <div class="quiz-resources">
         <div class="quiz-resources--card">
             <h3>{{ __('Available resources','sage') }}</h3>
-            <div class="quiz-resources--body">
-                @foreach ($result['resources_repeater'] as $resource)
-                    @include('partials.content-resource',['resource'=>$resource])
-                @endforeach
-            </div>
+            @if(!empty($result['results_resources_title']))
+              <p>{!! $result['results_resources_title'] !!}</p>
+            @endif
+            @if(!empty($result['resources_repeater']))
+              <div class="quiz-resources--body">
+                  @foreach ($result['resources_repeater'] as $resource)
+                      @include('partials.content-resource',['resource'=>$resource])
+                  @endforeach
+              </div>
+            @endif
         </div>
     </div>
 @endif
