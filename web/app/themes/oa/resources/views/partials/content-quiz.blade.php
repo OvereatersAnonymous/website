@@ -5,7 +5,7 @@
             <div class="quiz-body">
                 <div class="quiz-header"><h4>{!! get_the_title($item_id) !!}</h4></div>
                 <div class="quiz-question">{!! $question['question'] !!}</div>
-                <button class="btn navyblack quiz-btn" value="1" type="button">Yes</button> &nbsp; 
+                <button class="btn navyblack quiz-btn" value="1" type="button">Yes</button> &nbsp;
                 <button class="btn navyblack quiz-btn" value="0" type="button">No</button>
                 @if(!empty($question['quote']))
                 <div class="quiz-quote">
@@ -17,15 +17,20 @@
                 @endif
             </div>
         </div>
-        @if(!empty($question['resources_repeater']))
+        @if(!empty($question['resources_repeater'])|| !empty($question['results_resources_title']))
         <div class="quiz-resources">
             <div class="quiz-resources--card">
                 <h3>{{ __('Available resources','sage') }}</h3>
-                <div class="quiz-resources--body">
-                    @foreach ($question['resources_repeater'] as $resource)
-                        @include('partials.content-resource',['resource'=>$resource])
-                    @endforeach
-                </div>
+                @if(!empty($question['question_resources_title']))
+                  <p>{!! $question['question_resources_title'] !!}</p>
+                @endif
+                @if(!empty($question['resources_repeater']))
+                  <div class="quiz-resources--body">
+                      @foreach ($question['resources_repeater'] as $resource)
+                          @include('partials.content-resource',['resource'=>$resource])
+                      @endforeach
+                  </div>
+                @endif
             </div>
         </div>
         @endif
