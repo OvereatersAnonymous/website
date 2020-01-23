@@ -291,24 +291,33 @@ label {
     }
   }
   .advanced-options {
-    padding-left: 18px;
-    padding-top: 3px;
     &:after {
+      padding-left: 10px;
+      padding-top: 3px;
       vertical-align: 0.1em;
       @include icon();
-      content: '\f078';
+      content: '\f107';
     }
     &.open {
       &:after {
         vertical-align: 0.1em;
         @include icon();
-        content: '\f077';
+        content: '\f106';
       }
     }
   }
   .reset {
     margin-left: 15px;
     @include font-size(12);
+  }
+  .formseconds { //TEMP
+    &.processing {
+      background-image: url('#{$image-path}/ajax-loader.gif');
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
+      background-size:18px;
+      padding-left: 50px;
+    }
   }
 }
 

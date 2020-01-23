@@ -33,9 +33,11 @@
   font-stretch: normal;
 }
 @mixin icon() {
-	font-family: "Font Awesome 5 Free";
+	font-family: "FontAwesome";
 	line-height: 1;
 	font-style: normal;
+  	font-variant: normal;
+  	text-rendering: auto;
   	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-indent: 0;
