@@ -69,7 +69,7 @@
 }
 
 .slick-slider {
-	margin-top: 2rem;
+	/*margin-top: 2rem;*/
 	.slick-track {
 		padding-bottom: 1rem;
 
@@ -80,10 +80,19 @@
 			}
 			.slide-wrapper {
 				background-repeat: no-repeat;
-				background-position: 100%;
-				background-size: contain;
-				@media (max-width: 991px) { 
-					background-image: none !important;
+				background-position: center top;
+    			background-size: auto 180px;
+				@include media-breakpoint-up(lg) {
+					background-position: 100%;
+					background-size: contain;
+				}
+				&.img-exists {
+					.title {
+						margin-top: 150px;
+						@include media-breakpoint-up(lg) {
+							margin-top: 0;
+						}
+					}
 				}
 			}
 			.callout {
@@ -301,12 +310,44 @@
 /* FIND MEETINGS PAGES/PLUGIN */
 .template-find-a-meeting {
 	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
-	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link {
+	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
+	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
 		border-color: map-get($supporting-colors,'nude');
 	}
+	.page-header {
+		margin-bottom: 3rem;
+		margin-top: 0;
+		@include media-breakpoint-up(md) {
+			margin-top: 3rem;
+		}
+	}
+	.results-header {
+		h3 {
+			margin-top: 10px;
+		}
+		select {
+			@extend .select-field;
+    		@extend .select-field--white;
+		}
+	}
 	.main-wrapper {
 		background-color: map-get($supporting-colors,'nude');
+		.main {
+			padding-top: 3rem !important;
+			background-size: 40%;
+    		background-repeat: no-repeat;
+    		background-position: right 4rem;
+    		@media (max-width: 768px) { 
+    			background: none !important;
+    		}
+		}
+	}
+	&.results-loaded {
+		/*results page does not have an image */
+		.main-wrapper .main {
+			background: none !important;
+		}
 	}
 }
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
