@@ -1,17 +1,19 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "54d8111654f3eac8fbe5bf6c9939ef91",
+    "content-hash": "d3c993c89739834cc7ba4ea0d0fa0550",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.7",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7"
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -241,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "84046eaade593d68a76ca56dd845adc1519eb6f1"
+                "reference": "93f923673d61371747c28baee89426b507f667ab"
             },
             "require": {
                 "php": ">=7.1"
@@ -262,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-24T05:43:44+00:00"
+            "time": "2020-01-24T21:07:21+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -405,7 +407,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3.2",
-                "reference": "5.3.2"
+                "reference": "5.3.2",
+                "shasum": null
             },
             "require": {
                 "php": ">=5.3.2",
@@ -711,7 +714,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip",
+                "reference": "tags/1.6.6",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -729,7 +734,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip",
+                "reference": "tags/1.0.7",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -747,7 +754,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412"
+                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412",
+                "reference": "trunk",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -765,7 +774,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.9.1.zip",
+                "reference": "tags/12.9.1",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -783,7 +794,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip",
+                "reference": "tags/1.8.1",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -801,7 +814,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205"
+                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205",
+                "reference": "trunk",
+                "shasum": null
             },
             "require": {
                 "composer/installers": "~1.0"
