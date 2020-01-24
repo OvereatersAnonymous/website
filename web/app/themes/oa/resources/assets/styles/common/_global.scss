@@ -79,8 +79,11 @@ img, figure {
     @include NeutrifStudio_Bold();
 }
 
-i, em {
+em, i {
     @include NeutrifStudio_RegularItalic();
+}
+i.fa {
+  font-family: "FontAwesome" !important;
 }
 
 i strong, i bold, em strong, em bold,
