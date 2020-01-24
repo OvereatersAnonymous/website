@@ -15,10 +15,12 @@ body {
 }
 
 .main {
+  padding-bottom: 2rem;
   @include media-breakpoint-up(md) {
-    padding-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
-  padding-bottom: 3rem;
+  
 }
 .main-wrapper {
   background-color: map-get($supporting-colors, 'lightg');
@@ -77,8 +79,11 @@ img, figure {
     @include NeutrifStudio_Bold();
 }
 
-i, em {
+em, i {
     @include NeutrifStudio_RegularItalic();
+}
+i.fa {
+  font-family: "FontAwesome" !important;
 }
 
 i strong, i bold, em strong, em bold,
