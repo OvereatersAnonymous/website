@@ -7,7 +7,7 @@
         @php do_action('get_header') @endphp
         @include('partials.header')
         @yield('tabs')
-        <div class="jumbotron-fluid main-wrapper" style="background-color: {!! App::get_field('background_color') !!}">
+        <div class="jumbotron-fluid main-wrapper {!! App::get_field('background_color') !!}">
           <div class="container" role="document">
             <div class="content">
               <main class="main">
