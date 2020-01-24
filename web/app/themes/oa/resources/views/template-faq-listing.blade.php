@@ -15,9 +15,9 @@
       @if(!empty($faq_category_request) && !empty($faqs))
           <div class="faq-listing-wrapper">
               <div class="faq-listing-nav">
-                  <div class="faq-listing-nav--item back"><a class="link--back" href="{!! get_permalink() !!}"><i class="fas fa-chevron-left" style="font-size: 14px;"></i> {!! __("Back","sage") !!}</a></div>
-                  <div class="faq-listing-nav--item expand-all"><a class="link--expand" href="#"><i class="fas fa-plus" style="font-size: 14px;"></i>  {!! __("Expand all","sage") !!}</a></div>
-                  <div class="faq-listing-nav--item collapse-all"><a class="link--collapse" href="#"><i class="fas fa-minus" style="font-size: 14px;"></i> {!! __("Collapse all","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item back"><a class="link--back" href="{!! get_permalink() !!}"><i class="fa fa-chevron-left" style="font-size: 14px;"></i> {!! __("Back","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item expand-all"><a class="link--expand" href="#"><i class="fa fa-plus" style="font-size: 14px;"></i>  {!! __("Expand all","sage") !!}</a></div>
+                  <div class="faq-listing-nav--item collapse-all"><a class="link--collapse" href="#"><i class="fa fa-minus" style="font-size: 14px;"></i> {!! __("Collapse all","sage") !!}</a></div>
               </div>
               <div class="faq-accordion" id="accordion">
                   @foreach ($faqs as $faq)

@@ -2,7 +2,7 @@
 <div class="faq">
   <div class="faq--heading" id="heading-{!! $item_id !!}">
     <h4 class="@if($loop->iteration > 1)collapsed @endif" data-toggle="collapse" data-target="#collapse-{!! $item_id !!}" aria-expanded="true" aria-controls="collapse-{!! $item_id !!}">
-       {!! get_the_title($item_id) !!} <i class="fas fa-chevron-down" style="font-size: 14px;"></i>
+       {!! get_the_title($item_id) !!} <i class="fa fa-chevron-down" style="font-size: 14px;"></i>
      </h4>
   </div>
 
