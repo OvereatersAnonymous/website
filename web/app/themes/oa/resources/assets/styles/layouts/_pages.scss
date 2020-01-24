@@ -6,7 +6,7 @@
 		@extend .section-padding;
 		background-color: map-get($supporting-colors,'steal');
 		&--form {
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			@include media-breakpoint-up(md) {
 				margin-bottom: 0;
 			}
@@ -316,7 +316,6 @@
 		border-color: map-get($supporting-colors,'nude');
 	}
 	.page-header {
-		margin-bottom: 3rem;
 		margin-top: 0;
 		@include media-breakpoint-up(md) {
 			margin-top: 3rem;

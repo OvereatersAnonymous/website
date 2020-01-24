@@ -15,10 +15,12 @@ body {
 }
 
 .main {
+  padding-bottom: 2rem;
   @include media-breakpoint-up(md) {
-    padding-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
-  padding-bottom: 3rem;
+  
 }
 .main-wrapper {
   background-color: map-get($supporting-colors, 'lightg');
