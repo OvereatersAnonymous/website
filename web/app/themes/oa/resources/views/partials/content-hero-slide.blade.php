@@ -1,5 +1,5 @@
 <div class="hero">
-    <div class="slide-wrapper" style="background-image:url({!! $slide['hero_image']['sizes']['medium@2x'] !!})">
+    <div class="slide-wrapper @if ($slide['hero_image']['sizes']['medium@2x']) img-exists @endif" style="background-image:url({!! $slide['hero_image']['sizes']['medium@2x'] !!})">
         <span class="sr-only">{!! $slide['hero_image']['alt'] !!}</span>
         <div class="callout col-lg-7">
             <div class="title">{!! $slide['hero_home_callout_title'] !!}</div>

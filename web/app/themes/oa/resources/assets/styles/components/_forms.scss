@@ -49,12 +49,13 @@
       content: '\f107';
       @include font-size(24);
       border:none;
-  }
-
-  
+  } 
   background-image: url('#{$image-path}/arrow-down-blueberry.png');
   background-repeat: no-repeat;
-  background-position: 90% 50%;
+  background-position: 
+    calc(100% - 15px) 50%,
+    calc(100% - 10px) 50%,
+    95% 0;
   background-size:18px;
   padding-right:3.3rem;
   
@@ -230,5 +231,96 @@ label {
     width: auto;
   }
 }
+/* //END DONATION FORM */
+
+/*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
+/* FIND A MEETING FORMS*/
+.find-a-meeting-form {
+  width: 100%;
+  margin-top: 30px;
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+ 
+  &--header {
+    h3 {
+      display: none;
+    }
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    @extend .input-field;
+    @extend .input-field--white;
+    width: 100%;
+  }
+  input[type="submit"] {
+    @extend .btn;
+    @extend .coralred;
+    width: auto;
+  }
+
+  select {
+    @extend .select-field;
+    @extend .select-field--white;
+    width: 100%;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  i.fas {
+    @include font-size(12);
+  }
+  .find-a-meeting-form--search-fields {
+    margin-bottom: 15px;
+  }
+  .findameeting-location {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    &--option {
+      margin-right: 15px;
+      input {
+        margin-right: 5px;
+      }
+    }
+    label {
+      width: 100%;
+    }
+  }
+  .advanced-options {
+    &:after {
+      padding-left: 10px;
+      padding-top: 3px;
+      vertical-align: 0.1em;
+      @include icon();
+      content: '\f107';
+    }
+    &.open {
+      &:after {
+        vertical-align: 0.1em;
+        @include icon();
+        content: '\f106';
+      }
+    }
+  }
+  .reset {
+    margin-left: 15px;
+    @include font-size(12);
+  }
+  .formseconds { //TEMP
+    &.processing {
+      background-image: url('#{$image-path}/ajax-loader.gif');
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
+      background-size:18px;
+      padding-left: 50px;
+    }
+  }
+}
+
+/* //END FIND A MEETING FORMs */
 
 

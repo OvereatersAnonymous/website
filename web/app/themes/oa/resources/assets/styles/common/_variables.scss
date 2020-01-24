@@ -39,6 +39,8 @@ $button-colors: (
 
 /* image path */
 $image-path: '../images' !default;
+/* fontawesome fonts path */
+$fa-font-path: "~font-awesome/fonts/";
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

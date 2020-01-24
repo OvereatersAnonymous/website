@@ -33,9 +33,12 @@
   font-stretch: normal;
 }
 @mixin icon() {
-	font-family: FontAwesome;
+	font-family: "FontAwesome";
 	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+  	font-variant: normal;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-indent: 0;
 	position: absolute;

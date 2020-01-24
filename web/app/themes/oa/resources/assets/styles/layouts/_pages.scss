@@ -6,7 +6,7 @@
 		@extend .section-padding;
 		background-color: map-get($supporting-colors,'steal');
 		&--form {
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			@include media-breakpoint-up(md) {
 				margin-bottom: 0;
 			}
@@ -69,7 +69,7 @@
 }
 
 .slick-slider {
-	margin-top: 2rem;
+	/*margin-top: 2rem;*/
 	.slick-track {
 		padding-bottom: 1rem;
 
@@ -80,10 +80,19 @@
 			}
 			.slide-wrapper {
 				background-repeat: no-repeat;
-				background-position: 100%;
-				background-size: contain;
-				@media (max-width: 991px) { 
-					background-image: none !important;
+				background-position: center top;
+    			background-size: auto 180px;
+				@include media-breakpoint-up(lg) {
+					background-position: 100%;
+					background-size: contain;
+				}
+				&.img-exists {
+					.title {
+						margin-top: 150px;
+						@include media-breakpoint-up(lg) {
+							margin-top: 0;
+						}
+					}
 				}
 			}
 			.callout {
@@ -301,12 +310,104 @@
 /* FIND MEETINGS PAGES/PLUGIN */
 .template-find-a-meeting {
 	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
-	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link {
+	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
+	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
 		border-color: map-get($supporting-colors,'nude');
 	}
+	.page-header {
+		margin-top: 0;
+		@include media-breakpoint-up(md) {
+			margin-top: 3rem;
+		}
+	}
+	.results-header {
+		h3 {
+			margin-top: 10px;
+		}
+		select {
+			@extend .select-field;
+    		@extend .select-field--white;
+		}
+	}
 	.main-wrapper {
 		background-color: map-get($supporting-colors,'nude');
+		.main {
+			padding-top: 3rem !important;
+			background-size: 40%;
+    		background-repeat: no-repeat;
+    		background-position: right 4rem;
+    		@media (max-width: 768px) { 
+    			background: none !important;
+    		}
+		}
+	}
+	&.results-loaded {
+		/*results page does not have an image */
+		.main-wrapper .main {
+			background: none !important;
+		}
+	}
+	.tools {
+		text-align: right;
+		a {
+			display: inline-block;
+			@include media-breakpoint-up(md) {
+				margin-left: 15px;
+			}
+		}
+	}
+	.meeting {
+		border-radius: 5px;
+		background-color: white;
+		padding:2rem;
+		margin-bottom: 1rem;
+		&--counter {
+			@include font-size(48);
+			line-height: 3rem;
+			@extend strong;
+			color: map-get($theme-colors, 'gold');
+		}
+		&--date {
+			@extend h4;
+		}
+		&--name, &--address {
+			line-height: normal;
+		}
+		&--detail-toggle{
+			margin-top: 2rem;
+			a {
+				cursor: s-resize;
+				&:after {
+					padding-left: 10px;
+    				padding-top: 3px;
+					@include icon();
+      				content: '\f107';
+				}
+				&.open-details {
+					cursor: n-resize;
+					&:after {
+						@include icon();
+      					content: '\f106';
+      				}
+				}
+			}
+		}
+		&--links {
+			text-align: right;
+		}
+		&--icon {
+			text-align: center;
+		}
+	}
+	.no-results {
+		background-image: url('#{$image-path}/no-results.png');
+		background-size: 100px auto;
+		background-repeat: no-repeat;
+		padding-top: 2rem;
+		margin-top: 3rem;
+		padding-bottom: 10rem;
+		padding-left: 150px;
 	}
 }
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */

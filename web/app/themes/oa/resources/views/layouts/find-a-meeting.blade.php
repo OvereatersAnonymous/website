@@ -11,7 +11,7 @@
         <div class="jumbotron-fluid main-wrapper">
           <div class="container" role="document">
             <div class="content">
-              <main class="main">
+              <main class="main" @if(App::featuredImage()) style="background-image: url('{{App::featuredImageSrc()}}');" @endif>
                 @yield('content')
               </main>
               @if (App\display_sidebar())
