@@ -349,6 +349,67 @@
 			background: none !important;
 		}
 	}
+	.tools {
+		text-align: right;
+		a {
+			display: inline-block;
+			@include media-breakpoint-up(md) {
+				margin-left: 15px;
+			}
+		}
+	}
+	.meeting {
+		border-radius: 5px;
+		background-color: white;
+		padding:2rem;
+		margin-bottom: 1rem;
+		&--counter {
+			@include font-size(48);
+			line-height: 3rem;
+			@extend strong;
+			color: map-get($theme-colors, 'gold');
+		}
+		&--date {
+			@extend h4;
+		}
+		&--name, &--address {
+			line-height: normal;
+		}
+		&--detail-toggle{
+			margin-top: 2rem;
+			a {
+				cursor: s-resize;
+				&:after {
+					padding-left: 10px;
+    				padding-top: 3px;
+					@include icon();
+      				content: '\f107';
+				}
+				&.open-details {
+					cursor: n-resize;
+					&:after {
+						@include icon();
+      					content: '\f106';
+      				}
+				}
+			}
+		}
+		&--links {
+			text-align: right;
+		}
+		&--icon {
+			text-align: center;
+		}
+	}
+	.no-results {
+		background-image: url('#{$image-path}/no-results.png');
+		background-size: 100px auto;
+		background-repeat: no-repeat;
+		padding-top: 2rem;
+		margin-top: 3rem;
+		padding-bottom: 10rem;
+		padding-left: 150px;
+	}
 }
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* //END */
