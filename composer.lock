@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3c993c89739834cc7ba4ea0d0fa0550",
+    "content-hash": "9e833ad323dadd97d3bc39d25baf3244",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.7.2",
+            "version": "1.7.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "93f923673d61371747c28baee89426b507f667ab"
+                "reference": "02cf06a40a8e43cff2881c18e693ab7da86839c3"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-24T21:07:21+00:00"
+            "time": "2020-01-25T05:49:39+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -293,11 +293,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "cfe7311b4f0f269dca1536d6525d5499d4324be9"
+                "reference": "41e220ab525871d03fee037f7379dea860a29bcd"
             },
             "require": {
                 "php": ">=7.1"
@@ -314,7 +314,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-24T05:45:25+00:00"
+            "time": "2020-01-25T05:52:06+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",

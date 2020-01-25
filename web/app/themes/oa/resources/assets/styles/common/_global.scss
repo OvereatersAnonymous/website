@@ -175,6 +175,9 @@ iframe{
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.break-string {
+  word-break: break-all;
+}
 
 #CybotCookiebotDialog {
   -webkit-box-shadow: 0 -1px 10px 0 rgba(0,0,0,0.1) !important;
