@@ -260,6 +260,9 @@ label {
     @extend .coralred;
     width: auto;
   }
+  /*input.intergroup-input {
+    width: 200px;
+  }*/
 
   select {
     @extend .select-field;
@@ -274,6 +277,9 @@ label {
   }
   .find-a-meeting-form--search-fields {
     margin-bottom: 15px;
+    &.submit-search {
+      margin-top: 2rem;
+    }
   }
   .findameeting-location {
     display: flex;
@@ -289,7 +295,14 @@ label {
     label {
       width: 100%;
     }
+    &.service-bodies {
+      .fam-select {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
   }
+  
   .advanced-options {
     &:after {
       padding-left: 10px;
