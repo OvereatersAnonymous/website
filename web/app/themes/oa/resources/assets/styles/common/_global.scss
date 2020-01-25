@@ -23,7 +23,24 @@ body {
   
 }
 .main-wrapper {
+  /*default color */
   background-color: map-get($supporting-colors, 'lightg');
+  /*if overwritten woithin page admin, use that color */
+  &.lightbluegrey {
+    background-color: map-get($page-colors,'lightbluegrey');
+  }
+  &.aqualight {
+    background-color: map-get($page-colors,'aqualight');
+  }
+  &.palechartreuse {
+    background-color: map-get($page-colors,'palechartreuse');
+  }
+  &.rosegold {
+    background-color: map-get($page-colors,'rosegold');
+  }
+  &.quartz {
+    background-color: map-get($page-colors,'quartz');
+  }
 }
 
 
@@ -157,6 +174,9 @@ iframe{
 .section-padding {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.break-string {
+  word-break: break-all;
 }
 
 #CybotCookiebotDialog {

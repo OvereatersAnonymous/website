@@ -347,6 +347,10 @@
 		.main-wrapper .main {
 			background: none !important;
 		}
+		/*also hide body content if any*/
+		.text-content {
+			display: none;
+		}
 	}
 	.tools {
 		text-align: right;
