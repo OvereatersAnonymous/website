@@ -2,7 +2,7 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #5F51E4, //used by bootstrap?
+  primary: #5F51E4, //used by bootstrap, this is the only dupe
   blueberry: #5F51E4,
   peach: #FA8561,
   grape: #9D3C7B,
@@ -15,7 +15,7 @@ $supporting-colors: (
   nude: #EFECE1,
   pear: #D0EFEB,
   dragonfruit: #CC75A9, 
-  nightsky: #1A1A1A,
+  nightsky: map-get($theme-colors,'base'),
   smoke: #8492A6,
   steal: #C0CCDA,
   ocean: #8FDBF9,
@@ -25,16 +25,28 @@ $supporting-colors: (
   superlightg: #F9FAFC
 );
 $button-colors: (
-  blueberry: #5F51E4,
+  blueberry: map-get($theme-colors,'primary'),
   blueberry-highlight: #4234C4,
   coralred: #FF3C38,
   coralred-highlight: #CE312E,
   kiwi: #6DE0C1,
   kiwi-highlight: #18C596,
-  smoky: #8492A6,
+  smoky: map-get($supporting-colors,'smoke'),
   smoky-highlight: #697585,
-  navyblack: #3C4A68,
+  navyblack: map-get($theme-colors,'navyblack'),
   navyblack-highlight:#273042
+);
+$page-colors: (
+  lightbluegrey: map-get($supporting-colors,'lightg'),
+  lightbluegrey-highlight: map-get($supporting-colors,'smoke'),
+  aqualight: #e7f8ef,
+  aqualight-highlight:  #9cc7b0,
+  palechartreuse: #f5f8e7,
+  palechartreuse-highlight: #c1d36d,
+  rosegold: #ffe8e5,
+  rosegold-highlight: #e39f96,
+  quartz: #eee7f8,
+  quartz-highlight: #a08eba
 );
 
 /* image path */

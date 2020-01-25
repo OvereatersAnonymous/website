@@ -6,8 +6,6 @@
 			margin-right: 5px;
 			margin-bottom: 0;
 			.nav-link.active, .nav-item.show, .nav-link {
-				background-color: map-get($supporting-colors, 'lightg');
-				border-color: map-get($supporting-colors, 'lightg');
 				color: map-get($theme-colors, 'base');
 				@extend strong;
 				opacity: 0.4;
@@ -15,23 +13,12 @@
 
 				&:hover {
 					@include transition(all .3s ease);
-					background-color: map-get($supporting-colors, 'smoke');
-					border-color: map-get($supporting-colors, 'smoke');
-					opacity: 1;
 				}
 			}
 			.nav-link.active, .nav-item.show {
 				opacity:1;
 			}
-			&.dropdown {
-
-				&.show {
-					a {
-						background-color: map-get($supporting-colors, 'smoke');
-						border-color: map-get($supporting-colors, 'smoke');
-						opacity: 1;
-					}
-				}
+			&.dropdown {		
 				.dropdown-toggle {
 					&:after {
 						border:none;
@@ -46,18 +33,100 @@
 				}
 			}
 			.dropdown-menu {
-				border-color: map-get($supporting-colors, 'smoke');
-				background-color: map-get($supporting-colors, 'smoke');
-				width: 100%;
+				min-width: 100%;
 				.dropdown-item {
 					padding: 0.25rem 1rem;
 					color: map-get($theme-colors, 'base');
 					@extend strong;
 					@include transition(color .3s ease);
+				}
+			}
+			/*colors*/
+			.nav-link.active, .nav-link {
+				background-color: map-get($supporting-colors, 'lightg');
+				border-color: map-get($supporting-colors, 'lightg');
+				&:hover {
+					@include transition(all .3s ease);
+					background-color: map-get($supporting-colors, 'smoke');
+					border-color: map-get($supporting-colors, 'smoke');
+					opacity: 1;
+				}
+				/*overwrite if a specific color was set*/
+				&.lightbluegrey {
+					background-color: map-get($page-colors, 'lightbluegrey');
+					border-color: map-get($page-colors, 'lightbluegrey');
 					&:hover {
-						color: map-get($supporting-colors, 'lightg');
+						background-color: map-get($page-colors, 'lightbluegrey-highlight');
+						border-color: map-get($page-colors, 'lightbluegrey-highlight');
 					}
 				}
+				&.aqualight {
+					background-color: map-get($page-colors, 'aqualight');
+					border-color: map-get($page-colors, 'aqualight');
+					&:hover {
+						background-color: map-get($page-colors, 'aqualight-highlight');
+						border-color: map-get($page-colors, 'aqualight-highlight');
+					}
+				}
+				&.palechartreuse {
+					background-color: map-get($page-colors, 'palechartreuse');
+					border-color: map-get($page-colors, 'palechartreuse');
+					&:hover {
+						background-color: map-get($page-colors, 'palechartreuse-highlight');
+						border-color: map-get($page-colors, 'palechartreuse-highlight');
+					}
+				}
+				&.rosegold {
+					background-color: map-get($page-colors, 'rosegold');
+					border-color: map-get($page-colors, 'rosegold');
+					&:hover {
+						background-color: map-get($page-colors, 'rosegold-highlight');
+						border-color: map-get($page-colors, 'rosegold-highlight');
+					}
+				}
+				&.quartz {
+					background-color: map-get($page-colors, 'quartz');
+					border-color: map-get($page-colors, 'quartz');
+					&:hover {
+						background-color: map-get($page-colors, 'quartz-highlight');
+						border-color: map-get($page-colors, 'quartz-highlight');
+					}
+				}
+			}
+			.dropdown-menu, .dropdown-item:hover, .dropdown-item:focus,
+			&.show .nav-link {
+				background-color: map-get($supporting-colors, 'smoke');
+				border-color: map-get($supporting-colors, 'smoke');
+				opacity: 1;
+				/*overwrite if a specific color was set*/
+				&.lightbluegrey {
+					background-color: map-get($page-colors, 'lightbluegrey-highlight');
+					border-color: map-get($page-colors, 'lightbluegrey-highlight');
+					color: map-get($page-colors, 'lightbluegrey');
+				}
+				&.aqualight {
+					background-color: map-get($page-colors, 'aqualight-highlight');
+					border-color: map-get($page-colors, 'aqualight-highlight');
+					color: map-get($page-colors, 'aqualight');
+				}
+				&.palechartreuse {
+					background-color: map-get($page-colors, 'palechartreuse-highlight');
+					border-color: map-get($page-colors, 'palechartreuse-highlight');
+					color: map-get($page-colors, 'palechartreuse');
+				}
+				&.rosegold {
+					background-color: map-get($page-colors, 'rosegold-highlight');
+					border-color: map-get($page-colors, 'rosegold-highlight');
+					color: map-get($page-colors, 'rosegold');
+				}
+				&.quartz {
+					background-color: map-get($page-colors, 'quartz-highlight');
+					border-color: map-get($page-colors, 'quartz-highlight');
+					color: map-get($page-colors, 'quartz');
+				}
+			}
+			&.show .nav-link {
+				color: map-get($theme-colors, 'base') !important;
 			}
 		}
 	}
