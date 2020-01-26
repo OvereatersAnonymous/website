@@ -308,6 +308,13 @@
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* FIND MEETINGS PAGES/PLUGIN */
+#fountainG {
+	display: none;
+	&:after {
+		border: 6px solid white;
+  		border-color: white transparent white transparent;
+	}
+}
 .template-find-a-meeting {
 	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
 	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
@@ -350,6 +357,9 @@
 		/*also hide body content if any*/
 		.text-content {
 			display: none;
+		}
+		#fountainG {
+			display: block;
 		}
 	}
 	.tools {
@@ -399,6 +409,9 @@
 		}
 		&--links {
 			text-align: right;
+			.modal-content {
+				text-align: left;
+			}
 		}
 		&--icon {
 			text-align: center;
