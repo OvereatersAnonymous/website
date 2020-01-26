@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b660bebcdbfb766d562719e7d1e9935a",
+    "content-hash": "6b81100eeb851ae1bb6b2975d84b50b2",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -293,11 +293,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "1f8e5be75bcfe7740c9e430332632e5b10e7598c"
+                "reference": "82dd8a5c67676852a2c4b73daf1762bf3798149e"
             },
             "require": {
                 "php": ">=7.1"
@@ -314,7 +314,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-25T19:41:33+00:00"
+            "time": "2020-01-26T06:10:08+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
