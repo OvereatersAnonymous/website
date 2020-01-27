@@ -14,15 +14,27 @@
 	}
 	.podcasts {
 		@extend .section-padding;
-		@include media-breakpoint-up(lg) {
-			padding-bottom: 0;
+		padding-bottom: 0;
+		
+		.unveil-bg {
+			background-repeat: no-repeat;
+    		background-position: center top;
+    		background-size: auto 180px;
+    		height: 200px;
+    		@include media-breakpoint-up(md) {
+    			background-size: 100%;
+    			height: auto;
+    		}
 		}
-		&--image {
+		&--callout {
+			padding-bottom: 3rem;
+		}
+		/*&--image {
 			display: none;
 			@include media-breakpoint-up(md) {
 				display: block;
 			}
-		}
+		}*/
 	}
 	.news {
 		@extend .section-padding;
@@ -513,7 +525,7 @@
 		background-color: map-get($supporting-colors, 'ocean');
 	}
 	.results-card {
-		background-color: map-get($supporting-colors, 'cadet');
+		background-color: map-get($supporting-colors, 'peach');
 		color: white;
 		.results-text {
 			margin-top: 2rem;
