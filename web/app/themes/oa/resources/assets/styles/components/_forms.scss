@@ -293,6 +293,7 @@ label {
     &.flex {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-start;
       select, input {
         margin-right: 10px;
       }
@@ -349,11 +350,22 @@ label {
       padding-left: 50px;
     }
   }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .half_width_input_left, .half_width_input_right {
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: 48%;
+      }
+    }
+  }
   .review-panel {
     label {
       @extend strong;
       margin-bottom: 0;
-      display: inline-block;
+      display: inline-block !important;
     }
     .review-data {
       margin-bottom: 1rem;
