@@ -5,6 +5,10 @@
 		.nav-item {
 			margin-right: 5px;
 			margin-bottom: 0;
+			/*&:last-child {
+				align-self:flex-end;
+				margin-left: auto;
+			}*/
 			.nav-link.active, .nav-item.show, .nav-link {
 				color: map-get($theme-colors, 'base');
 				@extend strong;

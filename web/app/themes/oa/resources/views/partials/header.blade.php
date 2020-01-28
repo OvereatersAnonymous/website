@@ -1,4 +1,4 @@
-<div class="container-fluid search-wrapper">
+<div class="container-fluid search-wrapper hidden-print">
   <div class="row">
     <div class="col-md-12">
       <div class="search">
@@ -8,7 +8,7 @@
   </div>
 </div>
 <header class="banner">
-  <div class="jambotron hat">
+  <div class="jambotron hat hidden-print">
     <div class="container" style="position: relative;">
     	<!-- hat nav-->
     	<div class="row">
@@ -38,7 +38,7 @@
     				{{ get_bloginfo('name', 'display') }}
     			@endif
     	</div>
-    	<div class="col-7">
+    	<div class="col-7 hidden-print">
 		    <nav class="nav-primary">
           @include('partials.widget-feature-btn')
           <div class="overlay-toggle"><a href="#" tabindex="1" class="primary-nav-toggle" id="primary-nav-toggle"><span class="sr-only"> @php _e("Menu","sage"); @endphp</span></a></div>

@@ -1,4 +1,4 @@
-<div class="tabs__wpmeetings">
+<div class="tabs__wpmeetings hidden-print">
   <ul class="nav nav-tabs desktop">
     <li class="nav-item face-to-face">
       <a class="nav-link @php echo (isset($_GET['type']) && $_GET['type'] == WPMEETINGS_F2F ? 'active' : '')@endphp" href="/find-a-meeting/?type=@php echo WPMEETINGS_F2F; @endphp">{!! __('Face-To-Face','sage') !!}</a>
@@ -17,7 +17,7 @@
     </li>
   </ul>
 </div>
-<div class="nav nav-select mobile">
+<div class="nav nav-select mobile hidden-print">
   <select id="nav-select" class="select-field">
     <option @php echo (isset($_GET['type']) && $_GET['type'] == WPMEETINGS_F2F ? 'selected' : '')@endphp value="/find-a-meeting/?type=@php echo WPMEETINGS_F2F; @endphp">{!! __('Face-To-Face','sage') !!}</option>
     <option @php echo (isset($_GET['type']) && $_GET['type'] == WPMEETINGS_ONLINE ? 'selected' : '')@endphp value="/find-a-meeting/?type=@php echo WPMEETINGS_ONLINE; @endphp">{!! __('Online','sage') !!}</option>

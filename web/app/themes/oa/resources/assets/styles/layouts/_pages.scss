@@ -14,15 +14,27 @@
 	}
 	.podcasts {
 		@extend .section-padding;
-		@include media-breakpoint-up(lg) {
-			padding-bottom: 0;
+		padding-bottom: 0;
+		
+		.unveil-bg {
+			background-repeat: no-repeat;
+    		background-position: center top;
+    		background-size: auto 180px;
+    		height: 200px;
+    		@include media-breakpoint-up(md) {
+    			background-size: 100%;
+    			height: auto;
+    		}
 		}
-		&--image {
+		&--callout {
+			padding-bottom: 3rem;
+		}
+		/*&--image {
 			display: none;
 			@include media-breakpoint-up(md) {
 				display: block;
 			}
-		}
+		}*/
 	}
 	.news {
 		@extend .section-padding;
@@ -308,6 +320,13 @@
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* FIND MEETINGS PAGES/PLUGIN */
+#fountainG {
+	display: none;
+	&:after {
+		border: 6px solid white;
+  		border-color: white transparent white transparent;
+	}
+}
 .template-find-a-meeting {
 	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
 	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
@@ -350,6 +369,9 @@
 		/*also hide body content if any*/
 		.text-content {
 			display: none;
+		}
+		#fountainG {
+			display: block;
 		}
 	}
 	.tools {
@@ -399,6 +421,9 @@
 		}
 		&--links {
 			text-align: right;
+			.modal-content {
+				text-align: left;
+			}
 		}
 		&--icon {
 			text-align: center;
@@ -413,6 +438,10 @@
 		padding-bottom: 10rem;
 		padding-left: 150px;
 	}
+}
+/*find a meeting add/cancel/edit pages*/
+.find-a-meeting-manage {
+
 }
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* //END */
@@ -496,7 +525,7 @@
 		background-color: map-get($supporting-colors, 'ocean');
 	}
 	.results-card {
-		background-color: map-get($supporting-colors, 'cadet');
+		background-color: map-get($supporting-colors, 'peach');
 		color: white;
 		.results-text {
 			margin-top: 2rem;

@@ -235,13 +235,14 @@ label {
 
 /*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
 /* FIND A MEETING FORMS*/
-.find-a-meeting-form {
+.template-find-a-meeting .find-a-meeting-form {
   width: 100%;
   margin-top: 30px;
   @include media-breakpoint-up(md) {
     width: 50%;
   }
- 
+}
+.find-a-meeting-form {
   &--header {
     h3 {
       display: none;
@@ -255,12 +256,23 @@ label {
     @extend .input-field--white;
     width: 100%;
   }
-  input[type="submit"] {
+  input[type="submit"],
+  input[type="button"],
+  #review-meeting, #go-back {
     @extend .btn;
     @extend .coralred;
     width: auto;
   }
+  input#registration-policy-decline, #review-meeting, #go-back {
+    @extend .smoky;
+  }
+  /*input.intergroup-input {
+    width: 200px;
+  }*/
 
+  legend {
+    @extend h3;
+  }
   select {
     @extend .select-field;
     @extend .select-field--white;
@@ -272,8 +284,20 @@ label {
   i.fas {
     @include font-size(12);
   }
-  .find-a-meeting-form--search-fields {
+  .find-a-meeting-form--search-fields,
+  .find-a-meeting-form--manage-fields {
     margin-bottom: 15px;
+    &.submit-search {
+      margin-top: 2rem;
+    }
+    &.flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      select, input {
+        margin-right: 10px;
+      }
+    }
   }
   .findameeting-location {
     display: flex;
@@ -289,7 +313,14 @@ label {
     label {
       width: 100%;
     }
+    &.service-bodies {
+      .fam-select {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
   }
+  
   .advanced-options {
     &:after {
       padding-left: 10px;
@@ -317,6 +348,27 @@ label {
       background-position: 10% 50%;
       background-size:18px;
       padding-left: 50px;
+    }
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .half_width_input_left, .half_width_input_right {
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: 48%;
+      }
+    }
+  }
+  .review-panel {
+    label {
+      @extend strong;
+      margin-bottom: 0;
+      display: inline-block !important;
+    }
+    .review-data {
+      margin-bottom: 1rem;
     }
   }
 }
