@@ -327,30 +327,30 @@
   		border-color: white transparent white transparent;
 	}
 }
-.template-find-a-meeting {
+.template-find-a-meeting, 
+.page-manage-your-meeting-data,
+.page-add-a-meeting-data,
+.page-edit-a-meeting-data,
+.page-cancel-a-meeting-data {
 	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
 	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
 	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
 		border-color: map-get($supporting-colors,'nude');
 	}
+	.main-wrapper {
+		background-color: map-get($supporting-colors,'nude');
+	}
+}
+.template-find-a-meeting {
 	.page-header {
 		margin-top: 0;
 		@include media-breakpoint-up(md) {
 			margin-top: 3rem;
 		}
 	}
-	.results-header {
-		h3 {
-			margin-top: 10px;
-		}
-		select {
-			@extend .select-field;
-    		@extend .select-field--white;
-		}
-	}
+	
 	.main-wrapper {
-		background-color: map-get($supporting-colors,'nude');
 		.main {
 			padding-top: 3rem !important;
 			background-size: 40%;
@@ -381,6 +381,32 @@
 			@include media-breakpoint-up(md) {
 				margin-left: 15px;
 			}
+		}
+	}
+	.modal-footer {
+		button {
+			@extend .smoky;
+		}
+	}
+	
+	.no-results {
+		background-image: url('#{$image-path}/no-results.png');
+		background-size: 100px auto;
+		background-repeat: no-repeat;
+		padding-top: 2rem;
+		margin-top: 3rem;
+		padding-bottom: 10rem;
+		padding-left: 150px;
+	}
+}
+.find-a-meeting-results {
+	.results-header {
+		h3 {
+			margin-top: 10px;
+		}
+		select {
+			@extend .select-field;
+    		@extend .select-field--white;
 		}
 	}
 	.meeting {
@@ -424,19 +450,20 @@
 			.modal-content {
 				text-align: left;
 			}
+			a {
+				color: map-get($theme-colors, 'base');
+				display: inline;
+				@include font-size(20);
+				margin-right: 10px;
+				cursor: pointer;
+				&:hover {
+					color: map-get($theme-colors, 'blueberry');
+				}
+			}
 		}
 		&--icon {
 			text-align: center;
 		}
-	}
-	.no-results {
-		background-image: url('#{$image-path}/no-results.png');
-		background-size: 100px auto;
-		background-repeat: no-repeat;
-		padding-top: 2rem;
-		margin-top: 3rem;
-		padding-bottom: 10rem;
-		padding-left: 150px;
 	}
 }
 /*find a meeting add/cancel/edit pages*/
@@ -525,7 +552,7 @@
 		background-color: map-get($supporting-colors, 'ocean');
 	}
 	.results-card {
-		background-color: map-get($supporting-colors, 'peach');
+		background-color: map-get($theme-colors, 'peach');
 		color: white;
 		.results-text {
 			margin-top: 2rem;

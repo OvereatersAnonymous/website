@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
   <div class="back-btn page-header">
-    <i class="fas fa-chevron-left"></i> &nbsp; <a href="/news?news-category={!! APP::get_uri_param('news-category') !!}&page={!! APP::get_uri_param('page') !!}">{!! _e('All news','sage'); !!}</a>
+    <i class="fa fa-chevron-left"></i> &nbsp; <a href="/news?news-category={!! APP::get_uri_param('news-category') !!}&page={!! APP::get_uri_param('page') !!}">{!! _e('All news','sage'); !!}</a>
   </div>
   <header>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
