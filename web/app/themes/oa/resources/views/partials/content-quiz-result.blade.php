@@ -1,7 +1,7 @@
 <div class="results-card">
     <div class="results-body">
         <h4 class="results-title">{!! __('Recap','sage') !!}</h4>
-        <div class="results-subtitle">{!! __('You have answered','sage') !!} &ldquo;{!! __('No','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $wrong_answers !!} {!! __('question(s) and','sage') !!} &ldquo;{!! __('Yes','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $correct_answers !!} {!! __(' question(s)','sage') !!}</div>
+        <div class="results-subtitle">{!! __('You have answered','sage') !!} &ldquo;{!! __('Yes','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $correct_answers !!} {!! __('question(s) and','sage') !!} &ldquo;{!! __('No','sage') !!}&rdquo; {!! __('To','sage') !!} {!! $wrong_answers !!} {!! __(' question(s)','sage') !!}</div>
         <p class="results-text quiz-result">{!! $result['results'] !!}</p>
         @if($load_next_quiz)
             <button class="btn navyblack quiz-btn-next" value="next" type="button">{!! __('See more questions','sage') !!}</button>
