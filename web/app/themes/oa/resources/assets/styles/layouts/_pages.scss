@@ -762,10 +762,16 @@
 					color: map-get($theme-colors,'base');
 				}
 			}
-		}
+		}	
 		.col-file_format_category,
 		.col-document_button {
 			text-align: center;
+		}
+		.col-file_format_category {
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: table-cell;
+			}
 		}
 	}
 }
