@@ -1,7 +1,7 @@
 <div class="resource row">
     @if(!empty($resource['icon']))
         <div class="resource--icon col-sm-3">
-            <i class="{!! $resource['icon'] !!}"></i>
+            <i class="fa fa-{!! $resource['icon'] !!}"></i>
         </div>
     @endif
     <div class="col-sm-9">

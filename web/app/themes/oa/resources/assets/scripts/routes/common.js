@@ -172,6 +172,33 @@ export default {
       }, 250);
 
     });
+
+
+    // Set a variable for our button element.
+    const scrollToTopButton = $('#js-top');
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopButton.css('display', 'block');
+      } else {
+        scrollToTopButton.css('display', 'none');
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      jQuery('html, body').animate({ scrollTop: 0 });
+    }
+    //Disable hiding dropdown menu on click
+    scrollToTopButton.on({
+        'click':function(e){
+            e.preventDefault();
+            topFunction();
+        },
+    });
       
   },
 };

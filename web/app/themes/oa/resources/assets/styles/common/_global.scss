@@ -192,3 +192,20 @@ iframe{
     border:none !important;
   }
 }
+
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  .fa {
+    @include font-size(48);
+    opacity: 0.5;
+    color: map-get($theme-colors,'base');
+    &:hover {
+      opacity:1;
+    }
+  }
+}
