@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b7437aa9f1c62bb056254a29fba49ca",
+    "content-hash": "f23018898a00675df3862dfc1934e696",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -241,11 +241,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.7.4",
+            "version": "1.7.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "20186ee1e7e3d13e6e151790a838726df99b23c8"
+                "reference": "126c541db2c721666b0b994f5b6ea57d2abefd0e"
             },
             "require": {
                 "php": ">=7.1"
@@ -262,7 +262,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-30T21:57:23+00:00"
+            "time": "2020-01-31T12:56:04+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -291,11 +291,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "26cdc90e64263b7d1b0bdfdfc70e45bdfbe691ee"
+                "reference": "1422490327430816b7af9036502467378037ce6d"
             },
             "require": {
                 "php": ">=7.1"
@@ -312,15 +312,15 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-31T02:25:55+00:00"
+            "time": "2020-01-31T13:12:43+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "26362b830b68d0bed6ba0e198045f250bc4ff895"
+                "reference": "4658a7b7f7e6f26578cdc47917e13f2e9866f681"
             },
             "require": {
                 "php": ">=7.1"
@@ -337,7 +337,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-09T01:50:13+00:00"
+            "time": "2020-01-31T14:18:28+00:00"
         },
         {
             "name": "phpoption/phpoption",
