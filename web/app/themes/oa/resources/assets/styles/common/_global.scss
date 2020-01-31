@@ -204,12 +204,18 @@ iframe{
   bottom: 2rem;
   right: 2rem;
   cursor: pointer;
+  height: 80px;
+  width: 80px;
+  color: map-get($theme-colors,'base');
+  opacity: 0.5;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 50%;
+  &:hover {
+      opacity:1;
+      background-color: white;
+    }
   .fa {
     @include font-size(48);
-    opacity: 0.5;
-    color: map-get($theme-colors,'base');
-    &:hover {
-      opacity:1;
-    }
   }
 }
