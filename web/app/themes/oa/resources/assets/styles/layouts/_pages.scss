@@ -337,6 +337,10 @@
 	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
 		border-color: map-get($supporting-colors,'nude');
+		&:hover {
+			background-color: map-get($supporting-colors, 'nude');
+			border-color: map-get($supporting-colors, 'nude');
+		}
 	}
 	.main-wrapper {
 		background-color: map-get($supporting-colors,'nude');
