@@ -200,21 +200,33 @@ iframe{
 
 .top-link {
   transition: all .25s ease-in-out;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
   cursor: pointer;
   height: 80px;
   width: 80px;
   color: map-get($theme-colors,'base');
-  opacity: 0.5;
   text-align: center;
   padding-top: 13px;
   border-radius: 50%;
-  &:hover {
+  background-color: white;
+  
+  position: absolute;
+  bottom: 177px;
+  right: 15px;
+  opacity: 1;
+
+  @include media-breakpoint-up(sm) {
+    position: fixed;
+    opacity: 0.5;
+    bottom: 2rem;
+    right: 2rem;
+    z-index:50001;
+    background-color: transparent;
+    &:hover {
       opacity:1;
       background-color: white;
     }
+  }
+  
   .fa {
     @include font-size(48);
   }
