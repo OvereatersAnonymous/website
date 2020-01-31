@@ -337,6 +337,10 @@
 	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
 		border-color: map-get($supporting-colors,'nude');
+		&:hover {
+			background-color: map-get($supporting-colors, 'nude');
+			border-color: map-get($supporting-colors, 'nude');
+		}
 	}
 	.main-wrapper {
 		background-color: map-get($supporting-colors,'nude');
@@ -640,15 +644,23 @@
 		.posts-table-select-filters {
 			width: 100%;
 			label {
-				width: 5rem;
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					width: 5em;
+				}
 			}
 			select {
 				@extend .select-field;
-				margin-right: 10px;
+				max-width: 100%;
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					margin-right: 10px;
+					width: 30%;
+				}
 			}
 			select[name="ptp_filter_file_format_category"] {
 				@media (max-width: 991px) { 
-					margin-left: 5rem;
+					/*margin-left: 5rem;*/
 					margin-top: 10px;
 				}
 			}
@@ -667,9 +679,18 @@
 		.dataTables_length {
 			float: none;
 			margin-top: 10px;
+			label {
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					width: auto;
+				}
+			}
 			select {
 				@extend .select-field;
-				margin-left: 2.25rem;
+				@include media-breakpoint-up(md) {
+					margin-left: 2.25rem;
+				}
+				max-width: 100%;
 			}
 		}
 		.dataTables_filter {
@@ -679,8 +700,11 @@
 			}
 			input {
 				@extend .input-field;
-				width: 50%;
-				margin-left: 1.56rem;
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					width: 50%;
+					margin-left: 1.56rem;
+				}
 			}
 		}
 		.paging_simple_numbers {
