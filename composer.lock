@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "3d3d7b26bd0a91a9f2ed075f58ce3542",
-=======
-    "content-hash": "3afd01419cb59c9fe20acd571a835639",
->>>>>>> 6ecf980b1ab07d0ea8b57bffb6b1445bbc1db539
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -295,19 +291,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-<<<<<<< HEAD
             "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
                 "reference": "da46b63fdc02b4a1b5f480d860001c1170e17431"
-=======
-            "version": "1.2.7",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "e67f02322ff5cbea72cde7ec1b79545bbdc34f39"
->>>>>>> 6ecf980b1ab07d0ea8b57bffb6b1445bbc1db539
             },
             "require": {
                 "php": ">=7.1"
@@ -324,11 +312,7 @@
                 "plugin",
                 "wordpress"
             ],
-<<<<<<< HEAD
             "time": "2020-02-01T15:40:39+00:00"
-=======
-            "time": "2020-02-01T15:10:09+00:00"
->>>>>>> 6ecf980b1ab07d0ea8b57bffb6b1445bbc1db539
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
@@ -851,12 +835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "67ac6ea8f4a078c3c9b7aec5d7ae70f098c37389"
+                "reference": "666ba252853924887ac57dc9f66e6b6af78d5a76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/67ac6ea8f4a078c3c9b7aec5d7ae70f098c37389",
-                "reference": "67ac6ea8f4a078c3c9b7aec5d7ae70f098c37389",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/666ba252853924887ac57dc9f66e6b6af78d5a76",
+                "reference": "666ba252853924887ac57dc9f66e6b6af78d5a76",
                 "shasum": ""
             },
             "conflict": {
@@ -969,12 +953,13 @@
                 "spoonity/tcpdf": "<6.2.22",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
                 "stormpath/sdk": ">=0,<9.9.99",
-                "studio-42/elfinder": "<2.1.48",
+                "studio-42/elfinder": "<2.1.49",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
                 "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
                 "sylius/grid-bundle": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
-                "sylius/sylius": ">=1,<1.1.18|>=1.2,<1.2.17|>=1.3,<1.3.12|>=1.4,<1.4.4",
+                "sylius/resource-bundle": ">=1,<1.3.13|>=1.4,<1.4.6|>=1.5,<1.5.1|>=1.6,<1.6.3",
+                "sylius/sylius": ">=1,<1.3.12|>=1.4,<1.4.4",
                 "symfony/cache": ">=3.1,<3.4.35|>=4,<4.2.12|>=4.3,<4.3.8",
                 "symfony/dependency-injection": ">=2,<2.0.17|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
@@ -1060,23 +1045,28 @@
                     "name": "Marco Pivetta",
                     "email": "ocramius@gmail.com",
                     "role": "maintainer"
+                },
+                {
+                    "name": "Ilya Tribusean",
+                    "email": "slash3b@gmail.com",
+                    "role": "maintainer"
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-01-06T19:16:46+00:00"
+            "time": "2020-01-28T17:25:41+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.3",
+            "version": "3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb"
+                "reference": "dceec07328401de6211037abbb18bda423677e26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
+                "reference": "dceec07328401de6211037abbb18bda423677e26",
                 "shasum": ""
             },
             "require": {
@@ -1114,7 +1104,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-12-04T04:46:47+00:00"
+            "time": "2020-01-30T22:20:29+00:00"
         }
     ],
     "aliases": [],
