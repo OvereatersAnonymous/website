@@ -16,6 +16,7 @@ body {
 
 .main {
   padding-bottom: 2rem;
+  overflow-wrap: break-word;
   @include media-breakpoint-up(md) {
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -196,6 +197,13 @@ iframe{
 .grecaptcha-badge {
   opacity: 0;
   pointer-events: none;
+}
+
+
+.alignleft, .alignright {
+    display: block;
+    margin: 0 auto; 
+   
 }
 
 .top-link {
