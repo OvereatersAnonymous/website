@@ -105,7 +105,8 @@ i.fa {
 }
 
 i strong, i bold, em strong, em bold,
-strong i, bold i, strong em, bold em {
+strong i, bold i, strong em, bold em,
+h3 i, h4 i, h3 em, h4 em, {
   @include NeutrifStudio_BoldItalic();
 }
 
