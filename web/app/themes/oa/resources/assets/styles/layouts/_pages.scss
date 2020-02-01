@@ -280,11 +280,17 @@
 /* FAQs listing */
 .faq-category-listing-wrapper {
 	background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: top right;
+    background-size: 180px;
+    background-position: top center;
+    padding-top: 180px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include media-breakpoint-up(md) {
+    	background-size: 50%;
+    	background-position: top right;
+    	padding-top: 0;
+    }
 	.faq-group {
 		width: 48%;
 		&:first-child,
@@ -403,7 +409,11 @@
 		}
 	}
 	.tools {
-		text-align: right;
+		display: none;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+			display: block;
+		}
 		a {
 			display: inline-block;
 			@include media-breakpoint-up(md) {
@@ -435,6 +445,11 @@
 		select {
 			@extend .select-field;
     		@extend .select-field--white;
+    		width: 100%;
+    		@include media-breakpoint-up(md) {
+    			width: auto;
+    		}
+
 		}
 	}
 	.meeting {

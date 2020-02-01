@@ -39,7 +39,6 @@
       display: none;
   }
   padding: 0.8rem;
-  max-width:100%;
 }
 .select-field {
   /* for non select html-selects*/
@@ -51,6 +50,7 @@
       @include font-size(24);
       border:none;
   } 
+  max-width:100%;
   background-image: url('#{$image-path}/arrow-down-blueberry.png');
   background-repeat: no-repeat;
   background-position: 
@@ -205,6 +205,10 @@ label {
     border-radius: 0;
     padding: 0;
   }
+
+  .BBFormFieldContainer, .BBFieldSecurityCode {
+    margin: 10px 0;
+  }
   .BBFormSectionHeading {
     padding:0;
     label {
@@ -214,6 +218,15 @@ label {
   select, .BBFormSelectList {
     @extend .select-field;
     @extend .select-field--white;
+    width: 351px;
+  }
+  select[data-country-field="state"] {
+    max-width: 171px;
+    margin-bottom: 10px;
+  }
+  select#bboxdonation_payment_cboMonth,
+  select#bboxdonation_payment_cboYear {
+    max-width: 90px;
   }
   input[type="text"],
   input[type="tel"],
@@ -224,6 +237,12 @@ label {
   }
   label {
     margin-top: 7px;
+  }
+  label#bboxdonation_comment_lblComments {
+    margin-left:0;
+    @include media-breakpoint-up(md) {
+      padding-left: 161px; 
+    }
   }
   .BBFormSubmitbutton, .BBFormSubmitbuttonEdit {
     @extend .btn;
