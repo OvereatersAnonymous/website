@@ -1,8 +1,19 @@
 export default {
   init() {
 
+
     // JavaScript to be fired on all pages
     jQuery('#primary-nav-toggle').bind('click', function(event) {
+      //append #menu to URL to enable back btn functionality
+      if (window.location.href.indexOf('#menu') > -1) {
+        if ( jQuery('#primary-nav-toggle').hasClass('open')) {
+          var noHashURL = window.location.href.replace(/#.*$/, '');
+          window.history.replaceState('', document.title, noHashURL);
+        }
+      } else {
+        window.location.href = window.location.href + '#menu'; 
+      }
+      
       event.preventDefault();
       jQuery(this).toggleClass('open');
       jQuery('.overlay-nav').fadeToggle();
@@ -15,6 +26,16 @@ export default {
       jQuery('#primary-nav-toggle').removeClass('open');
       jQuery('#menu-primary-navigation .open').removeClass('open').find('ul').hide();
     })
+
+    window.onhashchange = function() {
+     //remove nav if back button was used while the #menu hash is present
+     if (window.location.href.indexOf('#menu') == -1) {
+      if ( jQuery('#primary-nav-toggle').hasClass('open')) {
+        jQuery('#primary-nav-close').click();
+      }
+     }
+    }
+
     jQuery('#menu-primary-navigation .menu-item-has-children > a, #menu-collapsible-sidenavigation .menu-item-has-children > a').bind('click', function(event) {
       event.preventDefault();
       jQuery(this).parent().toggleClass('open').find('ul').slideToggle();
