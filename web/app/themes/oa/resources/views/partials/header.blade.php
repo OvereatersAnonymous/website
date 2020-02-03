@@ -41,7 +41,7 @@
     	<div class="col-7 hidden-print">
 		    <nav class="nav-primary">
           @include('partials.widget-feature-btn')
-          <div class="overlay-toggle"><a href="#" tabindex="1" class="primary-nav-toggle" id="primary-nav-toggle"><span class="sr-only"> @php _e("Menu","sage"); @endphp</span></a></div>
+          <div class="overlay-toggle"><a href="#menu" tabindex="1" class="primary-nav-toggle" id="primary-nav-toggle"><span class="sr-only"> @php _e("Menu","sage"); @endphp</span></a></div>
 		    </nav>
 		</div>
 	</div>
