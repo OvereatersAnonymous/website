@@ -1,19 +1,17 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98bcd476188341d3bf9896ed31aeefb3",
+    "content-hash": "8df5f3803fbc2acc33cbc73015dcb84a",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.7",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7",
-                "reference": null,
-                "shasum": null
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.8.7"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -293,11 +291,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.2.8",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "da46b63fdc02b4a1b5f480d860001c1170e17431"
+                "reference": "ed6fa521b27979b3755753fe842b1fba97a1c572"
             },
             "require": {
                 "php": ">=7.1"
@@ -314,15 +312,15 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-02-01T15:40:39+00:00"
+            "time": "2020-02-03T19:42:02+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "4658a7b7f7e6f26578cdc47917e13f2e9866f681"
+                "reference": "7c8f001e48c90743f2d35e93ece64ca5cb6c5e44"
             },
             "require": {
                 "php": ">=7.1"
@@ -339,7 +337,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-01-31T14:18:28+00:00"
+            "time": "2020-02-03T19:40:21+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -407,8 +405,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3.2",
-                "reference": "5.3.2",
-                "shasum": null
+                "reference": "5.3.2"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -714,9 +711,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip",
-                "reference": "tags/1.6.6",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -734,9 +729,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.1.6.zip",
-                "reference": "tags/5.1.6",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.1.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -754,9 +747,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip",
-                "reference": "tags/1.0.7",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -774,9 +765,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412",
-                "reference": "trunk",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1578293412"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -794,9 +783,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.9.1.zip",
-                "reference": "tags/12.9.1",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.9.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -814,9 +801,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip",
-                "reference": "tags/1.8.1",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -834,9 +819,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205",
-                "reference": "trunk",
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-sitemap-page.zip?timestamp=1561808205"
             },
             "require": {
                 "composer/installers": "~1.0"
