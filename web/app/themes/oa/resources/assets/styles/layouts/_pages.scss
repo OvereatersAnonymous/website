@@ -513,7 +513,7 @@
 			a {
 				color: map-get($theme-colors, 'base');
 				/*display: inline-block;*/
-				@include font-size(20);
+				@include font-size(30);
 				margin-right: 10px;
 				cursor: pointer;
 				&:hover {
