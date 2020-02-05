@@ -149,7 +149,7 @@ label {
 
 /*<+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+><+>*/
 /* CONTACT FORM OVERWRITES*/
-.af-form {
+.wpcf7-form, .af-form {
   .acf-hidden, .af-field-contact-validate-email, .name-group .af-label {
     display: none;
   }
@@ -191,10 +191,15 @@ label {
       width: 48%;
     }
   }
-  button {
+  button, input[type="submit"] {
      @extend .btn;
      @extend .coralred;
   }
+  .wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 10px;
+  }
+
 }
 /* //END Contact form */
 

@@ -18,7 +18,7 @@
         @endforeach
     </ul>
     <div class="nav nav-select mobile hidden-print">
-        <select id="nav-select" class="select-field">
+        <select id="nav-select" class="select-field {!! App::get_field('background_color') !!}">
            <option @if($menus_nav['active']==$menus_nav['top_parent'])selected @endif value="{{ get_the_permalink($menus_nav['top_parent']) }}">{!!  App::postTitle($menus_nav['top_parent']) !!}</option>
             @foreach($menus_nav['pages'] as $page_id => $child_pages)
                 <option @if($menus_nav['active']==$page_id)selected @endif value="{{ get_the_permalink($page_id) }}">{!! App::postTitle($page_id) !!}</option>
