@@ -514,10 +514,15 @@
 				color: map-get($theme-colors, 'base');
 				/*display: inline-block;*/
 				@include font-size(30);
-				margin-right: 10px;
 				cursor: pointer;
 				&:hover {
 					color: map-get($theme-colors, 'blueberry');
+				}
+				span {
+					@include font-size(18);
+				}
+				@include media-breakpoint-up(md) {
+					margin-left: 10px;
 				}
 			}
 			.mobile-only {
