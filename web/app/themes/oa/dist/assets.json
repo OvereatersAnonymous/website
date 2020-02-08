@@ -77,6 +77,7 @@
   "images/flags/HUN.svg": "images/flags/HUN_aed2f308.svg",
   "images/flags/IDN.svg": "images/flags/IDN_f575e11c.svg",
   "images/flags/IND.svg": "images/flags/IND_2fc6dee0.svg",
+  "images/flags/IRA.svg": "images/flags/IRA_6d32f579.svg",
   "images/flags/IRL.svg": "images/flags/IRL_31f32c8b.svg",
   "images/flags/IRQ.svg": "images/flags/IRQ_ea88b745.svg",
   "images/flags/ISL.svg": "images/flags/ISL_da8c4319.svg",
@@ -161,7 +162,7 @@
   "vendor/fontawesome-webfont.ttf?v=4.7.0": "vendor/fontawesome-webfont_b06871f2.ttf",
   "vendor/fontawesome-webfont.woff2?v=4.7.0": "vendor/fontawesome-webfont_af7ae505.woff2",
   "vendor/fontawesome-webfont.woff?v=4.7.0": "vendor/fontawesome-webfont_fee66e71.woff",
-  "scripts/customizer.js": "scripts/customizer_aad55c93.js",
-  "styles/main.css": "styles/main_aad55c93.css",
-  "scripts/main.js": "scripts/main_aad55c93.js"
+  "scripts/customizer.js": "scripts/customizer_8325562d.js",
+  "styles/main.css": "styles/main_8325562d.css",
+  "scripts/main.js": "scripts/main_8325562d.js"
 }
