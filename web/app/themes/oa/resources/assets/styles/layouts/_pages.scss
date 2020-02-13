@@ -328,9 +328,15 @@
 .faq-accordion {
 	.faq {
 		margin-bottom: 2rem;
-		&--heading {
+		&--heading h4{
+			display: block;
 			&:hover {
-				cursor: s-resize;
+				cursor: n-resize;
+			}
+			&.collapsed {
+				&:hover {
+					cursor: s-resize;
+				}
 			}
 		}
 		&--body {
@@ -340,6 +346,20 @@
 		}
 		p:last-child {
 			margin-bottom: 0;
+		}
+
+		.fa-chevron-down {
+			&:before {
+				content: "\F077";
+				margin-left: 10px;
+			}
+		}
+		.collapsed {
+			.fa-chevron-down {
+				&:before {
+					content: "\f078";
+				}
+			}
 		}
 	}
 }
