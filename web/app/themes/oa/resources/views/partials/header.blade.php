@@ -22,7 +22,7 @@
     			@if (has_nav_menu('header_navigation'))
           	{!! wp_nav_menu(['theme_location' => 'header_navigation']) !!}
           @endif
-          <div class="search-toggle"><a href="#" class="search-toggle--btn" id="search-toggle--btn"><span class="sr-only"> @php _e("Search","sage"); @endphp</span></a></div>
+          <div class="search-toggle"><a href="#" class="search-toggle--btn" id="search-toggle--btn"><span> @php _e("Search","sage"); @endphp</span></a></div>
         </div>
       </div>
     	<!-- //END hat -->
