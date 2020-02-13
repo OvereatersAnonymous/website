@@ -200,6 +200,7 @@
 	justify-content: space-between;
 	.content-wrapper {
 		margin-bottom: 3rem;
+		
 		@extend h3;
 		@include media-breakpoint-up(md) {
 			width:32%;
@@ -239,6 +240,10 @@
 			}
 		}
 	}
+	/*&:after {
+	  content: "";
+	  flex: auto;
+	}*/
 }
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
@@ -328,9 +333,15 @@
 .faq-accordion {
 	.faq {
 		margin-bottom: 2rem;
-		&--heading {
+		&--heading h4{
+			display: block;
 			&:hover {
-				cursor: s-resize;
+				cursor: n-resize;
+			}
+			&.collapsed {
+				&:hover {
+					cursor: s-resize;
+				}
 			}
 		}
 		&--body {
@@ -340,6 +351,20 @@
 		}
 		p:last-child {
 			margin-bottom: 0;
+		}
+
+		.fa-chevron-down {
+			&:before {
+				content: "\F077";
+				margin-left: 10px;
+			}
+		}
+		.collapsed {
+			.fa-chevron-down {
+				&:before {
+					content: "\f078";
+				}
+			}
 		}
 	}
 }
@@ -874,12 +899,13 @@
 	display: flex;
 	justify-content: space-between;
 }
-.page-nav {
+.page-nav, .pagination {
 	margin-top: 3rem;
 	.nav-links > *,
 	p > * {
 		display: inline-block;
 		margin-right: .5rem;
+		padding: 0.3rem 0.6rem 0rem;
 		@extend strong;
 		color: map-get($theme-colors, 'base');
 

@@ -195,6 +195,12 @@
         &--BIH {
             background-image: url('#{$image-path}/flags/BIH.svg');  
         }
+        &--BLR {
+            background-image: url('#{$image-path}/flags/BLR.svg');  
+        }
+        &--BLZ {
+            background-image: url('#{$image-path}/flags/BLZ.svg');  
+        }
         &--BRA {
             background-image: url('#{$image-path}/flags/BRA.svg');  
         }
@@ -308,6 +314,9 @@
         }
         &--IRA {
             background-image: url('#{$image-path}/flags/IRA.svg');  
+        }
+        &--IRL {
+            background-image: url('#{$image-path}/flags/IRL.svg');  
         }
         &--IRQ {
             background-image: url('#{$image-path}/flags/IRQ.svg');  
@@ -477,11 +486,17 @@
         &--SYR {
             background-image: url('#{$image-path}/flags/SYR.svg');  
         }
+        &--TWN {
+            background-image: url('#{$image-path}/flags/TWN.svg');  
+        }
         &--THA {
             background-image: url('#{$image-path}/flags/THA.svg');  
         }
         &--TJK {
             background-image: url('#{$image-path}/flags/TJK.svg');  
+        }
+        &--TLD {
+            background-image: url('#{$image-path}/flags/TLD.svg');  
         }
         &--TLS {
             background-image: url('#{$image-path}/flags/TLS.svg');  
@@ -585,7 +600,7 @@
         /*header nav*/
         .menu-header-navigation-container {
             text-align: right;
-            padding-right: 45px;
+            padding-right: 105px;
             display: none;
             @include media-breakpoint-up(lg) {
                 display: block;
@@ -614,7 +629,6 @@
             .search-toggle {
                 &--btn {
                     position: absolute;
-                    padding-right: 25px;
                     top: 8px;
                     right: 15px;
                     z-index: 988;
@@ -622,11 +636,17 @@
                         @include icon();
                         content: "\f002";
                         @include font-size(16);
+                        left: -21px;
                     }
 
-                    &.open:before {
-                        content: "\f057";
-                        top: 3px;
+                    &.open {
+                        &:before {
+                            content: "\f057";
+                            top: 3px;
+                        }
+                        span {
+                            display: none;
+                        }
                     }
                 }
             }
