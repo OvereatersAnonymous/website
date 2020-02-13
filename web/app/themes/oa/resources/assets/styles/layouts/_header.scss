@@ -782,22 +782,23 @@
             margin-top: 15rem;
         }
     }
-    /*.site-search {
-        padding: 0 20px 0;
-        border-bottom: 3px solid map-get($theme-colors, 'base');
+    form.search-form {
+        padding: 0;
+        border-bottom: 2px solid map-get($theme-colors, 'base');
         position: relative;
         margin-bottom: 45px;
-        @include media-breakpoint-up(lg) {
-            padding: 0 30px 0;
-        }
+        
         label {
             margin-bottom: 0;
             width: 100%;
         }
         .search-field {
             background: transparent;
-            color: white;
+            border:none;
+            color: map-get($theme-colors, 'base');
             width: 100%;
+            border-radius: 0;
+            padding-left: 50px;
             @include font-size(18);
             @include media-breakpoint-up(md) {
                 @include font-size(24);
@@ -810,41 +811,41 @@
             display: none;
         }
         .search-field:focus {
-            color: white;
+            color: map-get($theme-colors, 'base');
             background-color: transparent;
             border-color: transparent;
             outline: none;
         }
-        .search-field::-webkit-input-placeholder {
-            color: white;
+        .search-field:-webkit-input-placeholder {
+            color: map-get($theme-colors, 'base');
         }
         .search-field:-moz-placeholder {
-            color: white;
+            color: map-get($theme-colors, 'base');
             opacity: 1;
         }
-        .search-field::-moz-placeholder {
-            color: white;
+        .search-field:-moz-placeholder {
+            color: map-get($theme-colors, 'base');
             opacity: 1;
         }
         .search-field:-ms-input-placeholder {
-            color: white;
+            color: map-get($theme-colors, 'base');
         }
         .search-field::placeholder {
-            color: white;
+            color: map-get($theme-colors, 'base');
+        }
+        &:before {
+            @include icon();
+            content: "\f002";
+            @include font-size(20);
+            left: 10px;
+            top: 50%;
+            margin-top: -10px;
+            @include media-breakpoint-up(lg) {
+                @include font-size(28);
+                margin-top: -14px;
+            }
         }
     }
-    .site-search:before {
-        @include icon();
-        content: "\f002";
-        @include font-size(20);
-        left: 0;
-        top: 50%;
-        margin-top: -10px;
-        @include media-breakpoint-up(lg) {
-            @include font-size(28);
-            margin-top: -14px;
-        }
-    }*/
     .menu-primary-navigation-container {
         margin-bottom: 30px;
         .menu {

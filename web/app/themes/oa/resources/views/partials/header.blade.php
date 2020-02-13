@@ -49,7 +49,7 @@
   </div>
 </header>
 <div class="overlay-nav" style="">
-  <div class="container">
+  <div class="container" style="padding-bottom: 50px;">
     <div class="row">
       <div class="col-md-12">
         <div class="overlay-toggle">
@@ -57,6 +57,7 @@
         </div>
         <div class="row">
           <div class="wrapper">
+            @include('partials.widget-search')
             <nav class="nav-primary">
               @if (has_nav_menu('primary_navigation'))
                 {!! wp_nav_menu(['theme_location' => 'primary_navigation']) !!}
