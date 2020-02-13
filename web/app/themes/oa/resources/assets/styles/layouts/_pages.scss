@@ -894,12 +894,13 @@
 	display: flex;
 	justify-content: space-between;
 }
-.page-nav {
+.page-nav, .pagination {
 	margin-top: 3rem;
 	.nav-links > *,
 	p > * {
 		display: inline-block;
 		margin-right: .5rem;
+		padding: 0.3rem 0.6rem 0rem;
 		@extend strong;
 		color: map-get($theme-colors, 'base');
 
