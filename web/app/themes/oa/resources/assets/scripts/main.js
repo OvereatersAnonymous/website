@@ -44,7 +44,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import podcasts from './routes/podcasts';
 import faqs from './routes/faqs';
-import quizzes from './routes/quizzes';
+import quiz from './routes/quiz';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -58,8 +58,8 @@ const routes = new Router({
   podcasts,
   //Faqs
   faqs,
-  //Quizzes
-  quizzes,
+  //Quiz
+  quiz,
 });
 
 // Load Events

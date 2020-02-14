@@ -15,7 +15,7 @@
 	.podcasts {
 		@extend .section-padding;
 		padding-bottom: 0;
-		
+
 		.unveil-bg {
 			background-repeat: no-repeat;
     		background-position: center top;
@@ -56,7 +56,7 @@
 }
 
 .callout {
-	
+
     .h2, .title {
     	font-size: 2rem;
 		line-height: normal;
@@ -64,7 +64,7 @@
 			font-size: 4rem;
 			line-height: 4rem;
 		}
-		
+
 	}
 	.title {
 		@include NeutrifStudio_Bold();
@@ -88,7 +88,7 @@
 		.slick-slide {
 
 			.hero {
-				
+
 			}
 			.slide-wrapper {
 				background-repeat: no-repeat;
@@ -144,7 +144,7 @@
 			}
 		}
 	}
-	
+
 }
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
@@ -200,7 +200,7 @@
 	justify-content: space-between;
 	.content-wrapper {
 		margin-bottom: 3rem;
-		
+
 		@extend h3;
 		@include media-breakpoint-up(md) {
 			width:32%;
@@ -227,7 +227,7 @@
 				@include media-breakpoint-up(lg) {
 					height: 300px;
 				}
-				
+
 				a {
 					display: block;
 					img {
@@ -305,7 +305,7 @@
 		}
 		&--child{
 			list-style: none;
-  			padding: 0; 
+  			padding: 0;
 		}
 		&--item{
 
@@ -382,12 +382,12 @@
   		border-color: white transparent white transparent;
 	}
 }
-.template-find-a-meeting, 
+.template-find-a-meeting,
 .page-manage-your-meeting-data,
 .page-add-a-meeting-data,
 .page-edit-a-meeting-data,
 .page-cancel-a-meeting-data {
-	.oa-tabs .nav-tabs .nav-item .nav-link.active, 
+	.oa-tabs .nav-tabs .nav-item .nav-link.active,
 	.oa-tabs .nav-tabs .nav-item .nav-item.show, .oa-tabs .nav-tabs .nav-item .nav-link,
 	.nav-select.mobile select {
 		background-color: map-get($supporting-colors,'nude');
@@ -408,14 +408,14 @@
 			margin-top: 3rem;
 		}
 	}
-	
+
 	.main-wrapper {
 		.main {
 			padding-top: 3rem !important;
 			background-size: 40%;
     		background-repeat: no-repeat;
     		background-position: right 4rem;
-    		@media (max-width: 768px) { 
+    		@media (max-width: 768px) {
     			background: none !important;
     		}
 		}
@@ -459,7 +459,7 @@
 			@extend .smoky;
 		}
 	}
-	
+
 	.no-results {
 		background-image: url('#{$image-path}/no-results.png');
 		background-size: 100px auto;
@@ -572,9 +572,9 @@
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
 /* QUIZZES */
-.quizzes {
+.template-quizzes {
 
-	&--questions {
+	.quizzes--questions {
 		&:before,
 		&:after {
 			content: "";
@@ -610,7 +610,7 @@
 			padding-top: 2rem;
 			margin-top: 4rem;
 			position: relative;
-			
+
 			&:before {
 				content: '\201C';
 				position: absolute;
@@ -625,7 +625,7 @@
 				color: map-get($theme-colors, 'base');
 				text-align: center;
 			}
-			
+
 			&--text {
 				@extend blockquote;
 				text-align: center;
@@ -736,7 +736,7 @@
 				}
 			}
 			select[name="ptp_filter_file_format_category"] {
-				@media (max-width: 991px) { 
+				@media (max-width: 991px) {
 					/*margin-left: 5rem;*/
 					margin-top: 10px;
 				}
@@ -810,7 +810,7 @@
 				}
 			}
 			span {
-				@media (max-width: 991px) { 
+				@media (max-width: 991px) {
 					display: none;
 				}
 			}
@@ -864,7 +864,7 @@
 					color: map-get($theme-colors,'base');
 				}
 			}
-		}	
+		}
 		.col-file_format_category,
 		.col-document_button {
 			text-align: center;
