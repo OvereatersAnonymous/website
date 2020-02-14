@@ -918,3 +918,8 @@
 		@extend .smoky;
 	}
 }
+table {
+	@extend .table; //extends bootstrap table classes
+	@extend .table-striped;
+	@extend .table-responsive-md;
+}
