@@ -57,6 +57,7 @@
         </div>
         <div class="row">
           <div class="wrapper">
+            @include('partials.widget-feature-btn')
             @include('partials.widget-search')
             <nav class="nav-primary">
               @if (has_nav_menu('primary_navigation'))
@@ -66,7 +67,7 @@
             @if (has_nav_menu('header_navigation'))
               {!! wp_nav_menu(['theme_location' => 'header_navigation', 'menu_class' => 'supporting-nav']) !!}
             @endif
-            @include('partials.widget-feature-btn')
+            
             <div class="country-select-mobile">
               <h4>{{__('Available in 20+ countries','sage')}}</h4>
               @include('partials.widget-country-select')
