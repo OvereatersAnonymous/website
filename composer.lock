@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b30e570d0dfaa45752ad4ac370833fd5",
+    "content-hash": "cb44423cf2eb6a3abd127e0d10c493b9",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.8.4",
+            "version": "1.8.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "be01e42cc8c4a71ffc909be96d9befdc99f6e000"
+                "reference": "4484f0c203ded89d66914ccd92e58fa53be99fbb"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-02-17T17:20:16+00:00"
+            "time": "2020-02-21T21:04:10+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -293,11 +293,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "ebb9bc3b6bd8e2f5e06f0f8c6cd499d4745631a3"
+                "reference": "86390b6cb9700963fcd3783ac80ed71b15f4da32"
             },
             "require": {
                 "php": ">=7.1"
@@ -314,7 +314,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-02-18T22:03:50+00:00"
+            "time": "2020-02-21T21:00:27+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
@@ -702,24 +702,6 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/advanced-forms",
-            "version": "1.6.6",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-forms/",
-                "reference": "tags/1.6.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-forms.1.6.6.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-forms/"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
