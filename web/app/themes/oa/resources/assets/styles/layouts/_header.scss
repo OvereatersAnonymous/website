@@ -731,7 +731,7 @@
     background: map-get($supporting-colors,'steal');
     left: 0;
     top: 0;
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 5rem;
     @include media-breakpoint-up(sm) {
         padding-top: 26px;
@@ -764,6 +764,10 @@
     }
     .row {
         justify-content: center !important;
+    }
+
+    section {
+        margin-bottom: 2rem;
     }
 
     .widget {
