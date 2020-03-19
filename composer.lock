@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a69eddacee32386f827d996ceb12638f",
+    "content-hash": "601ab259cb5c555f86638848dab969f8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.8.8",
+            "version": "1.8.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "041455fac8b3f132900654e88b297a162ead1913"
+                "reference": "66c8ba144620e0d1d9da6231fe5fdc8e973b7ec7"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-02-26T19:53:49+00:00"
+            "time": "2020-03-12T21:26:38+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -702,6 +702,24 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/akismet",
+            "version": "4.1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/4.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
