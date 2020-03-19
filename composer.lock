@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d74ce20a9a281e875e894d20384692d2",
+    "content-hash": "601ab259cb5c555f86638848dab969f8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -702,6 +702,24 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/akismet",
+            "version": "4.1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/4.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
