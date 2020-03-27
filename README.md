@@ -21,7 +21,7 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 ### Requirements
 * [WordPress](https://wordpress.org/) >= 5.2
 * PHP >= 7.1
-* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+* Composer >= 9.3  - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 * [Node.js](http://nodejs.org/) >= 8.0x
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
