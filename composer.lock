@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8dc3d7d1c4c59b9d6d29280d601a279",
+    "content-hash": "c8346b987d4f618cd0cdb05c7ca5774d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -306,11 +306,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.4.8",
+            "version": "1.4.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "1df62ab5aed0550721c56788f564e277c225de9f"
+                "reference": "e3beeb55a806f23e1d7a769b897d8aee9c8f3524"
             },
             "require": {
                 "php": ">=7.1"
@@ -327,7 +327,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-08-05T04:38:47+00:00"
+            "time": "2020-08-06T18:18:59+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
