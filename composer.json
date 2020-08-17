@@ -35,7 +35,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.7",
+        "version": "5.9.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -76,15 +76,15 @@
     "roots/wordpress": "^5.2.2",
     "roots/wp-config": "^1.0.0",
     "roots/wp-password-bcrypt": "^1.0.0",
-    "wpackagist-plugin/wp-mail-smtp": "^1.7.0",
-    "wpackagist-plugin/wordpress-seo": "^12.3",
+    "wpackagist-plugin/wp-mail-smtp": "^2.0.0",
+    "wpackagist-plugin/wordpress-seo": "^14.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "overeatersanonymous/oa-custom-configurations": "1.8.9",
     "overeatersanonymous/posts-table-pro": "2.1.5",
     "wpackagist-plugin/f4-media-taxonomies": "^1.0",
     "overeatersanonymous/wpmeetings": "1.5.4",
     "overeatersanonymous/wpservicebodies": "1.0.4",
-    "wpackagist-plugin/redirection": "4.6.2",
+    "wpackagist-plugin/redirection": "^4.6.2",
     "wpackagist-plugin/wp-sitemap-page": "1.6.2",
     "wpackagist-plugin/contact-form-7": "^5.1",
     "wpackagist-plugin/akismet": "^4.1"
