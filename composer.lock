@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66c522177001743648c9a6281673f3d4",
+    "content-hash": "cb686d8888b806809e00de26d3003741",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -243,11 +243,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "99e39f7c4cc12e5fb42b26a739ac1d18aab6ccfb"
+                "reference": "e40f8c22cf22b396728c8cef04130514c0bb603e"
             },
             "require": {
                 "php": ">=7.1"
@@ -264,7 +264,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-10-19T17:18:12+00:00"
+            "time": "2020-10-19T19:51:14+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
@@ -318,11 +318,11 @@
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpservicebodies.git",
-                "reference": "7c8f001e48c90743f2d35e93ece64ca5cb6c5e44"
+                "reference": "bfb972d1ea1455dfbb6a842ce190315fb52cb0e1"
             },
             "require": {
                 "php": ">=7.1"
@@ -339,7 +339,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2020-02-03T19:40:21+00:00"
+            "time": "2020-10-19T19:28:40+00:00"
         },
         {
             "name": "phpoption/phpoption",
