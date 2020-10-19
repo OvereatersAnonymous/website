@@ -96,7 +96,8 @@ Config::define('DISALLOW_FILE_MODS', true);
 // WP Mail SMTP Settings
 Config::define('WPMS_ON', env('WPMS_ON') ?: false);
 Config::define('WPMS_SMTP_PASS', env('WPMS_SMTP_PASS') ?: '');
-
+//Cache Settings
+Config::define('WPFC_CACHE_QUERYSTRING', env('WPFC_CACHE_QUERYSTRING') ?: false);
 /**
  * Debugging Settings
  */
