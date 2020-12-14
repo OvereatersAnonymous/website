@@ -459,7 +459,9 @@
 			@extend .smoky;
 		}
 	}
-
+  .modal{
+    z-index: 10002;
+  }
 	.no-results {
 		background-image: url('#{$image-path}/no-results.png');
 		background-size: 100px auto;
@@ -561,9 +563,6 @@
 			text-align: center;
 		}
 	}
-  .modal{
-    z-index: 10002;
-  }
 }
 /*find a meeting add/cancel/edit pages*/
 .find-a-meeting-manage {
