@@ -889,6 +889,39 @@
 /* SEARCH RESULTS */
 .gsc-control-cse {
 	border-radius: 5px;
+	background-color: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+}
+.gsc-webResult.gsc-result {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+a.gs-title {
+	@include NeutrifStudio_Regular();
+	color: map-get($theme-colors, 'primary') !important;
+	font-size: 24px !important;
+}
+.gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title * {
+	font-size: unset;
+}
+a.gs-title:hover, a.gs-title:active, a.gs-title:focus {
+	color: map-get($theme-colors, 'navyblack');
+}
+.gs-promotion .gs-visibleUrl, .gs-webResult .gs-visibleUrl, 
+.gs-fileFormat, .gs-bidi-start-align.gs-snippet {
+	@include NeutrifStudio_Regular();
+	font-size: 18px !important;
+}
+.gsc-selected-option-container {
+	max-width: 100% !important;
+}
+.gsc-results .gsc-cursor {
+	font-size: 24px !important;
+}
+.gs-web-image-box, .gs-promotion-image-box {
+	width: auto !important;
 }
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
