@@ -925,11 +925,19 @@
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
+    padding: 10px !important;
+}
+.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+	border-color: transparent !important;
+	background-color: transparent !important;
 }
 a.gs-title {
 	@include NeutrifStudio_Regular();
 	color: map-get($theme-colors, 'primary') !important;
 	font-size: 24px !important;
+}
+a.gs-title:hover {
+	text-decoration: underline;
 }
 .gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title * {
 	font-size: unset;
@@ -950,6 +958,10 @@ a.gs-title:hover, a.gs-title:active, a.gs-title:focus {
 }
 .gs-web-image-box, .gs-promotion-image-box {
 	width: auto !important;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page,
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+	background-color: transparent !important;
 }
 
 /* >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< */
