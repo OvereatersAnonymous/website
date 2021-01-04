@@ -11,9 +11,9 @@ export default {
           window.history.replaceState('', document.title, noHashURL);
         }
       } else {
-        window.location.href = window.location.href + '#menu'; 
+        window.location.href = window.location.href + '#menu';
       }
-      
+
       event.preventDefault();
       jQuery(this).toggleClass('open');
       jQuery('.overlay-nav').fadeToggle();
@@ -50,7 +50,7 @@ export default {
           //alert(jQuery(document).height());
       }, 500);
     };
-    
+
 
     //Search
     // JavaScript to be fired on all pages
@@ -90,7 +90,7 @@ export default {
 
     //add img unveil
     jQuery('img').unveil();
-    //add unveil to bg images 
+    //add unveil to bg images
     jQuery('.unveil-bg').unveil();
 
      jQuery('.animsition').animsition({
@@ -116,11 +116,11 @@ export default {
         transition: function(url) { window.location.href = url; },
     }).one('animsition.inStart', function(){
         //Load the cookiebot consent script on animsition in start event due to animsition conflicts with cookiebot script
-        jQuery.ajax({
+        /*jQuery.ajax({
              url: 'https://consent.cookiebot.com/uc.js?cbid=9044c0f0-589c-41fb-8fde-5910024179ea',
              dataType: 'script',
              async: true,
-         });
+         }); */
      });
 
     //trigger page load onChange for tab-selects
@@ -220,6 +220,6 @@ export default {
             topFunction();
         },
     });
-      
+
   },
 };
