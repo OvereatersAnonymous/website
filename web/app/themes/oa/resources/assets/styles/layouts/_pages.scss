@@ -462,9 +462,20 @@
         width: 50%;
       }
       .timezone-content{
-        background-color: map-get($supporting-colors, 'superlightg');
+      	//margin-top: 10px;
+      	position: relative;
         @include media-breakpoint-up(md) {
           float: right;
+        }
+        &:before {
+        	@include media-breakpoint-up(md) {
+	        	content: "\f0ac";
+	        	@include icon();
+	        	font-size: 1.5rem;
+	    		top: 1px;
+	        	position: absolute;
+	        	left: -30px;
+	        }
         }
       }
     }
