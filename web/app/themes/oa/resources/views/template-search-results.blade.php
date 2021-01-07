@@ -23,6 +23,7 @@
           })();
         </script>
         <gcse:searchresults-only></gcse:searchresults-only>
+      <a class="cookiebot-consent-link" href="javascript: Cookiebot.renew()">{{ get_field('cookiebot_cookie_consent_warning_link_text','option') }}</a>
       @endwhile
     </div>
   </div>
