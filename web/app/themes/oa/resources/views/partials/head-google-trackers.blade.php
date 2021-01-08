@@ -7,7 +7,7 @@
   gtag("consent", "default", {
     ad_storage: "denied",
     analytics_storage: "denied",
-    wait_for_update: 500
+    wait_for_update: 500,
   });
   gtag("set", "ads_data_redaction", true);
 </script>
@@ -19,7 +19,3 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KVBLG5M');</script>
 <!-- End Google Tag Manager -->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBLG5M"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
