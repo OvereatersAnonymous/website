@@ -10,3 +10,4 @@
   <i class="fa fa-angle-up" aria-hidden="true"></i>
   <span class="sr-only">@php _e("Back to top","sage"); @endphp</span>
 </div>
+@include('partials.footer-google-trackers')
