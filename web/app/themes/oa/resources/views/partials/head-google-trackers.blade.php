@@ -7,7 +7,7 @@
   gtag("consent", "default", {
     ad_storage: "denied",
     analytics_storage: "denied",
-    wait_for_update: 500,
+    wait_for_update: 3000,
   });
   gtag("set", "ads_data_redaction", true);
 </script>
