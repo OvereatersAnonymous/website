@@ -220,6 +220,22 @@ export default {
             topFunction();
         },
     });
-
+    
+    //Cookiebot Consent Requirement Script
+    /* eslint-disable */
+    //If user has not consented, show link and hide functionality
+    if(!Cookiebot.consent.marketing) {
+      jQuery('.cookiebot-consent-require').hide();
+      jQuery('.cookiebot-consent-link').show();
+    }
+    //once user consents, enable the functionality
+    window.addEventListener('CookiebotOnAccept', function (e) {
+      if (Cookiebot.consent.marketing)
+      {
+        jQuery('.cookiebot-consent-require').show();
+        jQuery('.cookiebot-consent-link').hide();
+      }
+    }, false);
+    /* eslint-enable */
   },
 };

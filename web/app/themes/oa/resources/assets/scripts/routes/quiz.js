@@ -9,7 +9,11 @@ export default {
         var slickElement = jQuery('.quizzes--questions');
         var resultsElement = jQuery('.results');
         //Store quiz set page from cookie
-        if(Cookie.get( 'oa_quiz_page' )){
+        /* eslint-disable */
+        if(!Cookiebot.consent.preferences){
+        /* eslint-enable */
+            oa_quiz_page = 1;
+        }else if(Cookie.get( 'oa_quiz_page' )){
             oa_quiz_page = Cookie.get( 'oa_quiz_page' );
         }else{
             oa_quiz_page = 1;
@@ -79,7 +83,11 @@ export default {
                         Cookie.remove( 'oa_quiz_page' );
                     }else{
                         oa_quiz_page++;
-                        Cookie.set('oa_quiz_page',oa_quiz_page);
+                        /* eslint-disable */
+                        if(Cookiebot.consent.preferences){
+                        /* eslint-enable */
+                          Cookie.set('oa_quiz_page', oa_quiz_page, { expires: 30 });
+                        }
                         loadNextQuizListener();
                     }
                 },
