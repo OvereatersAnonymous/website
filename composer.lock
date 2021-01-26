@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd1e38fca7a2268a4d5206dc85851cc5",
+    "content-hash": "3bdf432d678bf6729fcbcd8556e2f265",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.9.0",
+            "version": "5.9.4",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.9.0"
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k={%ACF_PRO_KEY}&t=5.9.4"
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -715,15 +715,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "4.1.6",
+            "version": "4.1.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/4.1.6"
+                "reference": "tags/4.1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -733,15 +733,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.2.1",
+            "version": "5.3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.2.1"
+                "reference": "tags/5.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.3.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -751,15 +751,15 @@
         },
         {
             "name": "wpackagist-plugin/f4-media-taxonomies",
-            "version": "1.0.10",
+            "version": "1.0.13",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/f4-media-taxonomies/",
-                "reference": "tags/1.0.10"
+                "reference": "tags/1.0.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.10.zip"
+                "url": "https://downloads.wordpress.org/plugin/f4-media-taxonomies.1.0.13.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -769,15 +769,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "4.8",
+            "version": "5.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redirection/",
-                "reference": "tags/4.8"
+                "reference": "tags/5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.4.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/redirection.5.0.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -805,15 +805,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "14.7",
+            "version": "15.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/14.7"
+                "reference": "tags/15.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -823,15 +823,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-fastest-cache",
-            "version": "0.9.1.1",
+            "version": "0.9.1.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-fastest-cache/",
-                "reference": "tags/0.9.1.1"
+                "reference": "tags/0.9.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.1.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -841,15 +841,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "2.2.1",
+            "version": "2.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/2.2.1"
+                "reference": "tags/2.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.2.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.2.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
