@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6f1429e80f69816ead24fb40b20bc86",
+    "content-hash": "141c69d0ec071ff710dd1f2c09870456",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -276,29 +276,16 @@
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
-            "version": "2.3.2",
+            "version": "2.3.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/posts-table-pro.git",
-                "reference": "0171c0a357161e0c4ac459da322ce5e95698bc6d"
+                "reference": "2cb832132e35977d3e354a03a03797fc26c9870f"
             },
             "require": {
                 "php": ">=7.1"
             },
             "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Barn2\\Plugin\\Posts_Table_Pro\\": "includes",
-                    "Barn2\\PTP_Lib\\": "lib",
-                    "WPTRT\\AdminNotices\\": "lib/vendor/admin-notices/src"
-                },
-                "files": [
-                    "lib/class-html-data-table.php",
-                    "lib/class-wp-scoped-hooks.php",
-                    "includes/template-functions.php",
-                    "includes/deprecated.php"
-                ]
-            },
             "authors": [
                 {
                     "name": "Barn2 Plugins",
@@ -311,7 +298,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2021-01-27T01:03:18+00:00"
+            "time": "2021-01-27T03:15:34+00:00"
         },
         {
             "name": "overeatersanonymous/wpmeetings",
