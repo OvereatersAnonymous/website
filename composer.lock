@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "141c69d0ec071ff710dd1f2c09870456",
+    "content-hash": "2423789fc5cf54dc1b563b8534b57957",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -251,11 +251,11 @@
         },
         {
             "name": "overeatersanonymous/oa-custom-configurations",
-            "version": "1.9.5",
+            "version": "1.9.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/oa-custom-configurations.git",
-                "reference": "335db3418cf854a3f886a6efd20675bf73cc04a9"
+                "reference": "8ad8b0318b365273e33ece2ecfd0eb2bf86c86ae"
             },
             "require": {
                 "php": ">=7.1"
@@ -272,15 +272,15 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2021-01-27T02:49:59+00:00"
+            "time": "2021-01-28T19:00:17+00:00"
         },
         {
             "name": "overeatersanonymous/posts-table-pro",
-            "version": "2.3.2.1",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/posts-table-pro.git",
-                "reference": "2cb832132e35977d3e354a03a03797fc26c9870f"
+                "reference": "3cfe4f8690b8e531aed41b1db72f28d99e8814d1"
             },
             "require": {
                 "php": ">=7.1"
@@ -288,17 +288,16 @@
             "type": "wordpress-plugin",
             "authors": [
                 {
-                    "name": "Barn2 Plugins",
-                    "email": "support@barn2.co.uk"
+                    "name": "andykeith, barn2media",
+                    "homepage": "https://barn2.co.uk/wordpress-plugins/posts-table-pro"
                 }
             ],
-            "description": "Posts Table Pro plugin for WordPress.",
             "homepage": "https://github.com/OvereatersAnonymous/posts-table-pro.git",
             "keywords": [
                 "plugin",
                 "wordpress"
             ],
-            "time": "2021-01-27T03:15:34+00:00"
+            "time": "2020-01-24T02:24:41+00:00"
         },
         {
             "name": "overeatersanonymous/wpmeetings",
