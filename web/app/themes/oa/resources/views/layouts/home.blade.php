@@ -2,7 +2,7 @@
 <html @php(language_attributes())>
   @include('partials.head')
   <body @php(body_class())>
-    <div class="animsition">
+    <div class="">
       <div class="content-wrap" role="document">
         @php(do_action('get_header'))
         @include('partials.header')
