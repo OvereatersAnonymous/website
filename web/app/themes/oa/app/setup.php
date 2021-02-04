@@ -67,7 +67,7 @@ add_action('after_setup_theme', function () {
     add_image_size( 'thumbnail@3x', 600, 600, true);
     //the following two are not made visible in admin b/c they are just the 1x of  medium and large
     //images set in WP Media Settings
-    add_image_size( 'medium@2x', 700); 
+    add_image_size( 'medium@2x', 700);
     add_image_size( 'large@2x', 1080);
     // Register filter is in filers.php
 
@@ -196,7 +196,7 @@ function oa_login_logo() {
                 height:63px;
             }
             @media (max-width: 768px) {
-              .login #login { width:95%;}  
+              .login #login { width:95%;}
             }
         <?php } ?>
     </style>
@@ -255,5 +255,25 @@ function oa_google_translate_enqueue_scripts (){
 
 }
 add_action( 'wp_enqueue_scripts', 'App\\oa_google_translate_enqueue_scripts',100 );
+
+/**
+ * Inject critical assets in head as early as possible
+ */
+add_action('wp_head', function (): void {
+    //Comment out for now since we want to be constantly testing
+    /*if ('development' === env('WP_ENV')) {
+        return;
+    }*/
+    $critical_CSS = 'styles/critical.css';
+    if (file_exists(locate_asset($critical_CSS))) {
+
+        echo '<style id="critical-css">' . get_file_contents($critical_CSS) . '</style>';
+    }
+
+    $critical_JS = 'scripts/critical.js';
+    if (file_exists(locate_asset($critical_JS))) {
+        echo '<script id="critical-js">' . get_file_contents($critical_JS) . '</script>';
+    }
+}, 1);
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END

@@ -6,6 +6,10 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "critical": [
+      "./scripts/critical.js",
+      "./styles/critical.scss"
     ]
   },
   "publicPath": "/app/themes/oa",
