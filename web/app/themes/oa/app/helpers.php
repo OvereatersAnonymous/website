@@ -173,7 +173,7 @@ function get_file_contents($asset): string
     $asset_path = locate_asset($asset);
 
     if ($wp_filesystem->is_readable($asset_path)) {
-        return $wp_filesystem->get_contents($asset_path);
+        return file_get_contents($asset_path);
     }
 
     return '';
