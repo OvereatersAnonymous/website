@@ -171,7 +171,9 @@
   "vendor/fontawesome-webfont.ttf?v=4.7.0": "vendor/fontawesome-webfont_b06871f2.ttf",
   "vendor/fontawesome-webfont.woff2?v=4.7.0": "vendor/fontawesome-webfont_af7ae505.woff2",
   "vendor/fontawesome-webfont.woff?v=4.7.0": "vendor/fontawesome-webfont_fee66e71.woff",
-  "scripts/customizer.js": "scripts/customizer_723324ef.js",
-  "styles/main.css": "styles/main_723324ef.css",
-  "scripts/main.js": "scripts/main_723324ef.js"
+  "styles/critical.css": "styles/critical_04ef7aa3.css",
+  "scripts/critical.js": "scripts/critical_04ef7aa3.js",
+  "scripts/customizer.js": "scripts/customizer_04ef7aa3.js",
+  "styles/main.css": "styles/main_04ef7aa3.css",
+  "scripts/main.js": "scripts/main_04ef7aa3.js"
 }

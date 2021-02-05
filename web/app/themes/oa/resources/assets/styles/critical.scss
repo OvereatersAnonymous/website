@@ -1,0 +1,15 @@
+// For firstload CSS only
+body {
+  opacity: 0;
+}
+#fullscrim {
+  /* Initial styles are set via JavaScript */
+
+  &:not(.show).hide {
+    opacity: 0 !important;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
