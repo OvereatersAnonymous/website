@@ -86,7 +86,7 @@
         &.show {
             display: flex;
             flex-wrap: wrap;
-            top:12px !important;
+            top:52px !important;
             padding-top: 50px;
             background-color:map-get($supporting-colors, 'mediumlightg') !important;
             border-color: map-get($supporting-colors, 'mediumlightg') !important;
@@ -679,10 +679,17 @@
         .nav-primary {
             text-align: right;
             .widget {
-                display: none;
-                @include media-breakpoint-up(md) {
-                    display: inline-block;
+                display: inline-block;
+                position:relative;
+                z-index:10003;
+                a {
+                    font-size: 12px;
+                    @include media-breakpoint-up(sm) {
+                        font-size: 1rem;
+                    }
                 }
+                
+
                 h3 {
                     display: none;
                 }
@@ -783,7 +790,7 @@
             margin-top: 5rem;
         }
         @include media-breakpoint-up(md) {
-            margin-top: 15rem;
+            margin-top: 10rem;
         }
     }
     form.search-form {

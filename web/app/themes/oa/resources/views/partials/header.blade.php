@@ -57,7 +57,6 @@
         </div>
         <div class="row">
           <div class="wrapper">
-            @include('partials.widget-feature-btn')
             @include('partials.widget-search')
             <nav class="nav-primary">
               @if (has_nav_menu('primary_navigation'))
