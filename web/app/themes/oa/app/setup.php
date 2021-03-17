@@ -275,5 +275,19 @@ add_action('wp_head', function (): void {
         echo '<script id="critical-js">' . get_file_contents($critical_JS) . '</script>';
     }
 }, 1);
+
+//Hide admin bar for subsriber level user
+add_action('set_current_user', 'App\\oa_hide_admin_bar');
+function oa_hide_admin_bar() {
+  if (!current_user_can('edit_posts')) {
+    show_admin_bar(false);
+  }
+}
+
+add_action('wp_logout','App\\auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_safe_redirect( home_url() );
+  exit;
+}
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END

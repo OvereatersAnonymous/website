@@ -146,5 +146,30 @@ add_filter( 'image_size_names_choose', 'App\\oa_custom_sizes' );
 
 //enable shortcodes in widgets
 add_filter( 'widget_text', 'do_shortcode' );
+
+/**
+ * Redirect user after successful login.
+ *
+ * @param string $redirect_to URL to redirect to.
+ * @param string $request URL the user is coming from.
+ * @param object $user Logged user's data.
+ * @return string
+ */
+function oa_login_redirect( $redirect_to, $request, $user ) {
+    //is there a user to check?
+    //check for admins
+    if ( in_array( 'administrator', $user->roles ) ) {
+        // redirect them to the default place
+        return $redirect_to;
+    } else {
+        if($request) {
+            return $request;
+        } else {
+            return home_url();
+        }
+    }
+}
+ 
+add_filter( 'login_redirect', 'App\\oa_login_redirect', 10, 3 );
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END
