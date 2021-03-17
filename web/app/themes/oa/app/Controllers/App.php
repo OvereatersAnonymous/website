@@ -160,6 +160,23 @@ class App extends Controller
 		return get_the_terms($id,$taxonomy);
 	}
 
+	/**
+	 * check if authentication required for access
+	 *
+	 * @return array
+	 */
+	public static function authCheck($id=false)
+	{
+		if (!$id){
+			$id = get_the_ID();
+		}
+		if (get_field('authentication_requirement',$id)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 	/**
 	 * Return the post categories in a string

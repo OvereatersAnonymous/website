@@ -411,3 +411,22 @@ label {
 /* //END FIND A MEETING FORMs */
 
 
+/* login form */
+#loginform {
+  p {
+    margin-bottom: 0.5rem;
+  }
+  label {
+    display: block;
+  }
+  
+  input[type=text],input[type=password] {
+    @extend .input-field;
+    @extend .input-field--white;
+  }
+  input[type=submit] {
+    @extend .btn;
+    @extend .smoky;
+    margin-top: 0.5rem;
+  }
+}
