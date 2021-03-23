@@ -51,6 +51,13 @@ export default {
       }, 500);
     };
 
+    //find any video embeds and make sure the embed-container class is added as wrapper
+    //this ensures the vieos are mobile responsive
+    var $content = jQuery('.post-content iframe');
+    if($content.length) {
+      $content.wrap( '<div class="video-container"></div>' );
+    }
+
 
     //Search
     // JavaScript to be fired on all pages
