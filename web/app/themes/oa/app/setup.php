@@ -284,10 +284,10 @@ function oa_hide_admin_bar() {
   }
 }
 
-add_action('wp_logout','App\\auto_redirect_after_logout');
+/*add_action('wp_logout','App\\auto_redirect_after_logout');
 function auto_redirect_after_logout(){
   wp_safe_redirect( home_url() );
   exit;
-}
+}*/
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END

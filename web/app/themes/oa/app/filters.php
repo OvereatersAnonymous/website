@@ -155,7 +155,7 @@ add_filter( 'widget_text', 'do_shortcode' );
  * @param object $user Logged user's data.
  * @return string
  */
-function oa_login_redirect( $redirect_to, $request, $user ) {
+/*function oa_login_redirect( $redirect_to, $request, $user ) {
     //is there a user to check?
     //check for admins
     if ( in_array( 'administrator', $user->roles ) ) {
@@ -170,6 +170,6 @@ function oa_login_redirect( $redirect_to, $request, $user ) {
     }
 }
  
-add_filter( 'login_redirect', 'App\\oa_login_redirect', 10, 3 );
+add_filter( 'login_redirect', 'App\\oa_login_redirect', 10, 3 );*/
 //_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
 // END

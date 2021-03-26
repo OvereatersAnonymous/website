@@ -2,7 +2,7 @@
   <div class="alert alert-warning" role="alert">
     <div class="container">
       <div class="text-left">
-        {!! __('You are logged in','sage') !!} &nbsp; | &nbsp; {{wp_loginout(site_url())}}</a>
+        {!! __('You are logged in','sage') !!} &nbsp; | &nbsp; {{wp_loginout(get_permalink())}}</a>
       </div>
     </div>
   </div>
