@@ -1,14 +1,6 @@
 export default {
   init() {
 
-    //do not load from cache when back button is clicked
-    //force a reload when page is loaded from bfcache.
-    jQuery(window).bind('pageshow', function(event) {
-      if (event.originalEvent.persisted) {
-          window.location.reload() 
-      }
-    });
-
     // JavaScript to be fired on all pages
     jQuery('#primary-nav-toggle').bind('click', function(event) {
       //append #menu to URL to enable back btn functionality

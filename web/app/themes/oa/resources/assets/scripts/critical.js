@@ -84,6 +84,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
   setTimeout(removeScrim, 3000);
   //remove opacity setting from body
   document.body.style.opacity = 1;
+
+  //do not load from cache when back button is clicked
+  //force a reload when page is loaded from bfcache.
+  //https://web.dev/bfcache/
+  /*window.onpageshow = function(event) {
+      if (event.persisted) {
+          window.location.reload() 
+      }
+  };*/
 });
 
 window.addEventListener("load", event => {
