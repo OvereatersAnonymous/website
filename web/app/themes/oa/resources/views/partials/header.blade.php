@@ -1,8 +1,8 @@
 @if(is_user_logged_in() && !current_user_can('edit_posts'))
   <div class="alert alert-warning" role="alert">
     <div class="container">
-      <div class="text-left">
-        {!! __('You are logged in','sage') !!} &nbsp; | &nbsp; {{wp_loginout(get_permalink())}}</a>
+      <div class="text-left logout-btn">
+        {!! __('You are logged in','sage') !!} &nbsp; | &nbsp; {{wp_loginout(get_permalink())}}
       </div>
     </div>
   </div>
