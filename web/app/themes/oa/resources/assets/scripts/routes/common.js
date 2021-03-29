@@ -54,7 +54,10 @@ export default {
     //this ensures the vieos are mobile responsive
     var $content = jQuery('.post-content iframe');
     if($content.length) {
-      $content.wrap( '<div class="video-container"></div>' );
+      //but only if it's not a jotform embed!
+      if (jQuery('.post-content iframe[id*="JotForm"]').length == 0) {
+        $content.wrap( '<div class="video-container"></div>' );
+      }
     }
 
 
