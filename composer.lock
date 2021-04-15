@@ -301,11 +301,11 @@
         },
         {
             "name": "overeatersanonymous/wpmeetings",
-            "version": "1.7.9",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:OvereatersAnonymous/wpmeetings.git",
-                "reference": "922c9e9c46d87894c93e5448d9626fe8ac105c99"
+                "reference": "df9c2e5385e38d54f2690309f0da62faa3213de5"
             },
             "require": {
                 "php": ">=7.1"
@@ -322,7 +322,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2021-04-14T19:55:25+00:00"
+            "time": "2021-04-15T19:00:33+00:00"
         },
         {
             "name": "overeatersanonymous/wpservicebodies",
