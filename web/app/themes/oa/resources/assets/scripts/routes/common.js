@@ -49,18 +49,7 @@ export default {
           //alert(jQuery(document).height());
       }, 500);
     };
-
-    //find any video embeds and make sure the embed-container class is added as wrapper
-    //this ensures the vieos are mobile responsive
-    var $content = jQuery('.post-content iframe');
-    if($content.length) {
-      //but only if it's not a jotform embed!
-      if (jQuery('.post-content iframe[id*="JotForm"]').length == 0 && jQuery('.post-content iframe[title*="reCAPTCHA"]').length == 0) {
-        $content.wrap( '<div class="video-container"></div>' );
-      }
-    }
-
-
+    
     //Search
     // JavaScript to be fired on all pages
     var $searchWrapper = jQuery('.search-wrapper');
